@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" width="210mm" height="297mm">
+  <defs>
+    <!-- Tone-on-tone Teal Depth -->
+    <radialGradient id="chAtmosphere" cx="80%" cy="20%" r="75%">
+      <stop offset="0%" stop-color="#1b5a6c" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#144d5c" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#114554" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="chCurveGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D8B86C" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#D8B86C" stop-opacity="0.32"/>
+      <stop offset="70%" stop-color="#DDE8E2" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#DDE8E2" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="chKhmerFacetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8B86C" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#DDE8E2" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Ambient Tone -->
+  <rect x="0" y="0" width="210" height="297" fill="url(#chAtmosphere)"/>
+
+  <!-- ============================================================ -->
+  <!-- 1. MODERN KHMER-INFLUENCED ABSTRACT GEOMETRY -->
+  <!-- Subtle stepped angular diamond contours (architectural geometry) -->
+  <!-- ============================================================ -->
+  <g stroke="url(#chKhmerFacetGrad)" fill="none" stroke-linecap="round">
+    <!-- Outer nested rhomboid / stepped facet (upper right quadrant) -->
+    <polygon points="175,25 200,60 175,95 150,60" stroke-width="0.75" stroke-opacity="0.35"/>
+    <polygon points="175,32 194,60 175,88 156,60" stroke-width="0.45" stroke-opacity="0.22" stroke-dasharray="3,3"/>
+    
+    <!-- Secondary echo facet (floating lower left) -->
+    <polygon points="35,185 55,215 35,245 15,215" stroke-width="0.6" stroke-opacity="0.2" stroke-dasharray="2,4"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 2. ABSTRACT GEOMETRIC LINEWORK -->
+  <!-- Clean architectural grid & registration guidelines -->
+  <!-- ============================================================ -->
+  <g stroke="#DDE8E2" stroke-width="0.35" stroke-opacity="0.09" stroke-linecap="round">
+    <!-- Vertical structural guides -->
+    <line x1="26" y1="20" x2="26" y2="280"/>
+    <line x1="184" y1="20" x2="184" y2="280"/>
+
+    <!-- Horizontal proportion divisions -->
+    <line x1="20" y1="34" x2="190" y2="34"/>
+    <line x1="20" y1="120" x2="190" y2="120" stroke-dasharray="2,6"/>
+    <line x1="20" y1="220" x2="190" y2="220" stroke-dasharray="2,6"/>
+    <line x1="20" y1="265" x2="190" y2="265"/>
+  </g>
+
+  <!-- Precision architectural corner registration ticks -->
+  <g stroke="#D8B86C" stroke-width="0.7" stroke-opacity="0.45" stroke-linecap="square">
+    <!-- Top-left -->
+    <path d="M 23 34 L 29 34 M 26 31 L 26 37"/>
+    <!-- Top-right -->
+    <path d="M 181 34 L 187 34 M 184 31 L 184 37"/>
+    <!-- Bottom-left -->
+    <path d="M 23 265 L 29 265 M 26 262 L 26 268"/>
+    <!-- Bottom-right -->
+    <path d="M 181 265 L 187 265 M 184 262 L 184 268"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- 3. SOFT ORGANIC JOURNEY CURVES (Continuous elegant line) -->
+  <!-- Completely replaces the dotted AI-network / constellation nodes -->
+  <!-- ============================================================ -->
+  <g fill="none">
+    <!-- Main sweeping innovation trajectory (smooth continuous bezier curve) -->
+    <path d="M 18 250 C 65 248, 110 238, 145 195 C 180 152, 195 95, 175 45" 
+          stroke="url(#chCurveGrad)" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Harmonious parallel secondary contour -->
+    <path d="M 24 256 C 70 254, 114 244, 148 202 C 182 160, 196 106, 178 52" 
+          stroke="#DDE8E2" stroke-width="0.5" stroke-opacity="0.12" stroke-dasharray="3,5" stroke-linecap="round"/>
+
+    <!-- Focal accent sweep -->
+    <path d="M 152 75 C 168 62, 185 58, 198 62" 
+          stroke="#D8B86C" stroke-width="0.8" stroke-opacity="0.38" stroke-linecap="round"/>
+  </g>
+</svg>

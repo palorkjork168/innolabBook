@@ -1,0 +1,27 @@
+# Typst generated/output files
+*.pdf
+*.pdf*
+output_*.pdf
+test_compile.pdf
+
+# Local Typst binary/download
+typst.zip
+typst-x86_64-pc-windows-msvc/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/cache/build folders
+.vscode/
+.idea/
+.cache/
+build/
+dist/
+out/
+tmp/

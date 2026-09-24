@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" width="210mm" height="297mm">
+  <!-- Subtle architectural framing and registration marks for Table of Contents -->
+  <!-- Top margin corner registration ticks -->
+  <g stroke="#D8B86C" stroke-width="0.8" stroke-linecap="square" stroke-opacity="0.75">
+    <path d="M 12 14 L 18 14 M 12 14 L 12 20"/>
+    <path d="M 198 14 L 192 14 M 198 14 L 198 20"/>
+  </g>
+
+  <!-- Vertical structural track between CONTENTS column and chapter listing -->
+  <line x1="36" y1="55" x2="36" y2="265" stroke="#D9DEDC" stroke-width="0.5" stroke-opacity="0.6"/>
+
+  <!-- Subtle horizontal registration tick at Chapter 01 baseline -->
+  <line x1="33" y1="78" x2="39" y2="78" stroke="#D8B86C" stroke-width="0.9" stroke-opacity="0.7"/>
+
+  <!-- Center subtle divider guide between 2 chapter columns (at x=115mm) -->
+  <line x1="115" y1="72" x2="115" y2="258" stroke="#D9DEDC" stroke-width="0.4" stroke-opacity="0.45" stroke-dasharray="2,5"/>
+
+  <!-- Bottom margin corner registration ticks -->
+  <g stroke="#D9DEDC" stroke-width="0.8" stroke-linecap="square" stroke-opacity="0.75">
+    <path d="M 12 283 L 18 283 M 12 283 L 12 277"/>
+    <path d="M 198 283 L 192 283 M 198 283 L 198 277"/>
+  </g>
+</svg>
