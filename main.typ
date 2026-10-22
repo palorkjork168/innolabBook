@@ -1,7 +1,5 @@
 #import "styles.typ": *
 
-#show: report-page
-
 #set heading(numbering: none)
 
 
@@ -11,44 +9,45 @@
 
 #include "frontmatter/cover.typ"
 
-#include "frontmatter/title.typ"
-
 #include "frontmatter/credits.typ"
 
 #include "frontmatter/toc.typ"
 
 
 // ============================================================
-// START REPORT PAGE NUMBERING
+// REPORT CONTENT & NUMBERING
 // ============================================================
+
+#show: report-page
 
 #counter(page).update(1)
 
 
 // ============================================================
-// REPORT CONTENT
+// REPORT CONTENT (THE 5 CORE CHAPTERS IN EXACT SOURCE ORDER)
 // ============================================================
 
 #include "chapters/chapter-01.typ"
 
+#pagebreak()
+
 #include "chapters/chapter-02.typ"
+
+#pagebreak()
 
 #include "chapters/chapter-03.typ"
 
+#pagebreak()
+
 #include "chapters/chapter-04.typ"
+
+#pagebreak()
 
 #include "chapters/chapter-05.typ"
 
-#include "chapters/chapter-06.typ"
-
-#include "chapters/chapter-07.typ"
-
-#include "chapters/chapter-08.typ"
 
 // ============================================================
 // BACK MATTER
 // ============================================================
 
-#include "backmatter/conclusion.typ"
-#include "backmatter/appendix.typ"
 #include "backmatter/back-cover.typ"

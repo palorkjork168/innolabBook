@@ -1,243 +1,146 @@
 #import "../styles.typ": *
+#import "../components/catalogue.typ": *
 
 #let ch-data = (
-  (num: "01", km: "ទិដ្ឋភាពទូទៅនៃគម្រោង", en: "PROJECT OVERVIEW", pg: "07"),
-  (num: "02", km: "បរិបទ មូលហេតុ និងបញ្ហាប្រឈម", en: "CONTEXT, RATIONALE & CHALLENGES", pg: "13"),
-  (num: "03", km: "ដំណើរការ និងការអនុវត្តគម្រោង", en: "PROGRAM JOURNEY & IMPLEMENTATION", pg: "21"),
-  (num: "04", km: "ការបណ្តុះបណ្តាល ការណែនាំ និងការចូលរួម", en: "TRAINING, MENTORING & ENGAGEMENT", pg: "31"),
-  (num: "05", km: "លទ្ធផល និងផលប៉ះពាល់", en: "RESULTS & IMPACT", pg: "43"),
-  (num: "06", km: "ករណីសិក្សាសហគ្រាស", en: "SME CASE STUDIES", pg: "55"),
-  (num: "07", km: "ការឡើងធ្វើបទបង្ហាញ បញ្ហាប្រឈម និងមេរៀន", en: "FINAL PITCH, CHALLENGES & LESSONS", pg: "79"),
-  (num: "08", km: "ទិសដៅអនាគត និងអនុសាសន៍", en: "FUTURE DIRECTION & RECOMMENDATIONS", pg: "89"),
+  (
+    num: "០១",
+    km: "ជំពូកទី១៖ សេចក្តីសង្ខេបប្រតិបត្តិ និងបរិបទគម្រោង",
+    sub: "ស្ថានភាពសេដ្ឋកិច្ចខេត្តកំពង់ធំ យុទ្ធសាស្ត្របញ្ចកោណដំណាក់កាលទី១ សសរស្តម្ភនវានុវត្តន៍ទាំង ៤ តម្លៃសេដ្ឋកិច្ច អំពី ASIP និងសកម្មភាពរដូវកាលទី១",
+    label-id: "ch-01",
+    pg: "01",
+  ),
+  (
+    num: "០២",
+    km: "ជំពូកទី២៖ សកម្មភាពប្រតិបត្តិទាំង ១០ នៃគម្រោង",
+    sub: "ដំណើរការជ្រើសរើស សិក្ខាសាលាផ្សព្វផ្សាយ ពិធីសម្ពោធផ្លូវការ វគ្គបណ្តុះបណ្តាលទាំង ៣ ទស្សនកិច្ច InnoTour វីដេអូឯកសារ ការប្រឹក្សា និងទិវាប្រកួតប្រជែង Final Pitch",
+    label-id: "ch-02",
+    pg: "11",
+  ),
+  (
+    num: "០៣",
+    km: "ជំពូកទី៣៖ ករណីសិក្សាសហគ្រាសធុនតូច និងមធ្យមទាំង ២០",
+    sub: "កសិកម្មទំនើប ចំណីអាហារកែច្នៃ សិប្បកម្មច្នៃប្រឌិត និងបដិសណ្ឋារកិច្ចចីរភាព នៃសហគ្រាសឆ្នើមទាំង ២០ ក្នុងខេត្តកំពង់ធំ",
+    label-id: "ch-03",
+    pg: "25",
+  ),
+  (
+    num: "០៤",
+    km: "ជំពូកទី៤៖ ការរកឃើញសំខាន់ៗ និងការវាយតម្លៃផលប៉ះពាល់",
+    sub: "ការវិភាគគំរូអាជីវកម្ម នវានុវត្តន៍ភាព បញ្ហាប្រឈម និងសេចក្តីសន្និដ្ឋាន ផ្អែកលើទិន្នន័យស្ទង់មតិសហគ្រាសទាំង ២០ តាមរូបភាពទី១ ដល់ រូបភាពទី២២",
+    label-id: "ch-04",
+    pg: "39",
+  ),
+  (
+    num: "០៥",
+    km: "ជំពូកទី៥៖ ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់",
+    sub: "យុទ្ធសាស្ត្រពង្រីកវិសាលភាពសម្រាប់រដូវកាលទី ២ ទី ៣ និងទី ៤ ឆ្ពោះទៅគោលដៅសហគ្រាស ១០០ រូប ត្រឹមឆ្នាំ២០២៨ ដោយមានការគាំទ្រពី SDF និង KE",
+    label-id: "ch-05",
+    pg: "53",
+  ),
 )
 
-// Helper to resolve chapter page dynamically if labeled in document, or fallback
 #let get-chapter-page(item) = context {
-  let targets = query(label("ch-" + item.num))
+  let targets = query(label(item.label-id))
   if targets.len() > 0 {
     let p = counter(page).at(targets.first().location()).first()
-    if p < 10 { "0" + str(p) } else { str(p) }
+    to-khmer-num(p)
   } else {
-    item.pg
+    to-khmer-num(item.pg)
   }
 }
 
-// Chapter entry block with active link when target exists
-#let toc-chapter-entry(item) = {
-  let card-body = block(
-    width: 100%,
-    stroke: none,
-  )[
-    // Top row: Chapter number (large) + Page number
+#let toc-card(item) = {
+  let content = block(width: 100%)[
     #grid(
       columns: (auto, 1fr, auto),
       align: bottom,
-      gutter: 3mm,
-
-      text(
-        font: fonts.display,
-        size: 28pt,
-        weight: 700,
-        fill: colors.primary,
-        baseline: -1pt,
-      )[
-        #item.num
-      ],
-
+      gutter: 2.5mm,
+      text(font: font-khmer-display, size: 18pt, weight: "bold", fill: c-teal)[#item.num],
       none,
-
-      text(
-        font: fonts.display,
-        size: 11pt,
-        weight: 600,
-        fill: colors.sand,
-      )[
-        #get-chapter-page(item)
-      ],
+      text(font: font-khmer-display, size: 10.5pt, weight: "bold", fill: c-sand-dark)[#get-chapter-page(item)],
     )
-
-    #v(1.5mm)
-
-    // Thin accent rule
-    #line(
-      length: 100%,
-      stroke: 0.8pt + colors.sand.lighten(20%),
-    )
-
+    #v(1.2mm)
+    #line(length: 100%, stroke: 0.75pt + c-sand.lighten(20%))
     #v(2.5mm)
-
-    // Khmer Chapter Title (Kantumruy Pro)
-    #block[
+    #box(height: 10mm, width: 100%)[
       #set par(leading: 6.5pt, justify: false)
-      #text(
-        font: fonts.main,
-        size: 11pt,
-        weight: 700,
-        fill: colors.primary,
-      )[
-        #item.km
-      ]
+      #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[#item.km]
     ]
-
     #v(1.5mm)
-
-    // English Subtitle (Barlow Condensed / Barlow)
-    #text(
-      font: fonts.display,
-      size: 8pt,
-      weight: 500,
-      fill: colors.gray,
-      tracking: 0.5pt,
-    )[
-      #item.en
+    #block[
+      #set par(leading: 5.8pt, justify: false)
+      #text(font: font-khmer-body, size: 7.5pt, fill: c-muted)[#item.sub]
     ]
-
-    #v(8.5mm)
   ]
 
-  // Link wrapper if target label exists in document
   context {
-    let targets = query(label("ch-" + item.num))
+    let targets = query(label(item.label-id))
     if targets.len() > 0 {
-      link(targets.first().location())[#card-body]
+      link(targets.first().location())[#content]
     } else {
-      card-body
+      content
     }
   }
 }
 
-// ============================================================
-// TOC PAGE PRESENTATION
-// ============================================================
-
 #page(
   paper: "a4",
-  margin: (top: 24mm, bottom: 20mm, left: 20mm, right: 20mm),
-  fill: colors.white,
-  background: toc-bg-pattern(),
+  margin: 0pt,
+  fill: c-paper,
   header: none,
   footer: none,
 )[
-  // Header Block
-  #grid(
-    columns: (1fr, auto),
-    align: horizon,
-    [
-      #text(
-        font: fonts.main,
-        size: 28pt,
-        weight: 700,
-        fill: colors.primary,
-      )[
-        មាតិកា
-      ]
-      #v(1mm)
-      #text(
-        font: fonts.display,
-        size: 8.5pt,
-        weight: 600,
-        fill: colors.sand,
-        tracking: 1.5pt,
-      )[
-        TABLE OF CONTENTS · INNOLAB KAMPONG THOM
-      ]
-    ],
-    [
-      #block(
-        stroke: 0.7pt + colors.sand,
-        radius: 3pt,
-        inset: (x: 8pt, y: 4.5pt),
-        fill: colors.paper,
-      )[
-        #text(
-          font: fonts.display,
-          size: 8pt,
-          weight: 600,
-          fill: colors.primary,
-          tracking: 1.2pt,
-        )[
-          SEASON 1 / 2025–2026
-        ]
-      ]
-    ],
-  )
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 16mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-teal,
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · រចនាសម្ព័ន្ធមាតិកា និងសន្ទស្សន៍])
 
-  #v(4mm)
+  // Top Right Season Tag
+  #place(top + right, dx: -24mm, dy: 16mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-sand-dark,
+  )[រដូវកាលទី១ / ២០២៥–២០២៦])
 
-  #line(
-    length: 100%,
-    stroke: 0.8pt + colors.line,
-  )
+  // Master Title
+  #place(top + left, dx: 24mm, dy: 24mm, block(width: 162mm)[
+    #khmer-display-title(
+      "មាតិកា",
+      preset: "xl",
+      size: 26pt,
+      color: c-teal,
+      rule-length: 162mm,
+      rule-stroke: 1.2pt + c-sand,
+    )
 
-  #v(10mm)
+    #v(8mm)
 
-  // 2-Column Chapter Spread with Left Vertical "CONTENTS"
-  #grid(
-    columns: (14mm, 1fr, 1fr),
-    gutter: (6mm, 14mm),
+    // Symmetrical Row-by-Row 2-Column Chapter Spread
+    #grid(
+      columns: (77mm, 77mm),
+      column-gutter: 8mm,
+      row-gutter: 11mm,
+      toc-card(ch-data.at(0)),
+      toc-card(ch-data.at(3)),
 
-    // Column 0: Full-height Vertical CONTENTS
-    block(
-      height: 185mm,
-    )[
-      #align(center + horizon)[
-        #rotate(-90deg)[
-          #text(
-            font: fonts.display,
-            size: 44pt,
-            weight: 700,
-            fill: colors.sage.darken(12%),
-            tracking: 9pt,
-          )[
-            CONTENTS
-          ]
-        ]
-      ]
-    ],
+      toc-card(ch-data.at(1)),
+      toc-card(ch-data.at(4)),
 
-    // Column 1: Chapters 01 - 04
-    [
-      #for item in ch-data.slice(0, 4) {
-        toc-chapter-entry(item)
-      }
-    ],
+      toc-card(ch-data.at(2)),
+      none,
+    )
+  ])
 
-    // Column 2: Chapters 05 - 08
-    [
-      #for item in ch-data.slice(4, 8) {
-        toc-chapter-entry(item)
-      }
-    ],
-  )
-
-  #v(1fr)
-
-  // Bottom note / institutional footer
-  #line(
-    length: 100%,
-    stroke: 0.5pt + colors.line,
-  )
-
-  #v(2.5mm)
-
-  #grid(
-    columns: (1fr, auto),
-    align: horizon,
-    text(
-      font: fonts.main,
-      size: 7.5pt,
-      fill: colors.gray,
-    )[
-
-    ],
-    text(
-      font: fonts.display,
-      size: 7.5pt,
-      fill: colors.sand,
-      weight: 600,
-      tracking: 1pt,
-    )[
-      ANGKOR SOCIAL INNOVATION PARK (ASIP)
-    ],
-  )
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    "ii",
+    header-right: "មាតិកា · មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ",
+    side: "right",
+    width: 162mm,
+  ))
 ]

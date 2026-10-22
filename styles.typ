@@ -30,6 +30,7 @@
 #import "components/photos.typ": report-photo, photos
 #import "components/patterns.typ": *
 #import "components/editorial.typ": *
+#import "components/catalogue.typ": *
 
 #let fonts = (
   main: ("Kantumruy Pro", "Arial"),
@@ -135,12 +136,12 @@
 
             align(right)[
               #text(
-                font: fonts.display,
-                size: 9pt,
+                font: font-khmer-display,
+                size: 9.5pt,
                 weight: 700,
                 fill: colors.primary,
               )[
-                #counter(page).display()
+                #to-khmer-num(counter(page).get().first())
               ]
             ],
           )
@@ -157,7 +158,7 @@
   )
 
   set par(
-    leading: 7pt,
+    leading: 8.5pt,
     justify: false,
   )
 
@@ -339,174 +340,81 @@
     clip: true,
   )[
     #if show-bg {
-      place(top + left, dx: -222mm)[
-        #image("/assets/innovation-path.svg", width: 432mm, height: 297mm)
-      ]
+      place(top + left, image("assets/cover/cover-front-art.svg", width: 210mm, height: 297mm))
     }
 
-    #block(
-      width: 210mm,
-      height: 297mm,
-      inset: (top: 26mm, bottom: 24mm, left: 24mm, right: 24mm),
+    // 1. InnoLab Brand Logo (Top Left, Crisp & Unblurred Vector/High-Res)
+    #place(top + left, dx: 22mm, dy: 20mm, block[
+      #image(resolve-logo("innolab"), height: 19mm, fit: "contain")
+    ])
+
+    // 2. Main Title Block (Bilingual Monograph Typography)
+    #place(top + left, dx: 22mm, dy: 46mm, block(width: 166mm)[
+      #block[
+        #set par(leading: 9pt, justify: false)
+        #text(font: font-khmer-display, size: 24pt, weight: "bold", fill: c-teal)[
+          គម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ
+        ]
+      ]
+
+      #v(1.5mm)
+      #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand-dark, tracking: 0.08em)[
+        (INNOLAB KAMPONG THOM)
+      ]
+
+      #v(2.5mm)
+      #line(length: 44mm, stroke: 2pt + c-sand)
+      #v(3mm)
+
+      #block(width: 140mm)[
+        #set par(leading: 7.5pt, justify: false)
+        #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[
+          របាយការណ៍គ្រប់ជ្រុងជ្រោយស្តីពីការបណ្តុះបណ្តាលសហគ្រាសធុនតូចនិងមធ្យម (SME) ថ្នាក់តំបន់ ការធ្វើសមាហរណកម្មសេដ្ឋកិច្ចចក្រា និងការផ្លាស់ប្តូរសេដ្ឋកិច្ចខេត្តកំពង់ធំ
+        ]
+      ]
+
+      #v(2mm)
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-teal.lighten(15%))[
+        ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations
+      ]
+    ])
+
+    // 3. Middle Area: Open, clean, showcasing the serene mountain and river landscape
+
+    // 4. Institutional Sponsor & Partner Logos (Refined Frosted Card)
+    #place(top + left, dx: 22mm, dy: 238mm, block(
+      width: 166mm,
+      fill: rgb(255, 255, 255, 92%),
+      radius: 5pt,
+      inset: (x: 10mm, y: 4.5mm),
+      stroke: 0.9pt + c-sand,
     )[
       #grid(
-        rows: (auto, 1fr, auto),
-
-        // Top identity & logo area
-        align(top)[
-          #grid(
-            columns: (auto, 1fr, auto),
-            align: horizon,
-
-            // Logo in pristine white pill badge
-            block(
-              fill: colors.white,
-              radius: 5pt,
-              inset: (x: 10pt, y: 5pt),
-              stroke: 0.5pt + colors.sage,
-            )[
-              #image(resolve-logo("innolab"), height: 13mm, fit: "contain")
-            ],
-
-            none,
-
-            // Season / Year Badge
-            block(
-              stroke: 0.8pt + colors.sand,
-              radius: 3pt,
-              inset: (x: 8pt, y: 4pt),
-            )[
-              #text(
-                font: fonts.display,
-                size: 8.5pt,
-                weight: 700,
-                fill: colors.sand,
-                tracking: 1.2pt,
-              )[
-                SEASON 1 / 2025–2026
-              ]
-            ],
-          )
-        ],
-
-        // Title & Hero Typography Area
-        align(top + left)[
-          #v(14mm)
-
-          #text(
-            font: fonts.display,
-            size: 10pt,
-            weight: 600,
-            fill: colors.sand,
-            tracking: 2pt,
-          )[
-            PROJECT & ACHIEVEMENT REPORT
-          ]
-
-          #v(4mm)
-
-          #block[
-            #set par(leading: 12pt)
-            #text(
-              font: fonts.main,
-              size: 32pt,
-              weight: 700,
-              fill: colors.white,
-            )[
-              មន្ទីរពិសោធន៍\
-              នវានុវត្តន៍កំពង់ធំ
-            ]
-          ]
-
-          #v(3mm)
-
-          #text(
-            font: fonts.display,
-            size: 20pt,
-            weight: 700,
-            fill: colors.sage,
-            tracking: 1.5pt,
-          )[
-            INNOLAB KAMPONG THOM
-          ]
-
-          #v(4mm)
-
-          #line(
-            length: 30mm,
-            stroke: 1.5pt + colors.sand,
-          )
-
-          #v(4mm)
-
-          #text(
-            font: fonts.main,
-            size: 13pt,
-            weight: 600,
-            fill: colors.white,
-          )[
-            ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព
-          ]
-
-          #v(2mm)
-
-          #text(
-            font: fonts.display,
-            size: 9.5pt,
-            weight: 500,
-            fill: colors.sage,
-            tracking: 0.8pt,
-          )[
-            CONNECT SMEs, CONNECT INNOVATIONS
-          ]
-        ],
-
-        // Bottom Supporting Institutional / Location Area
-        align(bottom + left)[
-          #line(
-            length: 100%,
-            stroke: 0.5pt + rgb(colors.sage.to-hex() + "40"),
-          )
-
-          #v(3mm)
-
-          #grid(
-            columns: (1fr, auto),
-            align: horizon,
-
-            text(
-              font: fonts.main,
-              size: 8.5pt,
-              fill: colors.white,
-              weight: 600,
-            )[
-              ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP)
-            ],
-
-            text(
-              font: fonts.display,
-              size: 8pt,
-              fill: colors.sand,
-              weight: 600,
-              tracking: 1pt,
-            )[
-              KAMPONG THOM · CAMBODIA
-            ],
-          )
-
-          #v(1mm)
-
-          #text(
-            font: fonts.display,
-            size: 7.5pt,
-            fill: colors.sage,
-            tracking: 0.5pt,
-          )[
-            ANGKOR SOCIAL INNOVATION PARK · PROJECT REPORT
-          ]
-        ],
+        columns: (1fr, 1fr, 1fr),
+        align: horizon + center,
+        gutter: 6mm,
+        image(resolve-logo("asip"), height: 10mm, fit: "contain"),
+        image(resolve-logo("sdf"), height: 9.5mm, fit: "contain"),
+        image(resolve-logo("ke"), height: 8.5mm, fit: "contain"),
       )
-    ]
+    ])
+
+    // 5. Official Attribution & Governance
+    #place(top + left, dx: 22mm, dy: 268mm, block(width: 166mm)[
+      #align(center)[
+        #text(font: font-sans, size: 8pt, weight: 700, fill: c-white, tracking: 0.16em)[
+          ANGKOR SOCIAL INNOVATION PARK (ASIP)
+        ]\
+        #v(1mm)
+        #text(font: font-sans, size: 6.5pt, weight: 500, fill: c-sand-light, tracking: 0.08em)[
+          SUPPORTED BY SKILLS DEVELOPMENT FUND (SDF) & KHMER ENTERPRISE (KE)
+        ]\
+        #v(0.8mm)
+        #text(font: font-khmer-display, size: 6.5pt, fill: c-white.transparentize(20%))[
+          សហការជាមួយរដ្ឋបាលខេត្តកំពង់ធំ · KAMPONG THOM PROVINCIAL ADMINISTRATION
+        ]
+      ]
+    ])
   ]
 }
 
@@ -517,141 +425,216 @@
     clip: true,
   )[
     #if show-bg {
-      place(top + left, dx: 0mm)[
-        #image("/assets/innovation-path.svg", width: 432mm, height: 297mm)
-      ]
+      place(top + left, image("assets/cover/cover-back-art.svg", width: 210mm, height: 297mm))
     }
 
-    #block(
-      width: 210mm,
-      height: 297mm,
-      inset: (top: 28mm, bottom: 24mm, left: 24mm, right: 24mm),
-    )[
+    // 1. Running Eyebrow Header Top Left
+    #place(top + left, dx: 26mm, dy: 13mm, block[
+      #text(
+        font: font-sans,
+        size: 7.2pt,
+        weight: 700,
+        fill: c-sand-dark,
+        tracking: 0.2em,
+      )[INNOLAB KAMPONG THOM · OFFICIAL MONOGRAPH]
+      #v(0.8mm)
+      #text(
+        font: font-sans,
+        size: 6.2pt,
+        weight: 600,
+        fill: c-teal,
+        tracking: 0.14em,
+      )[EXECUTIVE SUMMARY & PROGRAM SYNTHESIS]
+    ])
+
+    // 2. Program Executive Narrative
+    #place(top + left, dx: 26mm, dy: 28mm, block(width: 164mm)[
+      #text(font: font-khmer-display, size: 13.5pt, weight: "bold", fill: c-teal)[
+        ដំណើរនៃនវានុវត្តន៍ និងការរីកចម្រើននៃសហគ្រាសខេត្តកំពង់ធំ
+      ]\
+      #v(0.8mm)
+      #text(font: font-sans, size: 8pt, weight: 700, fill: c-sand-dark, tracking: 0.12em)[
+        CATALYZING REGIONAL INNOVATION & SUSTAINABLE SME GROWTH
+      ]
+      #v(2mm)
+      #line(length: 36mm, stroke: 1.4pt + c-sand)
+      #v(2mm)
+      #block[
+        #set par(leading: 7pt, justify: true)
+        #text(font: font-khmer-body, size: 7.8pt, fill: rgb("#14353E"))[
+          មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ (InnoLab Kampong Thom) គឺជាគំនិតផ្តួចផ្តើមនវានុវត្តន៍ថ្នាក់ក្រោមជាតិដំបូងគេបង្អស់ ដែលរៀបចំឡើងដោយ ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP) ក្រោមការឧបត្ថម្ភគាំទ្រពីមូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) និងសហគ្រិនខ្មែរ (Khmer Enterprise) សហការជាមួយរដ្ឋបាលខេត្តកំពង់ធំ។ គម្រោងនេះបានជ្រើសរើសសហគ្រាសជ័យលាភីចំនួន ២០ ក្នុងវិស័យទេសចរណ៍ កសិកម្ម-កែច្នៃ និងសិប្បកម្ម ដើម្បីចូលរួមវគ្គបណ្តុះបណ្តាលការធ្វើតេស្តសាកល្បងគំនិតច្នៃប្រឌិត ការផ្តល់ទុនពូជវិនិយោគ និងការតភ្ជាប់បណ្តាញទីផ្សារ។
+        ]
+      ]
+    ])
+
+    // 3. Four Core Learning Modules (Refined 2x2 Grid with generous padding & proportion)
+    #place(top + left, dx: 26mm, dy: 80mm, block(width: 164mm)[
+      #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-teal)[
+        កម្មវិធីបណ្តុះបណ្តាលស្នូលទាំង ៤ ដំណាក់កាល · 4 CORE LEARNING MODULES
+      ]
+      #v(3mm)
       #grid(
-        rows: (auto, 1fr, auto),
-
-        // Top identity line
-        align(top + left)[
-          #text(
-            font: fonts.display,
-            size: 9pt,
-            weight: 600,
-            fill: colors.sand,
-            tracking: 1.5pt,
-          )[
-            INNOLAB KAMPONG THOM
-          ]
-          #v(1mm)
-          #text(
-            font: fonts.main,
-            size: 8.5pt,
-            fill: colors.sage,
-          )[
-            របាយការណ៍បូកសរុបលទ្ធផលគម្រោង
-          ]
-        ],
-
-        // Middle Summary Block
-        align(horizon + left)[
-          #text(
-            font: fonts.main,
-            size: 20pt,
-            weight: 700,
-            fill: colors.white,
-          )[
-            ផ្សារភ្ជាប់សហគ្រាស\ និងនវានុវត្តន៍ភាព
-          ]
-
-          #v(3mm)
-
-          #text(
-            font: fonts.display,
-            size: 11pt,
-            weight: 600,
-            fill: colors.sand,
-            tracking: 1pt,
-          )[
-            CONNECT SMEs, CONNECT INNOVATIONS
-          ]
-
-          #v(6mm)
-
-          #line(
-            length: 30mm,
-            stroke: 1.2pt + colors.sand,
-          )
-
-          #v(6mm)
-
-          #block(width: 155mm)[
-            #set par(leading: 6.8pt)
-            #text(
-              font: fonts.main,
-              size: 9.5pt,
-              fill: colors.sage,
-            )[
-              មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ (InnoLab Kampong Thom) ត្រូវបានបង្កើតឡើងក្នុងគោលបំណងពង្រឹង និងលើកកម្ពស់សមត្ថភាពសហគ្រាសធុនតូច និងមធ្យម (SMEs) តាមរយៈការធ្វើតេស្តសាកល្បងគំនិតច្នៃប្រឌិត ការបណ្តុះបណ្តាលបច្ចេកវិទ្យា និងការតភ្ជាប់បណ្តាញធុរកិច្ច ដើម្បីជំរុញកំណើនសេដ្ឋកិច្ចប្រកបដោយចីរភាពក្នុងខេត្តកំពង់ធំ។
-            ]
-          ]
-        ],
-
-        // Bottom Institutional & Logos Area
-        align(bottom + left)[
-          #text(
-            font: fonts.main,
-            size: 8.5pt,
-            fill: colors.sage,
-          )[
-            អនុវត្ត និងគាំទ្រដោយ៖
-          ]
-
-          #v(3mm)
-
-          // Clean white card for official logos
-          #block(
-            width: 100%,
-            fill: colors.white,
-            radius: 4pt,
-            inset: (x: 10mm, y: 4.5mm),
-            stroke: 0.5pt + colors.sage,
-          )[
-            #grid(
-              columns: (1fr, 1fr, 1fr),
-              gutter: 6mm,
-              align: horizon + center,
-              image(resolve-logo("asip"), height: 13mm, fit: "contain"),
-              image(resolve-logo("sdf"), height: 11mm, fit: "contain"),
-              image(resolve-logo("ke"), height: 10mm, fit: "contain"),
-            )
-          ]
-
-          #v(4mm)
-
-          #grid(
-            columns: (1fr, auto),
-            align: horizon,
-            text(
-              font: fonts.display,
-              size: 7.5pt,
-              fill: colors.sage,
-              weight: 500,
-              tracking: 0.8pt,
-            )[
-              ANGKOR SOCIAL INNOVATION PARK · SDF · KHMER ENTERPRISE
+        columns: (1fr, 1fr),
+        column-gutter: 5mm,
+        row-gutter: 4mm,
+        block(
+          width: 100%,
+          height: 25mm,
+          fill: rgb("#FFFFFF").transparentize(10%),
+          stroke: 0.8pt + c-teal.lighten(35%),
+          radius: 4pt,
+          inset: (x: 10pt, y: 7.5pt),
+        )[
+          #stack(
+            spacing: 1.6mm,
+            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 01],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[Design Thinking & Empathy],
+            block[
+              #set par(leading: 4.5pt, justify: false)
+              #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ការស្វែងយល់ស៊ីជម្រៅពីតម្រូវការអតិថិជន និងបញ្ហាប្រឈម]
             ],
-            text(
-              font: fonts.display,
-              size: 7.5pt,
-              fill: colors.sand,
-              weight: 600,
-              tracking: 1pt,
-            )[
-              KAMPONG THOM · CAMBODIA
+          )
+        ],
+        block(
+          width: 100%,
+          height: 25mm,
+          fill: rgb("#FFFFFF").transparentize(10%),
+          stroke: 0.8pt + c-teal.lighten(35%),
+          radius: 4pt,
+          inset: (x: 10pt, y: 7.5pt),
+        )[
+          #stack(
+            spacing: 1.6mm,
+            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 02],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[Customer Insights & Prototype],
+            block[
+              #set par(leading: 4.5pt, justify: false)
+              #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ការអភិវឌ្ឍផលិតផលគំរូនវានុវត្តន៍ និងការធ្វើតេស្តទីផ្សារ]
+            ],
+          )
+        ],
+        block(
+          width: 100%,
+          height: 25mm,
+          fill: rgb("#FFFFFF").transparentize(10%),
+          stroke: 0.8pt + c-teal.lighten(35%),
+          radius: 4pt,
+          inset: (x: 10pt, y: 7.5pt),
+        )[
+          #stack(
+            spacing: 1.6mm,
+            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 03],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[Innovative Project Management],
+            block[
+              #set par(leading: 4.5pt, justify: false)
+              #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ការគ្រប់គ្រងប្រតិបត្តិការ ហិរញ្ញវត្ថុ និងយុទ្ធសាស្ត្រលក់]
+            ],
+          )
+        ],
+        block(
+          width: 100%,
+          height: 25mm,
+          fill: rgb("#FFFFFF").transparentize(10%),
+          stroke: 0.8pt + c-teal.lighten(35%),
+          radius: 4pt,
+          inset: (x: 10pt, y: 7.5pt),
+        )[
+          #stack(
+            spacing: 1.6mm,
+            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 04],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[InnoTour & Pitching Stage],
+            block[
+              #set par(leading: 4.5pt, justify: false)
+              #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ទស្សនកិច្ចសិក្សា ការតភ្ជាប់បណ្តាញ និងការប្រកួតប្រជែង]
             ],
           )
         ],
       )
-    ]
+    ])
+
+    // 4. Key Program Achievements Strip
+    #place(top + left, dx: 26mm, dy: 154mm, block(
+      width: 164mm,
+      fill: rgb("#062228").transparentize(15%),
+      stroke: 0.8pt + c-sand,
+      radius: 3pt,
+      inset: (x: 10pt, y: 5pt),
+    )[
+      #grid(
+        columns: (1fr, 1fr, 1fr),
+        gutter: 4mm,
+        [
+          #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand)[100%]\
+          #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[អត្រាបញ្ចប់គម្រោង]\
+          #text(font: font-sans, size: 5.5pt, fill: c-sand-light)[COMPLETION RATE]
+        ],
+        [
+          #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand)[48M]\
+          #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[រង្វាន់ប្រកួតប្រជែង (រៀល)]\
+          #text(font: font-sans, size: 5.5pt, fill: c-sand-light)[PITCHING PRIZE POOL]
+        ],
+        [
+          #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand)[20]\
+          #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[ករណីសិក្សាសហគ្រាស]\
+          #text(font: font-sans, size: 5.5pt, fill: c-sand-light)[SME CASE STUDIES]
+        ],
+      )
+    ])
+
+    // 5. Official Publication Barcode & Partner Card
+    #place(top + left, dx: 26mm, dy: 218mm, block(
+      width: 56mm,
+      fill: rgb(255, 255, 255, 95%),
+      radius: 4pt,
+      inset: (x: 3.5mm, y: 2.8mm),
+      stroke: 0.8pt + c-sand,
+    )[
+      #align(center)[
+        #text(font: font-sans, size: 5.5pt, weight: 800, fill: c-teal, tracking: 0.14em)[OFFICIAL PUBLICATION]\
+        #v(1mm)
+        #image("assets/cover/barcode.svg", width: 48mm, height: 11mm, fit: "contain")\
+        #v(0.8mm)
+        #text(font: font-sans, size: 6pt, weight: 700, fill: c-teal)[ISBN 978-0-141-32113-4]\
+        #text(font: font-sans, size: 5.2pt, weight: 600, fill: rgb("#0E3844"))[www.innolab-kh.com]
+      ]
+    ])
+
+    #place(top + left, dx: 86mm, dy: 218mm, block(
+      width: 104mm,
+      fill: rgb(255, 255, 255, 92%),
+      radius: 4pt,
+      inset: (x: 4mm, y: 3.2mm),
+      stroke: 0.8pt + c-sand,
+    )[
+      #grid(
+        columns: (1fr, 1fr, 1fr),
+        gutter: 3mm,
+        align: horizon + center,
+        image(resolve-logo("asip"), height: 9mm, fit: "contain"),
+        image(resolve-logo("sdf"), height: 8.5mm, fit: "contain"),
+        image(resolve-logo("ke"), height: 7.5mm, fit: "contain"),
+      )
+      #v(1.5mm)
+      #align(center)[
+        #text(font: font-sans, size: 5.6pt, weight: 700, fill: c-teal, tracking: 0.08em)[
+          ANGKOR SOCIAL INNOVATION PARK · SDF · KHMER ENTERPRISE
+        ]
+      ]
+    ])
+
+    // 6. Bottom Datum & Archival Tag
+    #place(top + left, dx: 26mm, dy: 278mm, block(width: 164mm)[
+      #grid(
+        columns: (1fr, auto),
+        align: horizon,
+        text(font: font-khmer-body, size: 6.8pt, fill: c-white.transparentize(25%))[
+          បោះពុម្ពផ្សាយផ្លូវការដោយ ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP)
+        ],
+        text(font: font-sans, size: 6.2pt, fill: c-sand, tracking: 0.12em)[
+          PUB-ID: INNOLAB-KPT-S1-2026 · ALL RIGHTS RESERVED
+        ],
+      )
+    ])
   ]
 }
 
@@ -659,44 +642,58 @@
   block(
     width: spine-width,
     height: 297mm,
-    fill: colors.primary,
-    inset: (top: 20mm, bottom: 20mm),
   )[
+    // Top Seal / Emblem (in White Sky)
+    #place(top + center, dy: 14mm, block[
+      #circle(radius: 4.2mm, fill: c-teal, stroke: 0.8pt + c-sand)[
+        #align(center + horizon)[
+          #text(font: font-sans, size: 4.8pt, weight: 900, fill: c-white)[ASIP]
+        ]
+      ]
+    ])
+
+    // Middle Vertical Typography along the Spine
     #align(center + horizon)[
       #rotate(90deg)[
-        #block(width: 250mm)[
+        #block(
+          width: 145mm,
+          fill: rgb("#062228").transparentize(10%),
+          inset: (x: 8pt, y: 2.5pt),
+          radius: 8pt,
+          stroke: 0.6pt + c-sand,
+        )[
           #grid(
             columns: (auto, 1fr, auto),
             align: horizon,
-            gutter: 4mm,
+            gutter: 3mm,
 
             text(
-              font: fonts.display,
-              size: 8pt,
+              font: font-sans,
+              size: 7pt,
               weight: 700,
-              fill: colors.white,
-              tracking: 1pt,
+              fill: c-white,
+              tracking: 0.14em,
             )[
               INNOLAB KAMPONG THOM
             ],
 
             align(center)[
               #text(
-                font: fonts.main,
-                size: 7.5pt,
+                font: font-khmer-display,
+                size: 6.8pt,
                 weight: 600,
-                fill: colors.sage,
+                fill: c-sand-light,
               )[
                 របាយការណ៍គម្រោង និងសមិទ្ធផល
               ]
             ],
 
             text(
-              font: fonts.display,
-              size: 8pt,
-              weight: 600,
-              fill: colors.sand,
-              tracking: 0.8pt,
+              font: font-sans,
+              size: 6.8pt,
+              weight: 700,
+              fill: c-sand,
+              tracking: 0.12em,
             )[
               SEASON 1 · 2025–2026
             ],
@@ -704,6 +701,15 @@
         ]
       ]
     ]
+
+    // Bottom Year Emblem (in Deep Base Ground)
+    #place(bottom + center, dy: -14mm, block[
+      #circle(radius: 3.6mm, fill: c-sand, stroke: 0.6pt + c-white)[
+        #align(center + horizon)[
+          #text(font: font-sans, size: 4.5pt, weight: 800, fill: c-teal)[2026]
+        ]
+      ]
+    ])
   ]
 }
 
@@ -711,7 +717,6 @@
   page(
     paper: "a4",
     margin: 0mm,
-    fill: colors.primary,
     header: none,
     footer: none,
   )[
@@ -723,7 +728,6 @@
   page(
     paper: "a4",
     margin: 0mm,
-    fill: colors.primary,
     header: none,
     footer: none,
   )[
@@ -737,14 +741,10 @@
     width: spread-width,
     height: 297mm,
     margin: 0mm,
-    fill: colors.primary,
     header: none,
     footer: none,
   )[
-    #place(top + left)[
-      #image("/assets/innovation-path.svg", width: spread-width, height: 297mm, fit: "cover")
-    ]
-
+    #place(top + left, image("assets/cover/cover-spread-art.svg", width: spread-width, height: 297mm))
     #grid(
       columns: (210mm, spine-width, 210mm),
       rows: 297mm,
@@ -894,235 +894,158 @@
   page(
     paper: "a4",
     margin: 0mm,
-    fill: colors.paper,
+    fill: c-paper,
     header: none,
     footer: none,
   )[
-    #grid(
-      columns: (74mm, 136mm),
-      rows: (297mm),
-      // Left Column: Editorial Photo Panel
-      block(
-        width: 74mm,
-        height: 297mm,
-        clip: true,
+    // Left Panel: Architectural Framing and Tall Documentary Photo
+    #geom-frame(18mm, 20mm, 58mm, 218mm, stroke-color: c-sand, offset-x: -3mm, offset-y: -3mm, marker: true)
+
+    #place(top + left, dx: 18mm, dy: 20mm, image("/assets/photos/02.jpg", width: 58mm, height: 218mm, fit: "cover"))
+
+    // Photo Caption under photograph
+    #place(top + left, dx: 18mm, dy: 242mm, block(width: 58mm)[
+      #text(font: font-sans, size: 6.5pt, weight: "bold", fill: c-sand-dark, tracking: 0.14em)[FIELD ARCHIVE · 2025–2026]\
+      #v(1.5mm)
+      #line(length: 24mm, stroke: 0.75pt + c-sand)
+      #v(2mm)
+      #set par(leading: 7.2pt, justify: false)
+      #text(font: font-khmer-body, size: 7pt, fill: c-charcoal.lighten(25%))[
+        សកម្មភាពបណ្តុះបណ្តាល និងកិច្ចពិភាក្សាសហគ្រិន InnoLab ខេត្តកំពង់ធំ
+      ]
+    ])
+
+    // Right Panel: Pure Editorial Typographic Architecture
+    #place(top + left, dx: 86mm, dy: 16mm, block(width: 106mm)[
+      // Running Header Top Right
+      #text(
+        font: font-khmer-display,
+        size: 7.5pt,
+        weight: "bold",
+        fill: c-teal,
+      )[របាយការណ៍ផ្លូវការ · គម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ]
+
+      #v(2.5mm)
+
+      // Official Dedication Block (Verbatim from DOCX Source)
+      #block(
+        fill: c-white,
+        radius: 3pt,
+        inset: (x: 8pt, y: 7pt),
+        stroke: 1pt + c-sand,
       )[
-        #image("/assets/photos/02.jpg", width: 74mm, height: 297mm, fit: "cover")
-
-        // Subtle dark gradient overlay at bottom
-        #place(bottom + left)[
-          #block(
-            width: 74mm,
-            height: 110mm,
-            fill: gradient.linear(
-              colors.primary.transparentize(100%),
-              colors.primary.transparentize(10%),
-              angle: 90deg,
-            ),
-          )
-        ]
-
-        // Inset vertical tag and provincial label
-        #place(top + left, dx: 6mm, dy: 24mm)[
-          #block(
-            fill: colors.primary.transparentize(15%),
-            radius: 2pt,
-            inset: (x: 6pt, y: 3.5pt),
-            stroke: 0.5pt + colors.sand,
-          )[
-            #text(
-              font: fonts.display,
-              size: 8pt,
-              weight: 700,
-              fill: colors.sand,
-              tracking: 1.2pt,
-            )[
-              FIELD REPORT · 2025
-            ]
-          ]
-        ]
-
-        #place(bottom + left, dx: 8mm, dy: -18mm)[
-          #text(
-            font: fonts.display,
-            size: 9pt,
-            weight: 700,
-            fill: colors.white,
-            tracking: 1.5pt,
-          )[
-            KAMPONG THOM PROVINCE
-          ]
-          #v(1mm)
-          #text(
-            font: fonts.main,
-            size: 8pt,
-            fill: colors.sage,
-          )[
-            ប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍
-          ]
-        ]
-      ],
-
-      // Right Column: Institutional Information & Acknowledgements
-      block(
-        width: 136mm,
-        height: 297mm,
-        inset: (top: 24mm, bottom: 20mm, left: 14mm, right: 20mm),
-      )[
-        #text(
-          font: fonts.display,
-          size: 8.5pt,
-          weight: 700,
-          fill: colors.sand,
-          tracking: 1.8pt,
-        )[
-          PROJECT INFORMATION & CREDITS
-        ]
-
-        #v(2.5mm)
-
-        #text(
-          font: fonts.main,
-          size: 24pt,
-          weight: 700,
-          fill: colors.primary,
-        )[
-          ព័ត៌មានគម្រោង
-        ]
-
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-dark)[
+          គោរពជូន៖
+        ]\
+        #v(0.8mm)
+        #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[
+          ឯកឧត្តម វង្សី វិសុទ្ធ ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ នៃព្រះរាជាណាចក្រកម្ពុជា
+        ]\
         #v(1mm)
-
-        #line(
-          length: 28mm,
-          stroke: 2pt + colors.sand,
-        )
-
-        #v(6mm)
-
-        // Implementing Entity Block
-        #text(
-          font: fonts.display,
-          size: 8pt,
-          weight: 700,
-          fill: colors.gray,
-          tracking: 1pt,
-        )[
-          IMPLEMENTING AGENCY · អង្គភាពអនុវត្ត
+        #line(length: 100%, stroke: 0.5pt + c-line)
+        #v(1.2mm)
+        #set par(leading: 6.5pt, justify: false)
+        #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal.lighten(15%))[
+          របាយការណ៍គ្រប់ជ្រុងជ្រោយស្តីពីការបណ្តុះបណ្តាលសហគ្រាសធុនតូចនិងមធ្យម (SME) ថ្នាក់តំបន់ ការធ្វើសមាហរណកម្មសេដ្ឋកិច្ចចក្រា និងការផ្លាស់ប្តូរសេដ្ឋកិច្ចខេត្តកំពង់ធំ
         ]
+      ]
 
-        #v(2.5mm)
+      #v(3mm)
 
-        #block(
-          width: 100%,
-          fill: colors.white,
-          radius: 3pt,
-          inset: (x: 5mm, y: 3.5mm),
-          stroke: 0.5pt + colors.line,
-        )[
-          #grid(
-            columns: (auto, 1fr),
-            gutter: 4mm,
-            align: horizon,
-            image(resolve-logo("asip"), height: 13mm, fit: "contain"),
-            [
-              #text(font: fonts.main, size: 9.5pt, weight: 700, fill: colors.text)[
-                ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ
-              ]
-              #v(0.5mm)
-              #text(font: fonts.display, size: 7.5pt, fill: colors.gray, tracking: 0.5pt)[
-                Angkor Social Innovation Park (ASIP)
-              ]
-            ],
-          )
-        ]
+      // Section 1: Implementing Agency (Verbatim from DOCX)
+      #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
+        រៀបចំដោយ៖ ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (Angkor Social Innovation Park )
+      ]
+      #v(1.5mm)
+      #grid(
+        columns: (auto, 1fr),
+        gutter: 4mm,
+        align: horizon,
+        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 4pt), stroke: 0.5pt + c-line)[
+          #image(resolve-logo("asip"), height: 10mm, fit: "contain")
+        ],
+        [
+          #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[
+            ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP)
+          ]\
+          #v(0.3mm)
+          #text(font: font-sans, size: 7pt, fill: c-muted)[
+            Angkor Social Innovation Park · ប្រតិបត្តិករគម្រោង
+          ]
+        ],
+      )
 
-        #v(5mm)
+      #v(2.5mm)
+      #line(length: 106mm, stroke: 0.5pt + c-line)
+      #v(2.5mm)
 
-        // Supporting Partners Block
-        #text(
-          font: fonts.display,
-          size: 8pt,
-          weight: 700,
-          fill: colors.gray,
-          tracking: 1pt,
-        )[
-          DEVELOPMENT & STRATEGIC PARTNERS · ដៃគូគាំទ្រ
-        ]
+      // Section 2: Strategic & Development Partners (Verbatim from DOCX)
+      #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
+        សហប្រតិបត្តិការដោយ៖ មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) និងសហគ្រិនខ្មែរ (KE)
+      ]
+      #v(1.5mm)
+      #grid(
+        columns: (1fr, 1fr),
+        gutter: 4mm,
+        align: horizon,
+        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 5pt), stroke: 0.5pt + c-line)[
+          #align(center + horizon)[#image(resolve-logo("sdf"), height: 9.5mm, fit: "contain")]
+        ],
+        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 5pt), stroke: 0.5pt + c-line)[
+          #align(center + horizon)[#image(resolve-logo("ke"), height: 9.5mm, fit: "contain")]
+        ],
+      )
 
-        #v(2.5mm)
+      #v(2.5mm)
+      #line(length: 106mm, stroke: 0.5pt + c-line)
+      #v(2.5mm)
 
+      // Section 3: Project Metadata Architecture (Hairline Rows)
+      #let credit-row(label-km, val-km) = block(
+        width: 100%,
+        inset: (y: 1.5mm),
+        stroke: (bottom: 0.5pt + c-line),
+      )[
         #grid(
-          columns: (1fr, 1fr),
-          gutter: 4mm,
-          block(
-            fill: colors.white,
-            radius: 3pt,
-            inset: (x: 4mm, y: 3.5mm),
-            stroke: 0.5pt + colors.line,
-          )[
-            #align(center + horizon)[
-              #image(resolve-logo("sdf"), height: 11mm, fit: "contain")
-            ]
+          columns: (32mm, 1fr),
+          gutter: 3mm,
+          [
+            #text(font: font-khmer-display, size: 7pt, weight: "bold", fill: c-sand-dark)[#label-km]
           ],
-          block(
-            fill: colors.white,
-            radius: 3pt,
-            inset: (x: 4mm, y: 3.5mm),
-            stroke: 0.5pt + colors.line,
-          )[
-            #align(center + horizon)[
-              #image(resolve-logo("ke"), height: 10mm, fit: "contain")
-            ]
+          [
+            #text(font: font-khmer-body, size: 7.5pt, weight: "bold", fill: c-teal)[#val-km]
           ],
         )
+      ]
 
-        #v(6mm)
+      #credit-row("គម្រោង", "គម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ (INNOLAB KAMPONG THOM)")
+      #credit-row("រដូវកាល", "រដូវកាលទី១ (២០២៥–២០២៦)")
+      #credit-row("ទីតាំងអនុវត្ត", "ខេត្តកំពង់ធំ ព្រះរាជាណាចក្រកម្ពុជា")
+      #credit-row("ដៃគូសហការ", "SDF និង KE រួមជាមួយរដ្ឋបាលខេត្តកំពង់ធំ")
 
-        // Metadata 2x2 Grid
-        #block(
-          width: 100%,
-          fill: colors.white,
-          radius: 3pt,
-          inset: (x: 5mm, y: 4.5mm),
-          stroke: 0.6pt + colors.line,
-        )[
-          #grid(
-            columns: (1fr, 1fr),
-            row-gutter: 4mm,
-            column-gutter: 4mm,
-            [
-              #text(font: fonts.display, size: 7.5pt, weight: 600, fill: colors.gray, tracking: 0.8pt)[PROJECT NAME]
-              #v(0.8mm)
-              #text(font: fonts.main, size: 9pt, weight: 700, fill: colors.primary)[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ]
-            ],
-            [
-              #text(font: fonts.display, size: 7.5pt, weight: 600, fill: colors.gray, tracking: 0.8pt)[SEASON]
-              #v(0.8mm)
-              #text(font: fonts.main, size: 9pt, weight: 700, fill: colors.primary)[រដូវកាលទី១ (Season 1)]
-            ],
-            [
-              #text(font: fonts.display, size: 7.5pt, weight: 600, fill: colors.gray, tracking: 0.8pt)[LOCATION]
-              #v(0.8mm)
-              #text(font: fonts.main, size: 9pt, weight: 700, fill: colors.text)[ខេត្តកំពង់ធំ (Kampong Thom)]
-            ],
-            [
-              #text(font: fonts.display, size: 7.5pt, weight: 600, fill: colors.gray, tracking: 0.8pt)[TIMEFRAME]
-              #v(0.8mm)
-              #text(font: fonts.main, size: 9pt, weight: 700, fill: colors.text)[២០២៥–២០២៦]
-            ],
-          )
-        ]
+      #v(3mm)
 
-        #v(5mm)
+      // Section 4: Acknowledgement Quote
+      #editorial-quote(
+        "គម្រោង InnoLab Kampong Thom សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅចំពោះស្ថាប័នដៃគូ រដ្ឋបាលខេត្តកំពង់ធំ គ្រូបណ្តុះបណ្តាល អ្នកប្រឹក្សាយោបល់ និងសហគ្រាសធុនតូច និងមធ្យម (SMEs) ទាំងអស់ ដែលបានចូលរួមចំណែកយ៉ាងសកម្មក្នុងការកសាងប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍ក្នុងមូលដ្ឋាន។",
+        author: text(font: font-khmer-body, size: 7pt, fill: c-muted)[ក្រុមការងារ InnoLab Kampong Thom · ASIP],
+        tag: "ការថ្លែងអំណរគុណ",
+        bar-color: c-sand,
+        text-color: c-teal,
+        text-size: 7.5pt,
+        bar-height: 20mm,
+        width: 106mm,
+      )
+    ])
 
-        // Acknowledgement / Quote Card
-        #quote-card(
-          [គម្រោង InnoLab Kampong Thom សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅចំពោះស្ថាប័នដៃគូ រដ្ឋបាលខេត្តកំពង់ធំ គ្រូបណ្តុះបណ្តាល អ្នកប្រឹក្សាយោបល់ និងសហគ្រាសធុនតូច និងមធ្យម (SMEs) ទាំងអស់ ដែលបានចូលរួមចំណែកយ៉ាងសកម្មក្នុងការកសាងប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍ក្នុងមូលដ្ឋាន។],
-          author: [InnoLab Kampong Thom Team · ASIP],
-          tag: [ACKNOWLEDGEMENT · ការថ្លែងអំណរគុណ],
-        )
-      ],
-    )
+    // Bottom Datum Line & Folio
+    #place(top + left, dx: 86mm, dy: 268mm, line(length: 106mm, stroke: 0.5pt + c-line))
+    #place(top + left, dx: 86mm, dy: 274mm, catalogue-folio(
+      "i",
+      header-right: "INNOLAB KAMPONG THOM · INSTITUTIONAL CREDITS",
+      side: "right",
+      width: 106mm,
+    ))
   ]
 }
 
@@ -1367,7 +1290,7 @@
   } else if num-str == "05" {
     "/assets/photos/04.jpg"
   } else if num-str == "06" {
-    "/assets/20SME/DSC00561.jpg"
+    "/assets/photos/03.jpg"
   } else if num-str == "07" {
     "/assets/photos/40.jpg"
   } else {
@@ -1384,7 +1307,7 @@
   let default-right-photo = if num-str == "01" {
     "/assets/photos/02.jpg"
   } else if num-str == "02" {
-    "/assets/photos/09.jpg"
+    "/assets/training/training1/HAK_-10.jpg"
   } else if num-str == "03" {
     "/assets/photos/15.jpg"
   } else if num-str == "04" {
@@ -1392,7 +1315,7 @@
   } else if num-str == "05" {
     "/assets/photos/12.jpg"
   } else if num-str == "06" {
-    "/assets/20SME/DSCF0825.jpg"
+    "/assets/photos/14.jpg"
   } else if num-str == "07" {
     "/assets/photos/39.jpg"
   } else {
@@ -1523,11 +1446,11 @@
           #line(length: 38mm, stroke: 2.5pt + colors.sand)
           #v(6mm)
           #block[
-            #set par(leading: 10.5pt)
+            #set par(leading: 13.5pt, justify: false)
             #text(font: fonts.main, size: 27pt, weight: 700, fill: colors.white)[#title]
           ]
           #if english != none [
-            #v(3mm)
+            #v(5mm)
             #text(font: fonts.display, size: 13pt, weight: 600, fill: colors.sage, tracking: 1.5pt)[#upper(english)]
           ]
         ]
@@ -1555,11 +1478,11 @@
           #line(length: 38mm, stroke: 2.5pt + colors.sand)
           #v(6mm)
           #block[
-            #set par(leading: 10.5pt)
+            #set par(leading: 13.5pt, justify: false)
             #text(font: fonts.main, size: 27pt, weight: 700, fill: colors.white)[#title]
           ]
           #if english != none [
-            #v(3mm)
+            #v(5mm)
             #text(font: fonts.display, size: 13pt, weight: 600, fill: colors.sage, tracking: 1.5pt)[#upper(english)]
           ]
         ]
@@ -1593,11 +1516,11 @@
               #line(length: 28mm, stroke: 2.5pt + colors.sand)
               #v(4mm)
               #block[
-                #set par(leading: 10.5pt)
+                #set par(leading: 12.5pt, justify: false)
                 #text(font: fonts.main, size: 25pt, weight: 700, fill: colors.white)[#title]
               ]
               #if english != none [
-                #v(2.5mm)
+                #v(4.5mm)
                 #text(font: fonts.display, size: 12.5pt, weight: 600, fill: colors.sage, tracking: 1.5pt)[#upper(english)]
               ]
             ],
@@ -1617,11 +1540,11 @@
           #line(length: 38mm, stroke: 2.5pt + colors.sand)
           #v(6mm)
           #block[
-            #set par(leading: 10.5pt)
+            #set par(leading: 13.5pt, justify: false)
             #text(font: fonts.main, size: 27pt, weight: 700, fill: colors.white)[#title]
           ]
           #if english != none [
-            #v(3mm)
+            #v(5mm)
             #text(font: fonts.display, size: 13pt, weight: 600, fill: colors.sage, tracking: 1.5pt)[#upper(english)]
           ]
         ]
@@ -1749,30 +1672,7 @@
 
     #v(2mm)
 
-    #grid(
-      columns: (1fr, auto),
-      gutter: 4mm,
-      align: (left, right),
-      block[
-        #set par(leading: 5.5pt, justify: false)
-        #text(
-          font: fonts.main,
-          size: 7.5pt,
-          fill: colors.gray,
-        )[
-          #actual-caption
-        ]
-      ],
-      text(
-        font: fonts.display,
-        size: 7.5pt,
-        fill: colors.gray,
-        weight: 600,
-        tracking: 1pt,
-      )[
-        INNOLAB ARCHIVE · 2025
-      ],
-    )
+    #editorial-caption(actual-caption, meta-tag: "INNOLAB ARCHIVE · 2025")
 
     #v(5mm)
 
@@ -1803,7 +1703,7 @@
           ],
         ),
         block[
-          #set par(leading: 6pt, justify: false)
+          #set par(leading: 7.5pt, justify: false)
           #text(
             font: fonts.main,
             size: 8.5pt,
@@ -1835,7 +1735,7 @@
   } else {
     v(7mm)
     block[
-      #set par(leading: 9pt, justify: false)
+      #set par(leading: 10.5pt, justify: false)
       #text(
         font: fonts.main,
         size: 18pt,
@@ -1846,7 +1746,7 @@
       ]
     ]
     if english != none [
-      #v(2mm)
+      #v(4.5mm)
       #text(
         font: fonts.display,
         size: 9.5pt,
@@ -1868,7 +1768,7 @@
   v(5mm)
 
   block[
-    #set par(leading: 7.5pt, justify: false)
+    #set par(leading: 8.5pt, justify: false)
     #text(
       font: fonts.main,
       size: 13pt,
@@ -1911,7 +1811,7 @@
     #v(2.5mm)
 
     #block[
-      #set par(leading: 6pt, justify: false)
+      #set par(leading: 7.5pt, justify: false)
       #text(
         font: fonts.main,
         size: 8.5pt,
@@ -1951,21 +1851,18 @@
 // CAPTION
 // ------------------------------------------------------------
 
-#let caption(number, body) = {
+#let caption(..args) = {
+  let pos = args.pos()
+  let body = if pos.len() > 1 {
+    pos.at(1)
+  } else if pos.len() == 1 {
+    pos.at(0)
+  } else {
+    ""
+  }
   v(2mm)
-
-  block[
-    #set par(leading: 5.5pt, justify: false)
-    #text(
-      font: fonts.main,
-      size: 8pt,
-      fill: colors.gray,
-    )[
-      *រូបភាពទី #number* — #body
-    ]
-  ]
-
-  v(5mm)
+  editorial-caption(body)
+  v(3mm)
 }
 
 
@@ -1987,7 +1884,7 @@
     inset: (x: 6mm, y: 5mm),
   )[
     #block[
-      #set par(leading: 6.5pt, justify: false)
+      #set par(leading: 7.5pt, justify: false)
       #text(
         font: fonts.display,
         size: 10.5pt,
@@ -2001,7 +1898,7 @@
     #v(2.5mm)
 
     #block[
-      #set par(leading: 6.8pt, justify: false)
+      #set par(leading: 7.8pt, justify: false)
       #text(
         font: fonts.main,
         size: 9.5pt,
@@ -2170,7 +2067,7 @@
       #v(2.5mm)
 
       #block[
-        #set par(leading: 6.2pt, justify: false)
+        #set par(leading: 8pt, justify: false)
         #text(
           font: fonts.main,
           size: 9.5pt,
@@ -2185,7 +2082,7 @@
         v(2mm)
 
         block[
-          #set par(leading: 5.5pt, justify: false)
+          #set par(leading: 7.2pt, justify: false)
           #text(
             font: fonts.main,
             size: 7.8pt,

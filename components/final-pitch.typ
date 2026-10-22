@@ -40,7 +40,7 @@
       #v(2.5mm)
 
       #block[
-        #set par(leading: 6.5pt, justify: false)
+        #set par(leading: 8pt, justify: false)
         #text(
           font: fonts.display,
           size: 10pt,
@@ -55,7 +55,7 @@
         v(2mm)
 
         block[
-          #set par(leading: 5.5pt, justify: false)
+          #set par(leading: 7.2pt, justify: false)
           #text(
             font: fonts.main,
             size: 7.8pt,
@@ -135,7 +135,7 @@
       v(2.5mm)
 
       block[
-        #set par(leading: 6.2pt, justify: false)
+        #set par(leading: 7.5pt, justify: false)
         #text(
           font: fonts.main,
           size: 8.5pt,
@@ -182,7 +182,7 @@
     #v(2mm)
 
     #block[
-      #set par(leading: 6.8pt, justify: false)
+      #set par(leading: 8.5pt, justify: false)
       #text(
         font: fonts.main,
         size: 11pt,
@@ -196,7 +196,7 @@
     #v(2mm)
 
     #block[
-      #set par(leading: 6.2pt, justify: false)
+      #set par(leading: 7.5pt, justify: false)
       #text(
         font: fonts.main,
         size: 8.5pt,

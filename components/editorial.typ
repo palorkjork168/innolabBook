@@ -3,6 +3,8 @@
 // REUSABLE EDITORIAL & PHOTO-LED COMPONENTS
 // ============================================================
 
+#import "catalogue.typ": editorial-caption
+
 #let colors = (
   primary: rgb("#114554"),
   sage: rgb("#DDE8E2"),
@@ -72,27 +74,8 @@
       ]
     ]
     #if caption != none [
-      #v(2mm)
-      #grid(
-        columns: (1fr, auto),
-        gutter: 4mm,
-        align: (left, right),
-        text(
-          font: fonts.main,
-          size: 7.5pt,
-          fill: colors.gray,
-        )[
-          #caption
-        ],
-        text(
-          font: fonts.display,
-          size: 7.5pt,
-          fill: colors.gray,
-          tracking: 1pt,
-        )[
-          INNOLAB ARCHIVE · 2025
-        ],
-      )
+      #v(2.5mm)
+      #editorial-caption(caption)
     ]
   ]
 }
@@ -154,14 +137,8 @@
       ],
     )
     #if caption != none [
-      #v(2mm)
-      #grid(
-        columns: (1fr, auto),
-        gutter: 4mm,
-        align: (left, right),
-        text(font: fonts.main, size: 7.5pt, fill: colors.gray)[#caption],
-        text(font: fonts.display, size: 7.5pt, fill: colors.gray, tracking: 1pt)[INNOLAB ARCHIVE · 2025],
-      )
+      #v(2.5mm)
+      #editorial-caption(caption)
     ]
   ]
 }
@@ -231,13 +208,7 @@
     )
     #if caption != none [
       #v(2.5mm)
-      #grid(
-        columns: (1fr, auto),
-        gutter: 4mm,
-        align: (left, right),
-        text(font: fonts.main, size: 7.5pt, fill: colors.gray)[#caption],
-        text(font: fonts.display, size: 7.5pt, fill: colors.gray, tracking: 1pt)[INNOLAB DOCUMENTARY ARCHIVE],
-      )
+      #editorial-caption(caption)
     ]
   ]
 }
@@ -288,16 +259,19 @@
             ]
             #v(0.8mm)
           ]
-          #text(
-            font: fonts.main,
-            size: 15pt,
-            weight: 700,
-            fill: colors.white,
-          )[
-            #title
+          #block[
+            #set par(leading: 8.5pt, justify: false)
+            #text(
+              font: fonts.main,
+              size: 15pt,
+              weight: 700,
+              fill: colors.white,
+            )[
+              #title
+            ]
           ]
           #if english != none [
-            #v(1mm)
+            #v(3.5mm)
             #text(
               font: fonts.display,
               size: 8.5pt,
@@ -336,16 +310,19 @@
             ]
             #v(1mm)
           ]
-          #text(
-            font: fonts.main,
-            size: 16pt,
-            weight: 700,
-            fill: colors.white,
-          )[
-            #title
+          #block[
+            #set par(leading: 9pt, justify: false)
+            #text(
+              font: fonts.main,
+              size: 16pt,
+              weight: 700,
+              fill: colors.white,
+            )[
+              #title
+            ]
           ]
           #if english != none [
-            #v(1.2mm)
+            #v(3.5mm)
             #text(
               font: fonts.display,
               size: 9pt,
@@ -458,16 +435,19 @@
             ]
             #v(0.8mm)
           ]
-          #text(
-            font: fonts.main,
-            size: 15pt,
-            weight: 700,
-            fill: colors.white,
-          )[
-            #title
+          #block[
+            #set par(leading: 8.5pt, justify: false)
+            #text(
+              font: fonts.main,
+              size: 15pt,
+              weight: 700,
+              fill: colors.white,
+            )[
+              #title
+            ]
           ]
           #if english != none [
-            #v(1mm)
+            #v(3.5mm)
             #text(
               font: fonts.display,
               size: 8.5pt,
@@ -744,13 +724,7 @@
     ]
     #if caption != none [
       #v(2.5mm)
-      #grid(
-        columns: (1fr, auto),
-        gutter: 4mm,
-        align: (left, right),
-        text(font: fonts.main, size: 7.5pt, fill: colors.gray)[#caption],
-        text(font: fonts.display, size: 7.5pt, fill: colors.gray, tracking: 0.8pt)[INNOLAB ARCHIVE],
-      )
+      #editorial-caption(caption)
     ]
   ]
 }

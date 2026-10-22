@@ -1,1080 +1,610 @@
 #import "../styles.typ": *
-#import "../components/charts.typ": *
-#import "../components/final-pitch.typ": *
-#import "../components/case-study.typ": *
-#import "../components/charts.typ": *
-#import "../components/final-pitch.typ": pitch-stage
+#import "../components/catalogue.typ": *
 
+// ==============================================================================
+// ជំពូកទី៨ ៖ ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់ (ទស្សនវិស័យពង្រីកថ្នាក់ជាតិ)
+// EDITORIAL CATALOGUE ARCHITECTURE (5 FACING SPREADS · PAGES 101–110)
+// ==============================================================================
 
-// ============================================================
-// CHAPTER 08
-// FUTURE DIRECTION & RECOMMENDATIONS
-// SOURCE-PRESERVING VERSION
-// ============================================================
+#label("ch-08")
 
-#chapter-title(
-  "08",
-  "ទិសដៅអនាគត និងអនុសាសន៍",
-  english: "FUTURE DIRECTION & RECOMMENDATIONS",
-  intro: [
-    ជំពូកនេះ
-    បែងចែកជាពីរផ្នែកច្បាស់លាស់៖
-
-    ផ្នែកទីមួយ
-    បង្ហាញផែនការ
-    និងទិសដៅបន្ត
-    ដែលបានកត់ត្រា
-    ក្នុងឯកសារគម្រោង។
-
-    ផ្នែកទីពីរ
-    បង្ហាញតម្រូវការ
-    ដែល SMEs
-    បានរាយការណ៍
-    និងអនុសាសន៍
-    សម្រាប់ការកែលម្អ
-    កម្មវិធី
-    នៅរដូវកាលបន្ទាប់។
-  ],
-)
-
-
-// ============================================================
-// 8.1 SOURCE-RECORDED FUTURE DIRECTION
-// ============================================================
-
-#section-title(
-  "៨.១ ផែនការបន្តដែលបានកត់ត្រាក្នុងឯកសារគម្រោង",
-  english: "SOURCE-RECORDED FUTURE PHASES",
-  tag: "STRATEGIC ROADMAP",
-  variant: "right",
-)
-
-ឯកសារប្រភព
-បានកំណត់
-ផែនការ
-សម្រាប់ការបន្ត
-InnoLab Kampong Thom
-ក្រោយរដូវកាលទី១។
-
-Angkor Social Innovation Park
-(ASIP)
-គ្រោងរៀបចំ
-រដូវកាលទី២
-ទី៣
-និងទី៤
-ជាបន្តបន្ទាប់។ :contentReference[oaicite:2]{index=2}
-
-#v(8mm)
-
-#let group-stage-height = 46mm
-
-#grid(
-  columns: (1fr, auto, 1fr, auto, 1fr, auto, 1fr),
-  gutter: 3mm,
-  align: horizon,
-
-  pitch-stage(
-    "S1",
-    "SEASON 1",
-    [
-      រដូវកាលទី១
-      បានបញ្ចប់
-      ជាមួយ SMEs
-      ចុងក្រោយ ២០។
-    ],
-    height: group-stage-height,
-  ),
-
-  text(
-    font: fonts.display,
-    size: 18pt,
-    fill: colors.sand,
-  )[
-    →
-  ],
-
-  pitch-stage(
-    "S2",
-    "SEASON 2",
-    [
-      កំពុងបន្ត
-      ដំណាក់កាល
-      ជ្រើសរើស។
-    ],
-    height: group-stage-height,
-  ),
-
-  text(
-    font: fonts.display,
-    size: 18pt,
-    fill: colors.sand,
-  )[
-    →
-  ],
-
-  pitch-stage(
-    "S3",
-    "SEASON 3",
-    [
-      ត្រូវបាន
-      រាយក្នុង
-      ផែនការបន្ត។
-    ],
-    height: group-stage-height,
-  ),
-
-  text(
-    font: fonts.display,
-    size: 18pt,
-    fill: colors.sand,
-  )[
-    →
-  ],
-
-  pitch-stage(
-    "S4",
-    "SEASON 4",
-    [
-      ត្រូវបាន
-      រាយក្នុង
-      ផែនការបន្ត។
-    ],
-    height: group-stage-height,
-  ),
-)
-
-
-// ============================================================
-// 8.2 TARGET TO 2028
-// ============================================================
-
- 
-#section-title("៨.២ គោលដៅដែលបានកត់ត្រារហូតដល់ឆ្នាំ២០២៨")
-
-ឯកសារគម្រោង
-បានយោង
-ទៅកាន់
-ប្រសាសន៍
-របស់ឯកឧត្តម
-ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ
-នៅក្នុងកម្មវិធី
-សម្ពោធជាផ្លូវការ
-នាខែកក្កដា ឆ្នាំ២០២៥
-ដែលបានលើកឡើងថា
-គម្រោង
-នឹងបន្ត
-រហូតដល់
-អនុវត្តការងារ
-ជាមួយសហគ្រិន
-ចំនួន ១០០ រូប
-ត្រឹមឆ្នាំ២០២៨។ 
-
-#v(7mm)
-
-#block(
-  width: 100%,
-  fill: colors.sage,
-  radius: 2mm,
-  inset: 8mm,
+// ==============================================================================
+// SPREAD 1 · PAGE 101 (VERSO / LEFT): CHAPTER OPENER (DEEP TEAL BLOCK)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-teal,
+  header: none,
+  footer: none,
 )[
-  #text(
-    font: fonts.display,
-    size: 8pt,
-    weight: 600,
-    fill: colors.primary,
-  )[
-    SOURCE-RECORDED TARGET
-  ]
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-sand,
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · រដូវកាលទី១])
 
-  #v(3mm)
+  // Archival Identification Tag
+  #place(top + left, dx: 24mm, dy: 26mm, text(
+    font: font-khmer-display,
+    size: 6.5pt,
+    fill: c-white.transparentize(30%),
+  )[ឯកសារផ្លូវការ · ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់])
 
-  #text(
-    font: fonts.display,
-    size: 44pt,
-    weight: 700,
-    fill: colors.primary,
-  )[
-    100
-  ]
+  // Architectural Geometric Frame behind photo
+  #geom-frame(24mm, 36mm, 162mm, 146mm, stroke-color: c-sand, offset-x: -5mm, offset-y: -5mm)
 
-  #v(1mm)
+  // Future Strategic Photograph
+  #place(top + left, dx: 24mm, dy: 36mm, image("../assets/photos/01.jpg", width: 162mm, height: 146mm, fit: "cover"))
 
-  #text(
-    font: fonts.main,
-    size: 13pt,
-    weight: 700,
-    fill: colors.text,
-  )[
-    សហគ្រិន ត្រឹមឆ្នាំ២០២៨
-  ]
+  // Enormous Sculptural Numeral 08 overlapping photo bottom edge
+  #place(top + left, dx: 18mm, dy: 166mm, display-number("០៨", size: 100pt, fill: c-sand, weight: "regular"))
+
+  // Chapter Identity & Title
+  #place(top + left, dx: 24mm, dy: 218mm, stack(
+    spacing: 5mm,
+    text(font: font-khmer-display, size: 22pt, fill: c-paper)[ជំពូកទី ៨ ៖\ ៧. ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់],
+    text(
+      font: font-khmer-display,
+      size: 9.5pt,
+      weight: "bold",
+      fill: c-sand-light,
+    )[CHAPTER 6: Strategic Horizon & National Scalability Plan],
+  ))
+
+  // Figure Caption for Chapter Opener Photo
+  #place(top + left, dx: 86mm, dy: 194mm, editorial-caption(
+    "ទិដ្ឋភាពយុទ្ធសាស្ត្រ និងការរៀបចំផែនការពង្រីកវិសាលភាពគម្រោងទៅកាន់ទូទាំងប្រទេស",
+    meta-tag: "យុទ្ធសាស្ត្របន្ទាប់",
+    text-color: c-sand-light,
+    width: 100mm,
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-teal.lighten(30%)))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    101,
+    header-left: "ជំពូកទី៨ ៖ ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់",
+    side: "left",
+    folio-color: c-sand,
+    color: c-sand-light,
+  ))
 ]
 
-#v(7mm)
 
-#callout(
-  "របៀបដែលរបាយការណ៍នេះប្រើគោលដៅនេះ",
-  [
-    លេខ ១០០
-    និងឆ្នាំ២០២៨
-    ត្រូវបានបង្ហាញ
-    ជា “ផែនការ/គោលដៅ
-    ដែលឯកសារគម្រោង
-    បានកត់ត្រា”
-    មិនមែន
-    ជាការអះអាង
-    ដោយឯករាជ្យ
-    អំពីគោលនយោបាយ
-    បច្ចុប្បន្នទេ។
-  ],
-)
-
-
-// ============================================================
-// 8.3 CONTINUED SUPPORT
-// ============================================================
-
-#section-title("៨.៣ កិច្ចសហការ និងការគាំទ្របន្ត")
-
-ឯកសារប្រភព
-រាយការណ៍ថា
-ការអនុវត្ត
-រដូវកាលបន្ត
-នឹងមាន
-ការគាំទ្របន្ថែម
-ពីមូលនិធិ
-អភិវឌ្ឍន៍ជំនាញ
-(SDF)
-សហគ្រិនខ្មែរ
-(Khmer Enterprise — KE)
-និងស្ថាប័ន
-ពាក់ព័ន្ធនានា។ :contentReference[oaicite:4]{index=4}
-
-#v(7mm)
-
-#let group-callout-height = 36mm
-
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  gutter: 5mm,
-
-  callout(
-    "SDF",
-    [
-      ការគាំទ្រ
-      ផ្នែកធនធាន
-      និងការអភិវឌ្ឍ
-      ជំនាញ
-      តាមការកត់ត្រា
-      ក្នុងឯកសារ។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "Khmer Enterprise",
-    [
-      កិច្ចសហការ
-      និងការគាំទ្រ
-      ដល់
-      ប្រព័ន្ធអេកូឡូស៊ី
-      សហគ្រិន។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "Relevant Institutions",
-    [
-      កិច្ចសហការ
-      ជាមួយ
-      ស្ថាប័ន
-      ពាក់ព័ន្ធ
-      ដើម្បីគាំទ្រ
-      ការអនុវត្តបន្ត។
-    ],
-    height: group-callout-height,
-  ),
-)
-
-
-// ============================================================
-// 8.4 SEASON 2 SELECTION STATUS
-// ============================================================
-
-
-
-#section-title("៨.៤ ស្ថានភាពជ្រើសរើសរដូវកាលទី២")
-
-ឯកសារប្រភព
-បញ្ជាក់ថា
-ការជ្រើសរើស
-បេក្ខជន
-សម្រាប់
-InnoLab Kampong Thom
-រដូវកាលទី២
-កំពុងបន្ត។
-
-នៅពេល
-ឯកសារនោះ
-ត្រូវបានរៀបចំ
-មានសហគ្រាស
-បានដាក់ពាក្យ
-ចំនួន ១១០។ :contentReference[oaicite:5]{index=5}
-
-#v(7mm)
-
-#let group-stat-height = 28mm
-
-#grid(
-  columns: (1fr, auto, 1fr),
-  gutter: 6mm,
-  align: horizon,
-
-  stat(
-    "110",
-    "ពាក្យសុំដែលបានកត់ត្រា",
-    height: group-stat-height,
-  ),
-
-  text(
-    font: fonts.display,
-    size: 26pt,
-    weight: 700,
-    fill: colors.sand,
-  )[
-    →
-  ],
-
-  stat(
-    "30",
-    "បេក្ខជនចុងក្រោយដែលគ្រោងជ្រើសរើស",
-    height: group-stat-height,
-  ),
-)
-
-#v(7mm)
-
-#callout(
-  "ចំណាំសំខាន់",
-  [
-    ចំនួន ៣០
-    គឺជា
-    “ចំនួនបេក្ខជន
-    ចុងក្រោយ
-    ដែលគ្រោង
-    នឹងជ្រើសរើស”
-    មិនមែន
-    មានន័យថា
-    បេក្ខជនទាំង ៣០
-    ត្រូវបានជ្រើសរើស
-    រួចហើយទេ។
-  ],
-)
-
-
-// ============================================================
-// 8.5 SEASON 2 OUTREACH
-// ============================================================
-#pagebreak()
-#section-title("៨.៥ សកម្មភាពផ្សព្វផ្សាយសម្រាប់រដូវកាលទី២")
-
-ក្នុងដំណាក់កាល
-ជ្រើសរើស
-ឯកសារប្រភព
-រាយការណ៍
-សកម្មភាព
-ផ្សព្វផ្សាយ
-ចំនួន ២ លើក។ 
-
-#v(7mm)
-
-#timeline-item(
-  "01",
-  "30 MAY",
-  "វិទ្យាស្ថានពហុបច្ចេកទេស ខេត្តកំពង់ធំ",
-  [
-    សកម្មភាព
-    ផ្សព្វផ្សាយ
-    អំពីគម្រោង
-    ដោយមាន
-    ការចូលរួម
-    ពីឯកឧត្តម
-    ងួន រាសី
-    និងមន្ទីរ
-    ខេត្តពាក់ព័ន្ធ។
-  ],
-)
-
-#timeline-item(
-  "02",
-  "31 MAY",
-  "សាលាស្រុកស្ទោង",
-  [
-    សកម្មភាព
-    ផ្សព្វផ្សាយ
-    ដោយមាន
-    ការចូលរួម
-    ពីអភិបាលស្រុក
-    និងមន្ត្រី
-    ពាក់ព័ន្ធ។
-  ],
-)
-
-#v(7mm)
-
-#callout(
-  "មិនបន្ថែមឆ្នាំដែលប្រភពមិនបញ្ជាក់",
-  [
-    ឯកសារប្រភព
-    បង្ហាញ
-    ថ្ងៃទី ៣០
-    និងថ្ងៃទី ៣១
-    ខែឧសភា
-    ប៉ុន្តែ
-    snippet ប្រភព
-    ដែលបានផ្ទៀងផ្ទាត់
-    មិនបង្ហាញ
-    ឆ្នាំសម្រាប់
-    សកម្មភាពទាំងពីរនេះ។
-
-    ដូច្នេះ
-    របាយការណ៍នេះ
-    មិនបន្ថែមឆ្នាំ
-    ដោយសន្មត់ទេ។
-  ],
-)
-
-#v(8mm)
-
-#image-placeholder(
-  "43",
-  description: "Suggested: Season 2 outreach at Kampong Thom Polytechnic Institute or Stoung District Hall",
-  ratio: "16:9",
-  height: 70mm,
-)
-
-#caption(
-  "៤៣",
-  "សកម្មភាពផ្សព្វផ្សាយ និងជ្រើសរើសបេក្ខជនសម្រាប់រដូវកាលទី២",
-)
-
-
-// ============================================================
-// 8.6 SME-REPORTED FUTURE SUPPORT NEEDS
-// ============================================================
-
-#pagebreak()
-
-#section-title("៨.៦ តម្រូវការគាំទ្រដែល SMEs បានរាយការណ៍")
-
-ក្រៅពី
-ផែនការបន្ត
-របស់គម្រោង
-ទិន្នន័យវាយតម្លៃ
-ក៏បង្ហាញ
-ថា SMEs
-នៅតែត្រូវការ
-ការគាំទ្រ
-បន្ថែម
-ដើម្បីបន្ត
-នវានុវត្តន៍។
-
-#v(7mm)
-
-#percent-bar(
-  "ការបណ្តុះបណ្តាល និងសិក្ខាសាលាបន្ថែម",
-  "80%", 80%,
-)
-
-#percent-bar(
-  "ឱកាសបង្កើតបណ្តាញ",
-  "66.7%", 66.7%,
-)
-
-#percent-bar(
-  "ជំនួយហិរញ្ញវត្ថុ",
-  "53.3%", 53.3%,
-)
-
-#percent-bar(
-  "ការទទួលបានបច្ចេកវិទ្យាថ្មី",
-  "33.3%", 33.3%,
-)
-
-#percent-bar(
-  "ការគាំទ្រផ្នែកគោលនយោបាយ / ការតស៊ូមតិ",
-  "26.7%", 26.7%,
-)
-
-#v(7mm)
-
-តម្រូវការ
-ដែលត្រូវបាន
-ជ្រើសរើស
-ច្រើនជាងគេ
-គឺការបណ្តុះបណ្តាល
-បន្ថែម
-80%។
-
-បន្ទាប់មក
-គឺ
-Networking
-66.7%
-និង
-ជំនួយហិរញ្ញវត្ថុ
-53.3%។  
-
-#pagebreak()
-// ============================================================
-// 8.7 PROGRAM DESIGN RECOMMENDATIONS
-// ============================================================
-
-#section-title("៨.៧ អនុសាសន៍សម្រាប់ការរចនាកម្មវិធី")
-
-អនុសាសន៍
-ក្នុងផ្នែកនេះ
-គឺជា
-ការបកស្រាយ
-ពីលទ្ធផល
-រដូវកាលទី១
-និងតម្រូវការ
-ដែល SMEs
-បានរាយការណ៍។
-
-វាមិនមែន
-ជាការបញ្ជាក់
-ពីសកម្មភាព
-ដែលត្រូវបានអនុម័ត
-រួចហើយ
-ដោយដៃគូ
-ឬស្ថាប័នណាមួយទេ។
-
-#v(7mm)
-
-#challenge-card(
-  "01",
-  "បន្តការអភិវឌ្ឍសមត្ថភាព",
-  [
-    ដោយសារ
-    80%
-    នៃអ្នកឆ្លើយ
-    ស្នើ
-    ការបណ្តុះបណ្តាល
-    បន្ថែម
-    រដូវកាលបន្ទាប់
-    អាចផ្តោត
-    លើមាតិកា
-    ជាក់ស្តែង
-    និងការអនុវត្ត
-    ក្នុងអាជីវកម្ម
-    បន្ថែមទៀត។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "02",
-  "ពង្រឹងបណ្តាញអាជីវកម្ម",
-  [
-    តម្រូវការ
-    Networking
-    66.7%
-    បង្ហាញ
-    ថាការភ្ជាប់
-    SMEs
-    ទៅកាន់
-    ដៃគូ
-    ទីផ្សារ
-    អ្នកផ្គត់ផ្គង់
-    និងអ្នកជំនាញ
-    គួរបន្ត
-    ជាសមាសភាគ
-    សំខាន់។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "03",
-  "កែលម្អការចូលដល់ហិរញ្ញវត្ថុ",
-  [
-    53.3%
-    បានរាយការណ៍
-    តម្រូវការ
-    ជំនួយហិរញ្ញវត្ថុ។
-
-    កម្មវិធី
-    អាចបង្កើន
-    ការតភ្ជាប់
-    ទៅកាន់
-    ឱកាសហិរញ្ញប្បទាន
-    វិនិយោគ
-    ឬប្រព័ន្ធ
-    គាំទ្រសមស្រប។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "04",
-  "បច្ចេកវិទ្យា និងឌីជីថល",
-  [
-    ទិន្នន័យ
-    រដូវកាលទី១
-    បង្ហាញថា
-    Digital Marketing
-    មិនមាន
-    ការផ្លាស់ប្តូរ
-    គួរឱ្យកត់សម្គាល់។
-
-    ជាមួយនឹង
-    33.3%
-    ដែលស្នើ
-    ការចូលដល់
-    បច្ចេកវិទ្យាថ្មី
-    ផ្នែកនេះ
-    អាចត្រូវការ
-    ការផ្តោត
-    បន្ថែម។
-  ],
-)
-
-
-// ============================================================
-// 8.8 FOLLOW-UP RECOMMENDATION
-// ============================================================
-
-#pagebreak()
-
-#section-title("៨.៨ អនុសាសន៍សម្រាប់ការតាមដានក្រោយកម្មវិធី")
-
-ដើម្បីយល់
-ពីការរក្សា
-និងពង្រីក
-នវានុវត្តន៍
-ក្រោយកម្មវិធី
-អាចពិចារណា
-ប្រព័ន្ធតាមដាន
-ក្រោយបញ្ចប់
-រដូវកាល។
-
-#v(7mm)
-
-#let group-step-height = 28mm
-
-#grid(
-  columns: (1fr, auto, 1fr, auto, 1fr),
-  gutter: 4mm,
-  align: horizon,
-
-  flow-step(
-    "3 MONTHS",
-    [
-      ពិនិត្យ
-      ការអនុវត្ត
-      ដំបូង
-    ],
-    height: group-step-height,
-  ),
-
-  text(
-    font: fonts.display,
+// ==============================================================================
+// SPREAD 1 · PAGE 102 (RECTO / RIGHT): STRATEGIC EXPANSION OVERVIEW (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ៧. ផែនការបន្ទាប់])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "៧. ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់",
+    preset: "lg",
     size: 18pt,
-    fill: colors.sand,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Narrative Stack
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 5mm,
+    fill: c-white,
+    stroke: (left: 3.5pt + c-teal, rest: 0.5pt + c-line),
+    radius: 2pt,
   )[
-    →
-  ],
+    #text(font: font-khmer-body, size: 9pt, fill: c-charcoal)[
+      ដោយគម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំរដូវកាលទី១ នេះទទួលបានសមិទ្ធផលល្អ និងផ្ដល់ជាអត្ថប្រយោជន៍បានយ៉ាងច្រើនដល់ខេត្តកំពង់ធំ និងសហគ្រាសក្នុងខេត្តកំពង់ធំ ផងដែរនោះ ក្រុមហ៊ុន អង្គរ  សូសល អ៊ិននើវេសិន ផាក ឯ.ក (ASIP) គ្រោងនឹងរៀបចំនូវគម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំរដូវកាលទី២ ទី៣ និងទី៤ ដោយយោងតាមប្រសាសន៍របស់ ឯកឧត្តមឧបនាយករដ្ឋមន្រ្ដីប្រចាំការ ដែលបានលើកឡើងថា នៅក្នុងកម្មវិធីសម្ពោធជាផ្លូវការនាថ្ងៃទី ខែកក្កដា ឆ្នាំ២០២៥ ថាគម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ នឹងរៀបចំជាបន្តបន្ទាប់រហូតសម្រេចអនុវត្តជាមួយសហគ្រិនចំនួន ១០០ រូប ត្រឹមឆ្នាំ២០២៨ នេះ ដោយមានការបន្តឧបត្ថម្ភថវិការបន្ថែមពី មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF), សហគ្រិនខ្មែរ  (KE) និង ស្ថាប័នពាក់ព័ន្ធនានា។ គួរបញ្ជាក់ថា គម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំរដូវកាលទី២ កំពុងតែបន្តជ្រើសរើសបេក្ខជនចូលរួមប្រកួត ដោយមកដល់ពេលនេះមានសហគ្រាសបានដាក់ពាក្យរហូតដល់១១០ រូប ដែលនឹងត្រូវជ្រើសរើសក្នុងវគ្គបន្តបន្ទាប់តរហូតទទួលបានបេក្ខជន ចំនួន៣០រូបចុងក្រោយ។
+    ]
+  ])
 
-  flow-step(
-    "6 MONTHS",
-    [
-      ពិនិត្យ
-      វឌ្ឍនភាព
-      និងបញ្ហា
-    ],
-    height: group-step-height,
-  ),
-
-  text(
-    font: fonts.display,
-    size: 18pt,
-    fill: colors.sand,
-  )[
-    →
-  ],
-
-  flow-step(
-    "12 MONTHS",
-    [
-      ពិនិត្យ
-      និរន្តរភាព
-      និងលទ្ធផល
-    ],
-    height: group-step-height,
-  ),
-)
-
-#v(7mm)
-
-#callout(
-  "នេះជាអនុសាសន៍ មិនមែនផែនការដែលប្រភពបានអនុម័ត",
-  [
-    ការតាមដាន
-    ៣ / ៦ / ១២ ខែ
-    គឺជាអនុសាសន៍
-    សម្រាប់ការរចនា
-    ប្រព័ន្ធវាយតម្លៃ
-    នាពេលអនាគត។
-
-    ឯកសារប្រភព
-    ដែលបានផ្ទៀងផ្ទាត់
-    មិនបានកំណត់
-    កាលវិភាគ
-    ៣ / ៦ / ១២ ខែ
-    ជាផែនការផ្លូវការ
-    របស់គម្រោងទេ។
-  ],
-)
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    102,
+    header-right: "៧. ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់",
+    side: "right",
+  ))
+]
 
 
-// ============================================================
-// 8.9 WHAT SHOULD BE TRACKED
-// ============================================================
+// ==============================================================================
+// SPREAD 2 · PAGE 103 (VERSO / LEFT): PROVINCIAL OUTREACH & STOUNG (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · សកម្មភាពផ្សព្វផ្សាយ])
 
-#section-title("៨.៩ សូចនាករដែលអាចតាមដានបន្ត")
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "សកម្មភាពផ្សព្វផ្សាយគម្រោងក្នុងខេត្ត និងស្រុកស្ទោង",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
 
-#let group-callout-height = 36mm
-
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 5mm,
-
-  callout(
-    "ការបន្តប្រើនវានុវត្តន៍",
-    [
-      តើ Prototype
-      ឬផលិតផលថ្មី
-      នៅតែ
-      ត្រូវបានប្រើ
-      ឬលក់
-      បន្ទាប់ពីកម្មវិធី
-      ឬអត់។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "ការពង្រីកទីផ្សារ",
-    [
-      ការចូល
-      ទីផ្សារថ្មី
-      ចំនួនអតិថិជន
-      និងបណ្តាញ
-      ចែកចាយ។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "ការកែលម្អប្រតិបត្តិការ",
-    [
-      ការកាត់បន្ថយ
-      ថ្លៃដើម
-      ការបង្កើន
-      ផលិតភាព
-      និងការប្រើ
-      ស្តង់ដារ
-      ផលិតកម្ម។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "ការងារ និងជំនាញ",
-    [
-      ការបង្កើត
-      ការងារ
-      ការអភិវឌ្ឍ
-      ជំនាញបុគ្គលិក
-      និងការរក្សា
-      បុគ្គលិកមានជំនាញ។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "បណ្តាញ និងដៃគូ",
-    [
-      ចំនួន
-      និងគុណភាព
-      នៃដៃគូ
-      អាជីវកម្ម
-      ដែលបន្ត
-      ក្រោយកម្មវិធី។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "ហិរញ្ញវត្ថុ",
-    [
-      ការចូលដល់
-      ទុន
-      វិនិយោគ
-      ឬឥណទាន
-      សម្រាប់
-      ការពង្រីក
-      នវានុវត្តន៍។
-    ],
-    height: group-callout-height,
-  ),
-)
-
-
-// ============================================================
-// 8.10 LINKING SEASON 1 LESSONS TO FUTURE COHORTS
-// ============================================================
-
-#pagebreak()
-
-#section-title("៨.១០ ពីមេរៀនរដូវកាលទី១ ទៅរដូវកាលបន្ទាប់")
-
-រដូវកាលទី១
-ផ្តល់
-ទាំងលទ្ធផល
-និងមេរៀន
-ដែលអាច
-ប្រើសម្រាប់
-ការកែលម្អ
-កម្មវិធីបន្ត។
-
-#v(7mm)
-
-#let group-callout-height = 27mm
-
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 5mm,
-
-  callout(
-    "Recruitment",
-    [
-      បង្កើន
-      ការគាំទ្រ
-      SMEs
-      ដែលមាន
-      កម្រិតឌីជីថល
-      ទាប
-      ក្នុងការដាក់ពាក្យ
-      និងទំនាក់ទំនង។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "Training",
-    [
-      បន្ត
-      វិធីសាស្ត្រ
-      Learn → Test → Apply
-      និងបន្ថែម
-      ពេលវេលា
-      សម្រាប់
-      ការអនុវត្ត។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "Mentoring",
-    [
-      រក្សា
-      Mentoring
-      តាមបរិបទ
-      របស់
-      សហគ្រាស
-      នីមួយៗ
-      ជំនួស
-      វិធីសាស្ត្រ
-      ដូចគ្នាទាំងអស់។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "Digital",
-    [
-      បន្ថែម
-      Online Branding
-      Digital Marketing
-      និង
-      Digital Customer Engagement។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "Finance",
-    [
-      បង្កើត
-      ផ្លូវភ្ជាប់
-      ទៅកាន់
-      ហិរញ្ញប្បទាន
-      សម្រាប់
-      Prototype
-      និងការពង្រីក
-      ផលិតកម្ម។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "Monitoring",
-    [
-      រក្សា
-      ទិន្នន័យ
-      Base / Endline
-      និងចំនួន
-      អ្នកឆ្លើយ
-      ឱ្យច្បាស់
-      ដើម្បីបង្កើន
-      គុណភាព
-      ការវាយតម្លៃ។
-    ],
-    height: group-callout-height,
-  ),
-)
-
-
-// ============================================================
-// 8.11 FUTURE DIRECTION SUMMARY
-// ============================================================
-
-#section-title("៨.១១ រូបភាពសង្ខេបនៃទិសដៅបន្ទាប់")
-
-#let group-stat-height = 34mm
-
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  gutter: 5mm,
-
-  stat(
-    "S2–S4",
-    "រដូវកាលបន្តដែលឯកសារប្រភពបានរាយ",
-    height: group-stat-height,
-  ),
-
-  stat(
-    "110",
-    "ពាក្យសុំ Season 2 ដែលបានកត់ត្រា",
-    height: group-stat-height,
-  ),
-
-  stat(
-    "30",
-    "បេក្ខជនចុងក្រោយដែលគ្រោងជ្រើសរើស",
-    height: group-stat-height,
-  ),
-
-  stat(
-    "100",
-    "គោលដៅសហគ្រិនត្រឹមឆ្នាំ២០២៨ ក្នុងឯកសារគម្រោង",
-    height: group-stat-height,
-  ),
-
-  stat(
-    "80%",
-    "ស្នើការបណ្តុះបណ្តាលបន្ថែម",
-    height: group-stat-height,
-  ),
-
-  stat(
-    "66.7%",
-    "ស្នើឱកាសបង្កើតបណ្តាញ",
-    height: group-stat-height,
-  ),
-)
-
-
-// ============================================================
-// CHAPTER CLOSING
-// ============================================================
-
-#pagebreak()
-
-#grid(
-  columns: (0.95fr, 1.05fr),
-  gutter: 10mm,
-
-  [
-    #text(
-      font: fonts.display,
-      size: 11pt,
-      weight: 600,
-      fill: colors.primary,
+  // Content Stack
+  #place(top + left, dx: 24mm, dy: 66mm, stack(
+    spacing: 4mm,
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: 0.5pt + c-line,
+      radius: 2pt,
     )[
-      FROM SEASON 1 FORWARD
-    ]
-
-    #v(3mm)
-
-    #block[
-      #set par(leading: 11pt, justify: false)
-      #text(
-        font: fonts.main,
-        size: 25pt,
-        weight: 700,
-        fill: colors.primary,
-      )[
-        ការបន្ត
-        មិនត្រឹមតែ
-        មានន័យថា
-        បង្កើនចំនួន
-        អ្នកចូលរួម
+      #text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
+        ក្នុងដំណាក់កាលជ្រើសជ្រើសនេះផងដែរ ក្រុមការងារបានចុះធ្វើការផ្សព្វផ្សាយអំពីគម្រោងចំនួន២ លើកដោយ ៖
       ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        - លើកទី១ ៖ នាថ្ងៃទី៣០ ខែឧសភា នៅវិទ្យាស្ថានពហុបច្ចេកទេសខេត្តកំពង់ធំ ដោយមានការចូលរួមពីឯកឧត្តម ងួន រាសី និងមន្ទីរខេត្តពាក់ព័ន្ធ។
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-sand-light.lighten(40%),
+      stroke: (left: 3pt + c-sand, rest: 0.5pt + c-sand),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        - លើកទី២ ៖​ នាថ្ងៃទី៣១ ខែឧសភា នៅសាលាស្រុកស្ទោង ដោយមានការចូលរួមពីលោក អភិបាលស្រុក និងមន្រី្តពាក់ព័ន្ធ។
+      ]
+    ],
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    103,
+    header-left: "សកម្មភាពផ្សព្វផ្សាយនៅខេត្តកំពង់ធំ និងស្រុកស្ទោង",
+    side: "left",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 2 · PAGE 104 (RECTO / RIGHT): 6.1 OPERATIONAL CHALLENGES & RISK (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ៦.១ ការគ្រប់គ្រងហានិភ័យ])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "6.1 Operational Challenges & Systemic Risk Management",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Intro
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 4.5mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
+      Expanding incubation frameworks into rural environments requires navigating distinct operational hurdles:
     ]
+    #h(2mm) #text(font: font-khmer-display, size: 7pt, fill: c-charcoal.lighten(40%))[(PDF)]
+  ])
 
-    #v(7mm)
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    104,
+    header-right: "៦.១ បញ្ហាប្រឈមប្រតិបត្តិការ និងការគ្រប់គ្រងហានិភ័យ",
+    side: "right",
+  ))
+]
 
-    ផែនការបន្ត
-    ដែលបានកត់ត្រា
-    បង្ហាញ
-    ទិសដៅ
-    សម្រាប់
-    Seasons 2, 3 និង 4។
 
-    #v(5mm)
+// ==============================================================================
+// SPREAD 3 · PAGE 105 (VERSO / LEFT): SYSTEMIC RISKS (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ហានិភ័យប្រព័ន្ធ])
 
-    ទិន្នន័យ
-    រដូវកាលទី១
-    ក៏បង្ហាញថា
-    ការពង្រីក
-    គួរត្រូវ
-    ភ្ជាប់
-    ទៅនឹង
-    ការបណ្តុះបណ្តាលបន្ត
-    Networking
-    Finance
-    Technology
-    និងប្រព័ន្ធ
-    តាមដានលទ្ធផល
-    ដែលកាន់តែរឹងមាំ។
-  ],
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "ការវិភាគហានិភ័យប្រព័ន្ធ និងដំណោះស្រាយបច្ចេកវិទ្យា",
+    preset: "lg",
+    size: 15pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
 
-  [
-    #image-placeholder(
-      "44",
-      description: "Suggested: Season 2 outreach, entrepreneurs, partners, or forward-looking group photo",
-      ratio: "4:5",
-      height: 125mm,
-    )
+  // Risk Stack
+  #place(top + left, dx: 24mm, dy: 66mm, stack(
+    spacing: 4mm,
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-sand-dark, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        - The Rural Digital Divide: Inconsistent electricity and low digital literacy can delay online training and data tracking. Solution: Move toward a hybrid model by deploying mobile-friendly communication tools (e.g., Telegram channels) and providing direct, personal onsite coaching at the facilities. PDF+ 1
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        - Superficial Learning vs. Real Application: Business owners sometimes struggle to translate broad classroom concepts into their everyday workflows. Solution: Make hands-on field exercises (like the market observation missions) mandatory, and pair them with weekly, one-on-one consulting reviews. PDF+ 1
+      ]
+    ],
+  ))
 
-    #caption(
-      "៤៤",
-      "ទិសដៅបន្តរបស់ InnoLab Kampong Thom និងការត្រៀមសម្រាប់រដូវកាលបន្ទាប់",
-    )
-  ],
-)
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    105,
+    header-left: "ការវិភាគហានិភ័យប្រព័ន្ធ",
+    side: "left",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 3 · PAGE 106 (RECTO / RIGHT): 6.2 LOCALIZATION (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ៦.២ ការធ្វើមូលដ្ឋានីយកម្ម])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "6.2 Localization & Full Khmer-Centric Curriculum Development",
+    preset: "lg",
+    size: 15pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Narrative Stack
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 4.5mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
+      To make this business education permanently accessible across Cambodia's provinces, the project is actively updating its educational resources. Every textbook, diagnostic matrix, project management tool, and auditing sheet is being fully translated and localized into clear, practical Khmer. This ensures that future provincial business owners can easily learn advanced concepts without facing language barriers.
+    ]
+    #h(2mm) #text(font: font-khmer-display, size: 7pt, fill: c-charcoal.lighten(40%))[(PDF+ 2)]
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    106,
+    header-right: "៦.២ ការធ្វើមូលដ្ឋានីយកម្មកម្មវិធីសិក្សាជាភាសាខ្មែរ",
+    side: "right",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 4 · PAGE 107 (VERSO / LEFT): 6.3 SEASON 2 EXPANSION (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ៦.៣ ការពង្រីករដូវកាលទី ២])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "6.3 Season 2 Expansion: Institutional Regional Blueprint",
+    preset: "lg",
+    size: 15pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Narrative Stack
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 4.5mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
+      Building directly on the successful foundation established in Kampong Thom, the framework is being structured to scale nationwide via InnoLab Season 2.
+    ]
+    #h(2mm) #text(font: font-khmer-display, size: 7pt, fill: c-charcoal.lighten(40%))[(PDF)]
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    107,
+    header-left: "៦.៣ ផែនការពង្រីករដូវកាលទី២ និងប្លង់មេស្ថាប័ន",
+    side: "left",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 4 · PAGE 108 (RECTO / RIGHT): NATIONAL BLUEPRINT DIAGRAM (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ប្លង់មេថ្នាក់ជាតិ])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "ដ្យាក្រាមពង្រីកវិសាលភាពស្ថាប័នថ្នាក់ជាតិ",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // National Blueprint Box
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    height: 140mm,
+    fill: c-teal.darken(15%),
+    stroke: 0.5pt + c-sand,
+    inset: 6mm,
+    radius: 3pt,
+  )[
+    #align(center)[
+      /*
+    ┌─────────────────────────┼─────────────────────────┐
+    ▼                         ▼                         ▼
+    ┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐
+    │  Kampong Thom    │      │    Province X    │      │    Province Y    │
+    │    (Season 1     │      │    (Season 2     │      │    (Season 2     │
+    │   Operational)   │      │   Deployment)    │      │   Deployment)    │
+    └──────────────────┘      └──────────────────┘      └──────────────────┘
+    */
+    #text(font: font-khmer-display, size: 11pt, weight: "bold", fill: c-sand)[[ NATIONAL INNOLAB CORE ]]
+      #v(6mm)
+      #line(length: 120mm, stroke: 1pt + c-sand)
+      #v(6mm)
+      #grid(
+        columns: (1fr, 1fr, 1fr),
+        gutter: 4mm,
+        block(fill: c-teal, inset: 4mm, radius: 2pt, stroke: 0.5pt + c-sand)[
+          #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-sand)[│  Kampong Thom    │      │    Province X    │      │    Province Y    │]
+          #v(1mm)
+          #text(font: font-khmer-body, size: 7.5pt, fill: c-white)[│    (Season 1     │      │    (Season 2     │      │    (Season 2     │ │   Operational)   │      │   Deployment)    │      │   Deployment)    │]
+        ],
+        block(fill: c-teal.lighten(10%), inset: 4mm, radius: 2pt, stroke: 0.5pt + c-sand.transparentize(50%))[
+          #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-sand)[│  Province X    │      │    Province X    │      │    Province Y    │]
+          #v(1mm)
+          #text(font: font-khmer-body, size: 7.5pt, fill: c-sand-light)[Season 2 Deployment]
+        ],
+        block(fill: c-teal.lighten(10%), inset: 4mm, radius: 2pt, stroke: 0.5pt + c-sand.transparentize(50%))[
+          #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-sand)[│  Province Y    │      │    Province X    │      │    Province Y    │]
+          #v(1mm)
+          #text(font: font-khmer-body, size: 7.5pt, fill: c-sand-light)[Season 2 Deployment]
+        ],
+      )
+    ]
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    108,
+    header-right: "ប្លង់មេពង្រីកវិសាលភាពស្ថាប័នថ្នាក់ជាតិ",
+    side: "right",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 5 · PAGE 109 (VERSO / LEFT): LONG-TERM INSTITUTIONAL GOAL (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · គោលដៅវែងឆ្ងាយ])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "គោលដៅស្ថាប័នរយៈពេលវែង និងការបង្កើតបណ្តាញអចិន្ត្រៃយ៍",
+    preset: "lg",
+    size: 15pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Long-Term Goal
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 5mm,
+    fill: c-white,
+    stroke: (left: 3.5pt + c-teal, rest: 0.5pt + c-line),
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-body, size: 9pt, fill: c-charcoal)[
+      The long-term goal is to embed these innovation labs directly into regional polytechnic institutes across Cambodia. This strategy will establish permanent, practical business incubation hubs that continuously drive sustainable, modern economic growth throughout the country's provinces.
+    ]
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    109,
+    header-left: "គោលដៅស្ថាប័នរយៈពេលវែង",
+    side: "left",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 5 · PAGE 110 (RECTO / RIGHT): CHAPTER CLOSING PHOTOGRAPHY (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · សំយោគជំពូកទី ៨])
+
+  // Full Page Photographic Hero Frame
+  #geom-frame(24mm, 28mm, 162mm, 122mm, stroke-color: c-sand, offset-x: 3mm, offset-y: 3mm)
+  #place(top + left, dx: 24mm, dy: 28mm, image("../assets/photos/02.jpg", width: 162mm, height: 122mm, fit: "cover"))
+
+  // Photo Caption Cleanly Below Photo
+  #place(top + left, dx: 24mm, dy: 154mm, editorial-caption(
+    "ចក្ខុវិស័យប្រែក្លាយខេត្តកំពង់ធំជាមជ្ឈមណ្ឌលកសិឧស្សាហកម្មឈានមុខ និងការបោះជំហានទៅកាន់អនាគត",
+    meta-tag: "ទស្សនវិស័យអនាគត",
+    width: 162mm,
+  ))
+
+  // Bottom Synthesis Block
+  #place(top + left, dx: 24mm, dy: 174mm, block(
+    width: 162mm,
+    inset: 4.5mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[សំយោគយុទ្ធសាស្ត្រពង្រីកថ្នាក់ជាតិ]
+    #v(1.5mm)
+    #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+      តាមរយៈភាពជោគជ័យជាក់ស្តែងនៃរដូវកាលទី១ គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំបានក្លាយជាគំរូដ៏រស់រវើកដែលអាចយកទៅអនុវត្តនៅតាមបណ្តាខេត្តផ្សេងៗទៀតក្នុងព្រះរាជាណាចក្រកម្ពុជា ដើម្បីចូលរួមចំណែកយ៉ាងសកម្មក្នុងការអភិវឌ្ឍសេដ្ឋកិច្ចមូលដ្ឋាន និងសេដ្ឋកិច្ចជាតិទាំងមូល។
+    ]
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    110,
+    header-right: "ជំពូកទី៨ ៖ សំយោគយុទ្ធសាស្ត្រពង្រីកថ្នាក់ជាតិ",
+    side: "right",
+  ))
+]

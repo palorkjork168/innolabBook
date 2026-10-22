@@ -1,1079 +1,749 @@
 #import "../styles.typ": *
-#import "../components/charts.typ": *
-#import "../components/final-pitch.typ": *
-#import "../components/case-study.typ": *
-#import "../components/final-pitch.typ": *
-#import "../components/charts.typ": metric
-
-
-// ============================================================
-// CHAPTER 07
-// FINAL PITCH, CHALLENGES & LESSONS
-// SOURCE-PRESERVING VERSION
-// ============================================================
-
-#chapter-title(
-  "07",
-  "Final Pitch បញ្ហាប្រឈម និងមេរៀន",
-  english: "FINAL PITCH, CHALLENGES & LESSONS",
-  intro: [
-    Final Pitching Day
-    គឺជាសកម្មភាព
-    បិទបញ្ចប់
-    រដូវកាលទី១
-    ដែលផ្តល់ឱកាស
-    ឱ្យសហគ្រាសទាំង ២០
-    បង្ហាញ
-    គំនិតនវានុវត្តន៍
-    លទ្ធផល
-    និងការអនុវត្ត
-    ដែលបានអភិវឌ្ឍ
-    ក្នុងកម្មវិធី។
-
-    ជំពូកនេះ
-    រក្សា
-    ដំណើរការប្រកួត
-    លក្ខខណ្ឌវាយតម្លៃ
-    បេក្ខជនជុំទី២
-    ម្ចាស់ជ័យលាភី
-    ពានរង្វាន់ពិសេស
-    មតិអ្នកចូលរួម
-    បញ្ហាប្រឈម
-    និងមេរៀន
-    សម្រាប់រដូវកាលបន្ទាប់។
-  ],
-)
-
-
-// ============================================================
-// 7.1 EVENT OVERVIEW
-// ============================================================
-
-#section-title("៧.១ ទិដ្ឋភាពទូទៅនៃ Final Pitching Day")
-
-Final Pitching Day
-ត្រូវបានរៀបចំ
-នៅថ្ងៃទី ២១
-ខែមីនា ឆ្នាំ ២០២៦
-ចាប់ពីម៉ោង ៨:០០ ព្រឹក
-ដល់ម៉ោង ៥:០០ រសៀល
-នៅវិទ្យាស្ថាន
-ពហុបច្ចេកទេស
-ខេត្តកំពង់ធំ។
-
-ព្រឹត្តិការណ៍នេះ
-មានអ្នកចូលរួម
-សរុបចំនួន ១៦៣ នាក់
-និងត្រូវបាន
-ឯកសារប្រភព
-ពិពណ៌នា
-ថាជាការបិទបញ្ចប់
-InnoLab Kampong Thom
-រដូវកាលទី១។ :contentReference[oaicite:0]{index=0}
-
-#v(7mm)
-
-#let group-metric-height = 28mm
-
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  gutter: 5mm,
-
-  metric(
-    "21 MAR 2026",
-    "ថ្ងៃរៀបចំព្រឹត្តិការណ៍",
-    height: group-metric-height,
-  ),
-
-  metric(
-    "163",
-    "អ្នកចូលរួម",
-    height: group-metric-height,
-  ),
-
-  metric(
-    "20 SMEs",
-    "បេក្ខជនបង្ហាញ",
-    height: group-metric-height,
-  ),
-)
-
-#v(8mm)
-
-#image-placeholder(
-  "40",
-  description: "Suggested: wide Final Pitching Day venue, stage, audience, and SME exhibition",
-  ratio: "16:9",
-  height: 72mm,
-)
-
-#caption(
-  "៤០",
-  "Final Pitching Day — InnoLab Kampong Thom រដូវកាលទី១",
-)
-
-
-// ============================================================
-// 7.2 EVENT PURPOSE
-// ============================================================
-
-#section-title("៧.២ គោលបំណងនៃព្រឹត្តិការណ៍")
-
-Final Pitching Day
-មានតួនាទី
-ជាវេទិកា
-សម្រាប់សហគ្រាស
-ទាំង ២០
-បង្ហាញ
-នវានុវត្តន៍
-ដែលបានអភិវឌ្ឍ
-តាមរយៈ
-ការបណ្តុះបណ្តាល
-ការសាកល្បង
-ការប្រឹក្សា
-និងការអនុវត្ត
-ក្នុងអាជីវកម្ម។
-
-ព្រឹត្តិការណ៍
-ក៏ផ្តល់
-ឱកាស
-សម្រាប់
-ការបង្ហាញ
-ផលិតផល
-ការបង្កើត
-បណ្តាញ
-និងការទទួល
-មតិកែលម្អ
-ពីគណៈកម្មការ
-និងអ្នកចូលរួម។
-
-
-// ============================================================
-// 7.3 ROUND 1
-// ============================================================
-
-#pagebreak()
-
-#section-title("៧.៣ ជុំទី១ — បទបង្ហាញរបស់សហគ្រាសទាំង ២០")
-
-សហគ្រាស
-ទាំង ២០
-បានធ្វើ
-បទបង្ហាញ
-ក្នុងជុំទី១។
-
-បេក្ខជននីមួយៗ
-មានពេល
-៥ នាទី
-សម្រាប់
-ការឡើងបង្ហាញ
-អំពីអាជីវកម្ម
-បញ្ហា
-គំនិតនវានុវត្តន៍
-ការអនុវត្ត
-និងលទ្ធផល។
-
-#v(7mm)
-
-#let group-callout-height = 36mm
-
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 6mm,
-
-  callout(
-    "60% — គណៈកម្មការ",
-    [
-      ពិន្ទុ
-      ពីគណៈកម្មការ
-      មានទម្ងន់
-      ៦០%
-      នៃពិន្ទុ
-      ជុំទី១។
-    ],
-    height: group-callout-height,
-  ),
-
-  callout(
-    "40% — ការចូលរួម និងសម្លេងគាំទ្រ",
-    [
-      ៤០%
-      ផ្សេងទៀត
-      មកពី
-      ការចូលរួម
-      របស់ SME
-      ក្នុងកម្មវិធី
-      និងការបោះឆ្នោត
-      ពីអ្នកចូលរួម។
-    ],
-    height: group-callout-height,
-  ),
-)
-
-#v(8mm)
-
-#pitch-stage(
-  "20",
-  "ROUND 1",
-  [
-    SMEs ទាំង ២០
-    ធ្វើបទបង្ហាញ
-    ៥ នាទី
-    ក្នុងម្នាក់។
-  ],
-)
-
-#v(5mm)
-
-#pitch-stage(
-  "7",
-  "ROUND 2",
-  [
-    បេក្ខជន ៧ រូប
-    ត្រូវបានអនុញ្ញាត
-    ឱ្យបន្ត
-    ទៅជុំទី២។
-  ],
-)
-
-#v(5mm)
-
-#pitch-stage(
-  "3",
-  "WINNERS",
-  [
-    ម្ចាស់ជ័យលាភី
-    ចម្បង
-    ចំនួន ៣ រូប។
-  ],
-)
-
-
-// ============================================================
-// 7.4 WHY 7 ADVANCED
-// ============================================================
-
-#section-title("៧.៤ ហេតុអ្វីបានជា ៧ រូប ឡើងទៅជុំទី២")
-
-ផែនការដំបូង
-គឺជ្រើសរើស
-បេក្ខជន
-ចំនួន ៦ រូប
-សម្រាប់ជុំទី២។
-
-ទោះជាយ៉ាងណា
-ឯកសារប្រភព
-បញ្ជាក់ថា
-ដោយសារពិន្ទុ
-របស់បេក្ខជន
-មួយចំនួន
-នៅជិតគ្នា
-និងមានកម្រិតខ្ពស់
-គណៈកម្មការ
-បានអនុញ្ញាត
-ឱ្យបេក្ខជន
-ចំនួន ៧ រូប
-បន្តទៅជុំទី២។
-
-#v(7mm)
-
-#callout(
-  "ការផ្លាស់ប្តូរពីផែនការដំបូង",
-  [
-    ៦ រូប
-    គឺជាចំនួន
-    ដែលបានគ្រោងទុក។
-
-    ៧ រូប
-    គឺជាចំនួន
-    ដែលបានឡើង
-    ជាក់ស្តែង
-    ដោយសារពិន្ទុ
-    នៅជិតគ្នា។
-  ],
-)
-
-
-// ============================================================
-// 7.5 SEVEN FINALISTS
-// ============================================================
-
-#pagebreak()
-
-#section-title("៧.៥ បេក្ខជន ៧ រូបនៅជុំទី២")
-
-ឯកសារអនុវត្ត
-រាយបេក្ខជន
-ចំនួន ៧ រូប
-ដូចខាងក្រោម៖
-
-#v(6mm)
-
-#data-list(
-  [
-    លោក លឹម សភា
-  ],
-  [
-    លោក ឡុក គៀនស្រ៊ី
-  ],
-  [
-    លោកស្រី ពិន ភិរម្យ
-  ],
-  [
-    លោក អាន លីហ៊ាន់
-  ],
-  [
-    លោកស្រី អ៉ិន ឡៃហួត
-  ],
-  [
-    លោក អុល ចំណាប់
-  ],
-  [
-    លោកស្រី ចែម ធីតា
-  ],
-)
-
-#v(7mm)
-
-#callout(
-  "កំណត់សម្គាល់អំពីឈ្មោះ",
-  [
-    ឯកសារផ្សេងៗ
-    មានការសរសេរ
-    ឈ្មោះខ្លះ
-    ខុសគ្នា
-    ជាពិសេស
-    លោក ឡុក គៀនស្រ៊ី,
-    លោកស្រី ពិន / ភិន ភិរម្យ / ភីរម្យ
-    និង
-    លោកស្រី អុិន / អ៉ិន ឡៃហួត។
-
-    របាយការណ៍នេះ
-    មិនគួរ
-    បិទបញ្ចប់
-    អក្ខរាវិរុទ្ធ
-    ផ្លូវការ
-    មុនមាន
-    ការផ្ទៀងផ្ទាត់
-    ពីឯកសារផ្លូវការ
-    របស់បេក្ខជន។
-  ],
-)
-
-
-// ============================================================
-// 7.6 ROUND 2
-// ============================================================
-
-#section-title("៧.៦ ជុំទី២ — សំណួរ និងចម្លើយជាមួយគណៈកម្មការ")
-
-បេក្ខជន
-ទាំង ៧
-បានបន្ត
-ទៅជុំទី២
-ដោយចូលរួម
-វគ្គសំណួរ
-និងចម្លើយ
-ជាមួយគណៈកម្មការ។
-
-ជុំទី២
-ប្រើ
-លក្ខវិនិច្ឆ័យ
-វាយតម្លៃ
-មួយឈុត
-ដាច់ដោយឡែក
-ពីជុំទី១។
-
-ក្រោយ
-ការវាយតម្លៃ
-បេក្ខជន
-ចំនួន ៣ រូប
-ត្រូវបានជ្រើសរើស
-ជាម្ចាស់ជ័យលាភី
-ចម្បង។ :contentReference[oaicite:1]{index=1}
-
-
-// ============================================================
-// 7.7 MAIN WINNERS
-// ============================================================
-
-#pagebreak()
-
-#section-title("៧.៧ ម្ចាស់ជ័យលាភីចម្បង ៣ រូប")
-
-ម្ចាស់ជ័យលាភី
-ទាំង ៣
-ត្រូវបានបង្ហាញ
-ជាម្ចាស់ជ័យលាភី
-ស្មើគ្នា
-មិនមែនជា
-ចំណាត់ថ្នាក់
-លេខ ១, ២, ៣
-ក្នុងរបាយការណ៍នេះទេ។
-
-#v(7mm)
-
-#winner-card(
-  "លោក ឡុក គៀនស្រ៊ី",
-  "KS SEED Co Ltd",
-  [
-    អភិវឌ្ឍ
-    គ្រាប់ពូជ
-    ក្នុងស្រុក
-    និងនវានុវត្តន៍
-    ផ្នែក
-    White Waxy Corn
-    F1 Hybrid Seed។
-  ],
-)
-
-#v(5mm)
-
-#winner-card(
-  "លោកស្រី ភិន ភីរម្យ",
-  "សិប្បកម្មសុវណ្ណភូមិ",
-  [
-    អភិវឌ្ឍ
-    ផលិតផល
-    Cashew Butter
-    និងការកែច្នៃ
-    គ្រាប់ស្វាយចន្ទី
-    មានតម្លៃបន្ថែម។
-  ],
-)
-
-#v(5mm)
-
-#winner-card(
-  "លោក អុល ចំណាប់",
-  "007Ai / បច្ចេកវិទ្យាគ្រឿងយន្តកសិកម្ម",
-  [
-    អភិវឌ្ឍ
-    និងកែលម្អ
-    គ្រឿងយន្តកសិកម្ម
-    សមស្រប
-    នឹងបរិបទ
-    កសិករកម្ពុជា។
-  ],
-)
-
-#v(7mm)#pagebreak()
-
-ឯកសារប្រភព
-រាយថា
-ម្ចាស់ជ័យលាភី
-ចម្បងទាំង ៣
-ទទួលបាន
-ពានរង្វាន់
-និងទឹកប្រាក់រង្វាន់។ 
-
-#v(6mm)
-
-#let group-metric-height = 28mm
-
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 6mm,
-
-  metric(
-    "16,000,000៛",
-    "រង្វាន់អតិបរមា សម្រាប់ម្ចាស់ជ័យលាភីម្នាក់",
-    height: group-metric-height,
-  ),
-
-  metric(
-    "48,000,000៛",
-    "រង្វាន់សរុប សម្រាប់ម្ចាស់ជ័យលាភី ៣ រូប",
-    height: group-metric-height,
-  ),
-)
-
-#v(8mm)
-
-#image-placeholder(
-  "41",
-  description: "Suggested: three main winners receiving awards, certificates, and prize recognition",
-  ratio: "16:9",
-  height: 70mm,
-)
-
-#caption(
-  "៤១",
-  "ម្ចាស់ជ័យលាភីចម្បងទាំង ៣ នៃ Final Pitching Day",
-)
-
-
-// ============================================================
-// 7.8 SPECIAL AWARDS
-// ============================================================
-
-#section-title("៧.៨ ពានរង្វាន់ពិសេស")
-
-ក្រៅពី
-ម្ចាស់ជ័យលាភី
-ចម្បង
-មានពានរង្វាន់
-ទទួលស្គាល់
-ពិសេស
-ចំនួន ២។
-
-#v(7mm)
-
-#special-award(
-  "MOST ACTIVE",
-  "លោក អាន លីហ៊ាន់",
-  [
-    ពានរង្វាន់
-    «សកម្មជាងគេ»
-    ត្រូវបាន
-    សម្រេច
-    តាមការបោះឆ្នោត
-    ពីអ្នកចូលរួម
-    InnoLab។
-  ],
-)
-
-#v(5mm)
-
-#special-award(
-  "MOST POPULAR",
-  "លោក ឡូន ឆួង",
-  [
-    ពានរង្វាន់
-    «មានការគាំទ្រច្រើនជាងគេ»
-    ផ្តល់ជូន
-    បេក្ខជន
-    ដែលវីដេអូ
-    ទទួលបាន
-    Likes និង Shares
-    ច្រើនជាងគេ
-    នៅលើទំព័រ
-    Facebook
-    របស់ ASIP។
-  ],
-)
-
-ប្រភពកំណត់
-លោក អាន លីហ៊ាន់
-ជាម្ចាស់ពាន
-Most Active
-និង
-លោក ឡូន ឆួង
-ជាម្ចាស់ពាន
-Most Popular។ 
-
-
-// ============================================================
-// 7.9 RECOGNITION FOR ALL 20
-// ============================================================
-
-
-#section-title("៧.៩ ការទទួលស្គាល់បេក្ខជនទាំង ២០")
-
-បេក្ខជនចុងក្រោយ
-ទាំង ២០
-ទទួលបាន
-វិញ្ញាបនបត្រ
-បញ្ជាក់ការចូលរួម
-និងកាដូ
-វត្ថុអនុស្សាវរីយ៍។
-
-ការទទួលស្គាល់នេះ
-បង្ហាញថា
-Final Pitch
-មិនត្រឹមតែ
-ផ្តោត
-លើម្ចាស់ជ័យលាភី
-ចម្បងប៉ុណ្ណោះទេ
-ប៉ុន្តែទទួលស្គាល់
-ដំណើររបស់
-សហគ្រាសទាំង ២០
-ក្នុងរដូវកាលទី១។ 
-
-
-// ============================================================
-// 7.10 MEDIA COVERAGE
-// ============================================================
-
-#section-title("៧.១០ ការផ្សព្វផ្សាយព័ត៌មាន")
-
-ឯកសារប្រភព
-រាយការណ៍ថា
-មានសេចក្តីប្រកាសព័ត៌មាន
-ចំនួន ២
-ដែលគ្របដណ្តប់
-លើព្រឹត្តិការណ៍
-Final Pitching Day
-និងត្រូវបាន
-ចុះផ្សាយ
-នៅក្នុង
-Khmer Times។ :contentReference[oaicite:5]{index=5}
-
-
-// ============================================================
-// 7.11 PARTICIPANT FEEDBACK
-// ============================================================
-
-
-#section-title("៧.១១ មតិកែលម្អរបស់អ្នកចូលរួម")
-
-ឯកសារប្រភព
-បញ្ជាក់ថា
-កម្រងស្ទង់មតិ
-ប្រើ
-មាត្រដ្ឋានវាស់វែង
-ពីរប្រភេទ
-ដែលមានទិស
-ផ្ទុយគ្នា
-នៅក្នុងកម្រង
-តែមួយ។
-
-ដោយសារតែ
-ភាពមិនស៊ីសង្វាក់នេះ
-លទ្ធផល
-គួរត្រូវបាន
-បកស្រាយ
-ដោយប្រុងប្រយ័ត្ន។
-
-#v(7mm)
-
-#callout(
-  "ការតុបតែង និងទីតាំង",
-  [
-    ជាង 76%
-    វាយតម្លៃ
-    ថា
-    ល្អ
-    ឬល្អណាស់។
-
-    ប្រហែល 7%
-    ស្ថិត
-    នៅកម្រិតកណ្ដាល
-    និងប្រហែល 15%
-    ស្ថិត
-    ក្រោមកម្រិតកណ្ដាល។
-  ],
-)
-
-#v(5mm)
-
-#callout(
-  "អាហារសម្រន់ អាហារថ្ងៃត្រង់ និងរបៀបវារៈ",
-  [
-    ប្រហែល 69%
-    វាយតម្លៃ
-    ថា
-    ល្អ
-    ឬល្អណាស់។
-
-    ប្រហែល 23%
-    ស្ថិត
-    នៅកម្រិតកណ្ដាល
-    និងប្រហែល 7%
-    ស្ថិត
-    ក្រោមកម្រិតកណ្ដាល។
-  ],
-)
-
-#v(5mm)
-
-#callout(
-  "Networking",
-  [
-    ប្រហែល 69%
-    វាយតម្លៃ
-    ថា
-    ល្អ
-    ឬល្អណាស់។
-
-    ប្រហែល 15%
-    ស្ថិត
-    នៅកម្រិតកណ្ដាល
-    និងប្រហែល 15%
-    ស្ថិត
-    ក្រោមកម្រិតកណ្ដាល។
-  ],
-)
-
-#v(7mm)
-
-#callout(
-  "Overall Satisfaction",
-  [
-    ដោយសារតែ
-    មាត្រដ្ឋាន
-    សម្រាប់សំណួរ
-    ពេញចិត្តជារួម
-    មានទិស
-    ផ្ទុយពី
-    សំណួរផ្សេងៗ
-    ហើយអត្ថបទប្រភព
-    មានកំហុស
-    ក្នុងសមាសភាគលេខ
-    របាយការណ៍នេះ
-    មិនបង្ហាញ
-    លេខបំបែក
-    ដែលមិនអាច
-    ផ្ទៀងផ្ទាត់បានទេ។
-
-    អត្ថបទប្រភព
-    បកស្រាយថា
-    ប្រហែល 85%
-    ស្ថិត
-    ក្នុងក្រុម
-    ពេញចិត្តខ្ពស់
-    បំផុតពីរ។
-  ],
-)
-
-
-// ============================================================
-// 7.12 EVENT CHALLENGES
-// ============================================================
-
-#section-title("៧.១២ បញ្ហាប្រឈមនៅថ្ងៃព្រឹត្តិការណ៍")
-
-ឯកសារប្រភព
-កត់ត្រា
-បញ្ហាប្រឈម
-ផ្នែកប្រតិបត្តិការ
-ជាច្រើន
-ដែលកើតឡើង
-ក្នុងថ្ងៃ
-Final Pitch។
-
-#v(7mm)
-
-#let group-card-height = 42mm
-
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 5mm,
-
-  challenge-card(
-    "01",
-    "Protocol",
-    [
-      ការរៀបចំ
-      ពិធីការ
-      ត្រូវធ្វើ
-      ក្រោមពេលវេលា
-      ហាត់សម
-      ដែលតឹងរ៉ឹង។
-    ],
-    height: group-card-height,
-  ),
-
-  challenge-card(
-    "02",
-    "Technical Setup",
-    [
-      ពេលវេលា
-      សម្រាប់
-      សាកល្បង
-      ឧបករណ៍
-      មុនព្រឹត្តិការណ៍
-      មិនគ្រប់គ្រាន់
-      ដែលបង្ក
-      បញ្ហាបច្ចេកទេស។
-    ],
-    height: group-card-height,
-  ),
-
-  challenge-card(
-    "03",
-    "Live Coordination",
-    [
-      ក្រុមការងារ
-      ត្រូវពឹងផ្អែក
-      លើការសម្របសម្រួល
-      និងដោះស្រាយ
-      បញ្ហា
-      តាមពេលវេលាជាក់ស្តែង។
-    ],
-    height: group-card-height,
-  ),
-
-  challenge-card(
-    "04",
-    "Air Conditioning",
-    [
-      ប្រព័ន្ធ
-      ម៉ាស៊ីនត្រជាក់
-      មានបញ្ហា
-      ដែលប៉ះពាល់
-      ដល់ផាសុកភាព
-      និងការចូលរួម
-      របស់អ្នកចូលរួម។
-    ],
-    height: group-card-height,
-  ),
-)
-
-ឯកសារប្រភព
-កត់ត្រា
-ទាំងបញ្ហាពិធីការ
-បញ្ហាបច្ចេកទេស
-ពេលវេលាតេស្តឧបករណ៍
-មិនគ្រប់គ្រាន់
-និងតម្រូវការ
-សម្របសម្រួល
-នៅពេលព្រឹត្តិការណ៍
-កំពុងដំណើរការ។ 
-
-
-// ============================================================
-// 7.13 LESSONS LEARNED
-// ============================================================
-
-#pagebreak()
-
-#section-title("៧.១៣ មេរៀនពីរដូវកាលទី១")
-
-មេរៀន
-ខាងក្រោម
-ត្រូវបានទាញចេញ
-ពីបទពិសោធន៍
-នៃការរៀបចំ
-និងអនុវត្ត
-Final Pitch
-និងកម្មវិធី
-រដូវកាលទី១
-ទាំងមូល។
-
-#v(7mm)
-
-#challenge-card(
-  "01",
-  "តេស្តឧបករណ៍មុនព្រឹត្តិការណ៍",
-  [
-    ត្រូវរៀបចំ
-    ពេលវេលា
-    សម្រាប់
-    សាកល្បង
-    សំឡេង
-    Projector
-    Microphone
-    និងប្រព័ន្ធ
-    បច្ចេកទេស
-    ទាំងមូល
-    មុនថ្ងៃកម្មវិធី។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "02",
-  "ការហាត់សម និងពិធីការ",
-  [
-    កាលវិភាគ
-    ហាត់សម
-    គួរមាន
-    ពេលបម្រុង
-    សម្រាប់
-    ការកែប្រែ
-    និងការសម្របសម្រួល
-    ពិធីការ។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "03",
-  "ផែនការបម្រុង",
-  [
-    ប្រព័ន្ធ
-    សំខាន់ៗ
-    ដូចជា
-    ម៉ាស៊ីនត្រជាក់
-    អគ្គិសនី
-    សំឡេង
-    និងឧបករណ៍បង្ហាញ
-    គួរមាន
-    ផែនការបម្រុង។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "04",
-  "ការបែងចែកតួនាទីក្រុមការងារ",
-  [
-    តួនាទី
-    និងការទទួលខុសត្រូវ
-    នៅថ្ងៃព្រឹត្តិការណ៍
-    គួរត្រូវ
-    កំណត់
-    ឱ្យច្បាស់
-    ជាមុន។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "05",
-  "Survey Design",
-  [
-    កម្រងស្ទង់មតិ
-    គួរប្រើ
-    មាត្រដ្ឋាន
-    ក្នុងទិសដៅ
-    ដូចគ្នា
-    ដើម្បីជៀសវាង
-    ភាពច្រឡំ
-    ក្នុងការបកស្រាយ
-    ទិន្នន័យ។
-  ],
-)
-
-#v(5mm)
-
-#challenge-card(
-  "06",
-  "ពីការរៀនទៅការបង្ហាញ",
-  [
-    ការរៀបចំ
-    Pitch
-    មានប្រសិទ្ធភាព
-    នៅពេល
-    ភ្ជាប់
-    ទៅនឹង
-    Coaching
-    Prototype
-    Market Research
-    និងការហាត់សម
-    ជាបន្តបន្ទាប់។
-  ],
-)
-
-
-// ============================================================
-// 7.14 PROGRAM LOGIC
-// ============================================================
-// #pagebreak()
-// #section-title("៧.១៤ Learn → Test → Pitch → Scale")
-
-// #grid(
-//   columns: (1fr, auto, 1fr, auto, 1fr, auto, 1fr),
-//   gutter: 3mm,
-//   align: horizon,
-
-//   flow-step(
-//     "LEARN",
-//     [
-//       រៀន
-//       និងយល់
-//     ],
-//   ),
-
-//   text(
-//     font: fonts.display,
-//     size: 18pt,
-//     fill: colors.sand,
-//   )[
-//     →
-//   ],
-
-//   flow-step(
-//     "TEST",
-//     [
-//       សាកល្បង
-//       និងកែលម្អ
-//     ],
-//   ),
-
-//   text(
-//     font: fonts.display,
-//     size: 18pt,
-//     fill: colors.sand,
-//   )[
-//     →
-//   ],
-
-//   flow-step(
-//     "PITCH",
-//     [
-//       បង្ហាញ
-//       និងទទួល
-//       មតិ
-//     ],
-//   ),
-
-//   text(
-//     font: fonts.display,
-//     size: 18pt,
-//     fill: colors.sand,
-//   )[
-//     →
-//   ],
-
-//   flow-step(
-//     "SCALE",
-//     [
-//       រៀបចំ
-//       សម្រាប់
-//       ពង្រីក
-//     ],
-//   ),
-// )
-
-
-// ============================================================
-// CHAPTER CLOSING
-// ============================================================
-
-#pagebreak()
-
-#grid(
-  columns: (0.95fr, 1.05fr),
-  gutter: 10mm,
-
-  [
-    #text(
-      font: fonts.display,
-      size: 11pt,
-      weight: 600,
-      fill: colors.primary,
+#import "../components/catalogue.typ": *
+
+// ==============================================================================
+// ជំពូកទី៧ ៖ ថ្ងៃប្រកួតប្រជែងឡើងពេជ្រចុងក្រោយ និងថវិកាប្រតិបត្តិការ
+// EDITORIAL CATALOGUE ARCHITECTURE (5 FACING SPREADS · PAGES 91–100)
+// ==============================================================================
+
+#label("ch-07")
+
+// ==============================================================================
+// SPREAD 1 · PAGE 91 (VERSO / LEFT): CHAPTER OPENER (DEEP TEAL BLOCK)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-teal,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-sand,
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · រដូវកាលទី១])
+
+  // Archival Identification Tag
+  #place(top + left, dx: 24mm, dy: 26mm, text(
+    font: font-khmer-display,
+    size: 6.5pt,
+    fill: c-white.transparentize(30%),
+  )[ឯកសារផ្លូវការ · សកម្មភាពទី ១០ និងថវិកាប្រតិបត្តិការ])
+
+  // Architectural Geometric Frame behind photo
+  #geom-frame(24mm, 36mm, 162mm, 146mm, stroke-color: c-sand, offset-x: -5mm, offset-y: -5mm)
+
+  // Pitching Day Photograph
+  #place(top + left, dx: 24mm, dy: 36mm, image("../assets/photos/finnal-pitching-2.jpg", width: 162mm, height: 146mm, fit: "cover"))
+
+  // Enormous Sculptural Numeral 07 overlapping photo bottom edge
+  #place(top + left, dx: 18mm, dy: 166mm, display-number("០៧", size: 100pt, fill: c-sand, weight: "regular"))
+
+  // Chapter Identity & Title
+  #place(top + left, dx: 24mm, dy: 218mm, stack(
+    spacing: 5mm,
+    text(font: font-khmer-display, size: 22pt, fill: c-paper)[ជំពូកទី ៧ ៖\ ថ្ងៃប្រកួតប្រជែង និងថវិកា],
+    text(
+      font: font-khmer-display,
+      size: 9.5pt,
+      weight: "bold",
+      fill: c-sand-light,
+    )[CHAPTER 5: Financial Ledgers & Resource Allocation],
+  ))
+
+  // Figure Caption for Chapter Opener Photo
+  #place(top + left, dx: 86mm, dy: 194mm, editorial-caption(
+    "ទិដ្ឋភាពទិវាប្រកួតប្រជែងឡើងពេជ្រចុងក្រោយ Final Pitching Day នៃគម្រោង InnoLab",
+    meta-tag: "ថ្ងៃប្រកួតប្រជែងចុងក្រោយ",
+    text-color: c-sand-light,
+    width: 100mm,
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-teal.lighten(30%)))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    91,
+    header-left: "ជំពូកទី៧ ៖ ថ្ងៃប្រកួតប្រជែង និងថវិកាប្រតិបត្តិការ",
+    side: "left",
+    folio-color: c-sand,
+    color: c-sand-light,
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 1 · PAGE 92 (RECTO / RIGHT): EVENT CONTEXT & OBJECTIVES (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · សកម្មភាពទី ១០])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "សកម្មភាពទី ១០ ៖ ថ្ងៃប្រកួតប្រជែងឡើងពេជ្រចុងក្រោយ",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Narrative Stack
+  #place(top + left, dx: 24mm, dy: 66mm, stack(
+    spacing: 4mm,
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: 0.5pt + c-line,
+      radius: 2pt,
     )[
-      FINAL PITCHING DAY
-    ]
-
-    #v(3mm)
-
-    #block[
-      #set par(leading: 11pt, justify: false)
-      #text(
-        font: fonts.main,
-        size: 24pt,
-        weight: 700,
-        fill: colors.primary,
-      )[
-        ការបង្ហាញចុងក្រោយគឺជាផ្នែកមួយ\ នៃដំណើររៀន មិនមែនជាចុងបញ្ចប់នៃនវានុវត្តន៍
+      #text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
+        ថ្ងៃប្រកួតប្រជែងឡើងពេជ្រចុងក្រោយត្រូវបានរៀបចំឡើងនៅថ្ងៃទី ២១ ខែមីនា ឆ្នាំ ២០២៦ ចាប់ពីម៉ោង ៨:០០ ព្រឹក ដល់ម៉ោង ៥:០០ រសៀល នៅវិទ្យាស្ថានពហុបច្ចេកទេសខេត្តកំពង់ធំ ដោយទាក់ទាញអ្នកចូលរួមសរុបចំនួន ១៦៣ នាក់ និងជាការបិទបញ្ចប់កម្មវិធី InnoLab កំពង់ធំ ជំនាន់ទី ១។ ព្រឹត្តិការណ៍នេះត្រូវបានចូលរួមដោយតំណាងដ៏ខ្ពង់ខ្ពស់របស់ ឯកឧត្តម វង្សី វិស្សុត ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ និងជារដ្ឋមន្ត្រីទទួលបន្ទុកទីស្តីការគណៈរដ្ឋមន្ត្រី រួមជាមួយ ឯកឧត្ដម គី សុខគីម នាយកប្រតិបត្ដិ នៃមូលនិធិអភិវឌ្ឍន៍ជំនាញ, ឯកឧត្តម ហាន កុសល អភិបាលរងនៃគណៈអភិបាលខេត្តកំពង់ធំ និងឯកឧត្តមបណ្ឌិត ឈៀង វណ្ណារិទ្ធ ប្រធានក្រុមប្រឹក្សាភិបាលនៃឧទ្យាននវានុវត្តន៍សង្គមអង្គរ​(ASIP)។ គណៈកម្មការវាយតម្លៃរួមមាន លោកស្រី ប៉ែន បុប្ផា អគ្គនាយិកាប្រតិបត្តិនៃរិទ្ធិពល (Rithipul), លោកស្រី ឆេង សុគន្ធ សាស្ត្រាចារ្យផ្នែកគ្រប់គ្រងហានិភ័យនៅវិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា, លោក គង់ មាន ទីប្រឹក្សាឯករាជ្យ និងលោក តាន់ វិជ្ជា ទីប្រឹក្សាជាន់ខ្ពស់សម្រាប់ការអភិវឌ្ឍសេដ្ឋកិច្ចនៅ GIZ កម្ពុជា។
       ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        *គោលបំណង៖* ដើម្បីឱ្យ សហគ្រាសធុនតូច និងមធ្យម គោលដៅទាំង ២០ បង្ហាញពីគំនិតច្នៃប្រឌិតរបស់ពួកគេនៅចំពោះមុខគណៈកម្មការវាយតម្លៃ និងជ្រើសរើសម្ចាស់ជ័យលាភីចំនួនបីរូបតាមរយៈការប្រកួតប្រជែងចំនួនពីរជុំ។ នៅក្នុងជុំទី ១ finalists ម្នាក់ៗមានពេលប្រាំនាទីដើម្បីធ្វើបទបង្ហាញ ដោយការវាយតម្លៃប្រើប្រាស់ទម្រង់ពិន្ទុរួមបញ្ចូលជាមួយការបោះឆ្នោតផ្ទាល់ពីទស្សនិកជននៅនឹងកន្លែង ដោយបែងចែកជា ពិន្ទុពីគណៈកម្មការ ៦០ ភាគរយ រួមផ្សំជាមួយនឹងការចូលរួមចំណែករបស់ សហគ្រាសធុនតូច និងមធ្យម ក្នុងអំឡុងពេលកម្មវិធី និងការបោះឆ្នោតពីទស្សនិកជន ៤០ ភាគរយ។ ទោះបីជាផែនការដំបូងត្រូវជ្រើសរើសយកតែ ៦ សហគ្រាសដើម្បីឈានទៅជុំបន្ទាប់ ប៉ុន្តែមានសហគ្រាសចំនួន ៧ ត្រូវបានអនុញ្ញាតឱ្យឆ្លងទៅមុខដោយសារតែមានពិន្ទុខ្ពស់ប្រកៀកគ្នា រួមមាន៖ លោក លឹម​ សភា លោក ឡុក គៀនស្រ៊ី  លោកស្រី ពិន​ ភិរម្យ​ លោក អាន លីហ៊ាន់ លោកស្រី អ៉ិន ឡៃហួត លោក អុល ចំណាប់ និងលោកស្រី ចែម ធីតា។ នៅក្នុងជុំទី ២ បេក្ខជនដែលជាប់ឈ្មោះខ្លីបានចូលរួមក្នុងវគ្គសំណួរ និងចម្លើយជាមួយគណៈកម្មការ ដោយវាយតម្លៃលើលក្ខវិនិច្ឆ័យមួយឈុតដាច់ដោយឡែក មុនពេលម្ចាស់ជ័យលាភីកំពូលទាំងបីត្រូវបានជ្រើសរើស។ ក្រៅពីនេះ ក៏មានការផ្តល់ជូននូវពានរង្វាន់ទទួលស្គាល់ពិសេសចំនួនពីរផងដែរ គឺ ពានរង្វាន់ «សកម្មជាងគេ» (Most Active) ដែលសម្រេចដោយការបោះឆ្នោតពីសិក្ខាកាម InnoLab ដូចគ្នា និងពានរង្វាន់ «មានការគាំទ្រច្រើនជាងគេ» (Most Popular) ផ្តល់ជូនបេក្ខជនដែលមានវីដេអូទទួលបានការចុច Likes និង Shares ច្រើនជាងគេនៅលើទំព័រហ្វេសប៊ុករបស់ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ​(ASIP)។
+      ]
+    ],
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    92,
+    header-right: "សកម្មភាពទី ១០ ៖ ទិវាប្រកួតប្រជែងចុងក្រោយ",
+    side: "right",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 2 · PAGE 93 (VERSO / LEFT): PITCH PRESENTATION CONTENT (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ខ្លឹមសារបទបង្ហាញ])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "ខ្លឹមសារនៃការឡើងធ្វើបទបង្ហាញរបស់សហគ្រិន",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Narrative Stack
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 4.5mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
+      ខ្លឹមសារនៃការឡើងធ្វើបទបង្ហាញ៖ បទបង្ហាញឡើងពេជ្រខ្លួនឯងបានបង្ហាញពីលទ្ធផលការងារនវានុវត្តន៍ដែលបានអភិវឌ្ឍនៅទូទាំងក្រុមសិក្ខាកាមក្នុងអំឡុងពេលកម្មវិធី រាប់ចាប់តាំងពីធាតុចូលកសិកម្ម ដូចជា ពូជស្រូវ ជី និងគ្រឿងចក្រកសិកម្ម, ផលិតផលចំណីអាហារ រួមមាន អាហារសម្រន់ធ្វើពីគ្រាប់ស្វាយចន្ទី បបរភ្លាមៗ និងសាច់កែច្នៃ, សេវាកម្មទេសចរណ៍ ដូចជា កញ្ចប់ទស្សនកិច្ចបែបហ្គេម (Gamified Visitor Package) នៅសំបូរព្រៃគុក រហូតដល់ផលិតផលសិប្បកម្មដែលធ្វើពីសំបកគ្រាប់ស្វាយចន្ទី និងកំប្លោក ដែលឆ្លុះបញ្ចាំងពីជួរអាជីវកម្មចម្រុះដូចគ្នាទៅនឹងអ្វីដែលបានកត់ត្រាទុកនៅក្នុងវីដេអូឯកសារ InnoLab។
     ]
+  ])
 
-    #v(7mm)
+  // Insert Photo
+  #place(top + left, dx: 24mm, dy: 112mm, image("../assets/photos/40.jpg", width: 162mm, height: 120mm, fit: "cover"))
+  #place(top + left, dx: 24mm, dy: 236mm, editorial-caption(
+    "សកម្មភាពសហគ្រិនឡើងធ្វើបទបង្ហាញការពារគម្រោងនវានុវត្តន៍នៅចំពោះមុខគណៈកម្មការ",
+    meta-tag: "បទបង្ហាញចុងក្រោយ",
+    width: 162mm,
+  ))
 
-    Final Pitch បានបញ្ចប់រដូវកាលទី១ ដោយផ្តល់វេទិកា សម្រាប់សហគ្រាសទាំង ២០ បង្ហាញការងារដែលបានអភិវឌ្ឍ។
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    93,
+    header-left: "ខ្លឹមសារនៃការឡើងធ្វើបទបង្ហាញ",
+    side: "left",
+  ))
+]
 
-    #v(5mm)
 
-    នៅពេលដូចគ្នា បញ្ហាប្រឈមក្នុងការរៀបចំ និងមតិពីអ្នកចូលរួម ផ្តល់មេរៀនជាក់ស្តែងសម្រាប់ការរចនារដូវកាលបន្ទាប់។
-  ],
+// ==============================================================================
+// SPREAD 2 · PAGE 94 (RECTO / RIGHT): CHALLENGES & RESULTS (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · បញ្ហាប្រឈម និងលទ្ធផល])
 
-  [
-    #photo-stacked-2(
-      "/assets/photos/40.jpg",
-      "/assets/photos/18.jpg",
-      tag1: "FINAL PITCH STAGE",
-      tag2: "CLOSING MILESTONE",
-      caption: [រូបភាពទី៤២៖ ទិវា Final Pitching Day និងការបិទបញ្ចប់ InnoLab Kampong Thom រដូវកាលទី១],
-      height1: 58mm,
-      height2: 58mm,
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "បញ្ហាប្រឈម និងលទ្ធផលនៃទិវាប្រកួតប្រជែងចុងក្រោយ",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Content Stack
+  #place(top + left, dx: 24mm, dy: 66mm, stack(
+    spacing: 4mm,
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-sand-dark, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        បញ្ហាប្រឈម៖ នៅថ្ងៃនោះរួមមាន ការកម្រិតលើពិធីការ (Protocol) ក្រោមពេលវេលាហាត់សមដ៏តឹងរ៉ឹង, បញ្ហាការរៀបចំផ្នែកបច្ចេកទេសដោយសារពេលវេលាតេស្តឧបករណ៍មិនបានគ្រប់គ្រាន់, ការពឹងផ្អែកខ្លាំងលើការសម្របសម្រួលភ្លាមៗក្នុងពេលជាក់ស្តែងក្នុងចំណោមក្រុមការងាររៀបចំ និងការខូចម៉ាស៊ីនត្រជាក់នៅទីតាំងព្រឹត្តិការណ៍ ដែលជះឥទ្ធិពលដល់ភាពងាយស្រួល និងការចូលរួម។
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-sand-light.lighten(40%),
+      stroke: (left: 3pt + c-sand, rest: 0.5pt + c-sand),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        លទ្ធផល៖ ព្រឹត្តិការណ៍បានបញ្ចប់ទៅដោយជោគជ័យ ជាមួយនឹងម្ចាស់ជ័យលាភីបីរូបដែលត្រូវបានជ្រើសរើសសម្រាប់បទបង្ហាញដែលមានដំណោះស្រាយច្នៃប្រឌិតបំផុត និងមានសក្តានុពលខ្លាំងបំផុតក្នុងការយកទៅអនុវត្ត និងពង្រីកខ្នាតក្នុងពិភពពិត៖ លោក ឡុក គៀនស្រ៊ី អគ្គនាយកនៃក្រុមហ៊ុន ខេ អេស ស៊ីដ ឯ.ក. (KS SEED Co., Ltd.), លោកស្រី ភិន ភីរម្យ​  អគ្គនាយិកា នៃ សិប្បកម្មសុវណ្ណភូមិ និង លោក អុល ចំណាប់ ស្ថាបនិកសិប្បកម្មបច្ចេកវិទ្យាគ្រឿងយន្ត 007Ai។ លោក អាន លីហ៊ាន់ ឈ្នះរង្វាន់ សហគ្រិនសកម្ម និងលោក ឡូន ឆួង ឈ្នះរង្វាន់ សហគ្រិនមានប្រជាប្រិយភាព។ ម្ចាស់ជ័យលាភីចម្បងទាំងបីទទួលបានពានរង្វាន់ និងរង្វាន់ជាទឹកប្រាក់ ហើយបេក្ខជនចុងក្រោយទាំង ២០ រូបទទួលបានវិញ្ញាបនបត្របញ្ជាក់ការចូលរួម និងកាដូវត្ថុអនុស្សាវរីយ៍។ សេចក្តីប្រកាសព័ត៌មានចំនួនពីរដែលគ្របដណ្តប់លើព្រឹត្តិការណ៍នេះត្រូវបានចុះផ្សាយនៅក្នុងសារព័ត៌មាន Khmer Times។
+      ]
+    ],
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    94,
+    header-right: "បញ្ហាប្រឈម និងលទ្ធផលជោគជ័យ",
+    side: "right",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 3 · PAGE 95 (VERSO / LEFT): PARTICIPANT FEEDBACK (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · មតិកែលម្អ])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "មតិកែលម្អរបស់អ្នកចូលរួម និងកម្រិតពេញចិត្តជារួម",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Content Stack
+  #place(top + left, dx: 24mm, dy: 66mm, stack(
+    spacing: 3.5mm,
+    block(
+      width: 162mm,
+      inset: 4mm,
+      fill: c-white,
+      stroke: 0.5pt + c-line,
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        មតិកែលម្អរបស់អ្នកចូលរួម៖ ទិន្នន័យត្រូវបានប្រមូលលើជញ្ជីងវាស់វែងពីរខុសគ្នានៅក្នុងកម្រងស្ទង់មតិតែមួយ៖
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        សម្រាប់កត្តាជាក់លាក់៥៖ រួមមាន ការតុបតែងនិងទីតាំងព្រឹត្តិការណ៍, អាហារសម្រន់, អាហារថ្ងៃត្រង់, របៀបវារៈព្រឹត្តិការណ៍ និងឱកាសបង្កើតបណ្តាញទំនាក់ទំនង អ្នកចូលរួមបានវាយតម្លៃបទពិសោធន៍របស់ពួកគេលើជញ្ជីងដែលលេខ ១ មានន័យថា «ល្អណាស់» និងលេខ ៥ មានន័យថា «ខ្សោយ»។ លើជញ្ជីងនោះ ការតុបតែងនិងទីតាំងព្រឹត្តិការណ៍ត្រូវបានវាយតម្លៃថា ល្អ ឬល្អណាស់ ដោយច្រើនជាង ៧៦ ភាគរយនៃអ្នកឆ្លើយតប ដោយមាន ៧ ភាគរយវាយតម្លៃកម្រិតមធ្យម និង ១៥ ភាគរយវាយតម្លៃក្រោមមធ្យម។ អាហារសម្រន់ អាហារថ្ងៃត្រង់ និងរបៀបវារៈព្រឹត្តិការណ៍ នីមួយៗត្រូវបានវាយតម្លៃថាល្អ ឬល្អណាស់ដោយប្រហែល ៦៩ ភាគរយ ដោយមាន ២៣ ភាគរយមធ្យម និង ៧ ភាគរយក្រោមមធ្យម។ ឱកាសបង្កើតបណ្តាញទំនាក់ទំនងក៏ត្រូវបានវាយតម្លៃថាល្អ ឬល្អណាស់ដោយប្រហែល ៦៩ ភាគរយផងដែរ ដោយមាន ១៥ ភាគរយមធ្យម និង ១៥ ភាគរយក្រោមមធ្យម។
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4mm,
+      fill: c-sand-light.lighten(40%),
+      stroke: (left: 3pt + c-sand, rest: 0.5pt + c-sand),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        ការពេញចិត្តជារួម៖ ដាច់ដោយឡែកពីគ្នា អ្នកចូលរួមបានវាយតម្លៃការពេញចិត្តជារួមរបស់ពួកគេចំពោះព្រឹត្តិការណ៍លើជញ្ជីងផ្ទុយគ្នា ដែលលេខ ១ គឺទាបបំផុត និងលេខ ៥ គឺខ្ពស់បំផុត។ ផ្អែកលើការវាស់វែងនោះ មានត្រឹមតែប្រហែល ១៥ ភាគរយប៉ុណ្ណោះដែលបានវាយតម្លៃការពេញចិត្តរបស់ពួកគេនៅកម្រិត ៣ ឬទាបជាងនេះ ខណៈប្រហែល ៥ formulation ភាគរយបានវាយតម្លៃកម្រិត ៤ និងប្រហែល ៣១ ភាគរយបានវាយតម្លៃកម្រិត ៥ មានន័យថាប្រហាក់ប្រហែល ៨៥ ភាគរយបានផ្តល់ចំណាត់ថ្នាក់ព្រឹត្តិការណ៍ស្ថិតក្នុងចំណោមពិន្ទុខ្ពស់បំផុតទាំងពីរ។
+      ]
+    ],
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    95,
+    header-left: "មតិកែលម្អរបស់អ្នកចូលរួម និងការពេញចិត្ត",
+    side: "left",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 3 · PAGE 96 (RECTO / RIGHT): OPERATIONAL BUDGET REALIZED (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ថវិកាប្រតិបត្តិការ])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "5.1 Operational Budget Execution Realized",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Intro
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 4mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+      Every dollar deployed across the InnoLab Kampong Thom framework was tracked against strict performance metrics. The financial management model requires complete transparency across all operational pillars:
+    ]
+    #h(2mm) #text(font: font-khmer-display, size: 7pt, fill: c-charcoal.lighten(40%))[(PDF)]
+  ])
+
+  // Budget Allocation Chart Box
+  #place(top + left, dx: 24mm, dy: 104mm, block(
+    width: 162mm,
+    inset: 5mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    /*
+    ┌────────────────────────────────────────────────────────┐
+    │ [████████████████] Academic Curriculum Delivery (35%)   │
+    ├────────────────────────────────────────────────────────┤
+    │ [████████████] Onsite Diagnostics & Auditing (25%)     │
+    ├────────────────────────────────────────────────────────┤
+    │ [██████████] Media Production & Documentaries (20%)    │
+    ├────────────────────────────────────────────────────────┤
+    │ [──────────] Public Ceremonies & Admin (20%)            │
+    └────────────────────────────────────────────────────────┘
+    */
+    #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[Operational Budget Allocation Realized]
+    #v(3mm)
+    #stack(
+      spacing: 2.5mm,
+      block(fill: c-teal, inset: 3mm, radius: 2pt)[
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-white)[Academic Curriculum Delivery (35%)]
+      ],
+      block(fill: c-teal.lighten(15%), inset: 3mm, radius: 2pt)[
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-white)[Onsite Diagnostics & Auditing (25%)]
+      ],
+      block(fill: c-sand-dark, inset: 3mm, radius: 2pt)[
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-white)[Media Production & Documentaries (20%)]
+      ],
+      block(fill: c-sand, inset: 3mm, radius: 2pt)[
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal.darken(20%))[Public Ceremonies & Admin (20%)]
+      ],
     )
-  ],
-)
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    96,
+    header-right: "៥.១ ថវិកាប្រតិបត្តិការដែលបានអនុវត្ត",
+    side: "right",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 4 · PAGE 97 (VERSO / LEFT): BUDGET ALLOCATION BREAKDOWN (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · បំណែងចែកថវិកា])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "ការវិភាគបំណែងចែកថវិកាតាមមុខសញ្ញាសំខាន់ៗទាំងបួន",
+    preset: "lg",
+    size: 15pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // 4 Allocation Cards
+  #place(top + left, dx: 24mm, dy: 66mm, stack(
+    spacing: 3.5mm,
+    block(
+      width: 162mm,
+      inset: 4mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.2pt, fill: c-charcoal)[
+        - Academic Curriculum & Field Delivery (35%): Funding expert trainers, venue spaces, field exercises, translation work, and educational tracking tools. PDF
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.2pt, fill: c-charcoal)[
+        - Onsite Diagnostics & Field Auditing (25%): Covering logistical costs for technical teams to travel to distant rural facilities for inspections and engineering audits. PDF
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-sand-dark, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.2pt, fill: c-charcoal)[
+        - Media Production & Ecosystem Documentaries (20%): Funding specialized film crews, equipment, and editing teams during the 10-day field production sprint. PDF
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-sand, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.2pt, fill: c-charcoal)[
+        - Public Ceremonies & Inter-Departmental Coordination (20%): Funding high-level launch events, printing formal reports, and managing provincial communication networks. PDF
+      ]
+    ],
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    97,
+    header-left: "បំណែងចែកថវិកាតាមមុខសញ្ញាសំខាន់ៗ",
+    side: "left",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 4 · PAGE 98 (RECTO / RIGHT): CAPITAL TARGETS & SCALE MATRIX (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · គោលដៅទុនវិនិយោគ])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "5.2 Capital Investment Targets for the Final Pitching Showcase",
+    preset: "lg",
+    size: 16pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // Intro
+  #place(top + left, dx: 24mm, dy: 66mm, block(
+    width: 162mm,
+    inset: 4mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+      The immediate next phase of the project centers on the upcoming Final Pitching Showcase. The 20 finalist SMEs will present their fully audited, risk-mitigated business expansion plans directly to institutional investors, venture capital funds, and commercial banking partners.
+    ]
+    #h(2mm) #text(font: font-khmer-display, size: 7pt, fill: c-charcoal.lighten(40%))[(PDF+ 1)]
+  ])
+
+  // Scale Matrix Card
+  #place(top + left, dx: 24mm, dy: 104mm, block(
+    width: 162mm,
+    height: 80mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    inset: 4mm,
+    radius: 2pt,
+  )[
+    #align(center)[
+      #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[Enterprise Capital Scale Matrix · Target Capital Needed (USD)]
+/*
+$25,000 ─────────────────────────────────────────────────────────────┐
+│ High-Scale
+$15,000 ───────────────────────────────┐                             │ Processing
+│ Mid-Tier                    │ Hubs
+$5,000  ──────────┐ Micro-Grants       │ Automation                  │
+│                    │                             │
+──────────┴────────────────────┴─────────────────────────────┴
+Level 1 Tier                 Level 2 Tier                 Level 3 Tier
+Level 1 Tier (Micro-Grants / $2,500 – $5,000): Intended for micro-enterprises to purchase foundational tools, update basic labels, and secure standard hygiene certifications.
+*/
+      #v(3mm)
+      #grid(
+        columns: (1fr, 1fr, 1fr),
+        gutter: 3.5mm,
+        block(fill: c-sand-light.lighten(50%), inset: 3.5mm, stroke: 0.5pt + c-sand, radius: 2pt)[
+          #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[Level 1 Tier]
+          #v(1mm)
+          #text(font: font-khmer-display, size: 13pt, weight: "bold", fill: c-teal)[$2,500 – $5,000]
+          #v(1mm)
+          #text(font: font-khmer-body, size: 7pt, fill: c-charcoal)[Micro-Grants]
+        ],
+        block(fill: c-sand-light.lighten(50%), inset: 3.5mm, stroke: 0.5pt + c-sand, radius: 2pt)[
+          #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[Level 2 Tier]
+          #v(1mm)
+          #text(font: font-khmer-display, size: 13pt, weight: "bold", fill: c-teal)[$5,001 – $15,000]
+          #v(1mm)
+          #text(font: font-khmer-body, size: 7pt, fill: c-charcoal)[Mid-Tier Automation]
+        ],
+        block(fill: c-teal, inset: 3.5mm, radius: 2pt)[
+          #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand)[Level 3 Tier]
+          #v(1mm)
+          #text(font: font-khmer-display, size: 13pt, weight: "bold", fill: c-sand)[$15,001 – $30,000+]
+          #v(1mm)
+          #text(font: font-khmer-body, size: 7pt, fill: c-white)[High-Scale Hubs]
+        ],
+      )
+    ]
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    98,
+    header-right: "៥.២ គោលដៅទុនវិនិយោគ និងម៉ាទ្រីសកម្រិតទុន",
+    side: "right",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 5 · PAGE 99 (VERSO / LEFT): THREE CAPITAL TIERS (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Left
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · កម្រិតទុនវិនិយោគទាំង ៣])
+
+  // Title
+  #place(top + left, dx: 24mm, dy: 28mm, khmer-display-title(
+    "ការវិភាគកម្រិតទុនវិនិយោគទាំងបី (Levels 1, 2, 3)",
+    preset: "lg",
+    size: 15pt,
+    color: c-teal,
+    rule-length: 120mm,
+    rule-stroke: 1pt + c-sand,
+  ))
+
+  // 3 Tiers Narrative
+  #place(top + left, dx: 24mm, dy: 66mm, stack(
+    spacing: 4mm,
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        - Level 1 Tier (Micro-Grants / \$2,500 – \$5,000): Intended for micro-enterprises to purchase foundational tools, update basic labels, and secure standard hygiene certifications.
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-sand, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        - Level 2 Tier (Mid-Tier Automation / \$5,001 – \$15,000): Tailored for expanding businesses to acquire semi-automated packaging lines, solar drying domes, or small delivery trucks.
+      ]
+    ],
+    block(
+      width: 162mm,
+      inset: 4.5mm,
+      fill: c-white,
+      stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
+      radius: 2pt,
+    )[
+      #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+        - Level 3 Tier (High-Scale Processing Hubs / \$15,001 – \$30,000+): Directed at advanced cohort leaders to build complete processing facilities, buy industrial-grade machinery, and implement full enterprise resource planning (ERP) tracking software.
+      ]
+    ],
+  ))
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    99,
+    header-left: "ការវិភាគកម្រិតទុនវិនិយោគទាំងបី",
+    side: "left",
+  ))
+]
+
+
+// ==============================================================================
+// SPREAD 5 · PAGE 100 (RECTO / RIGHT): CHAPTER CLOSING & SYNTHESIS (WARM PAPER)
+// ==============================================================================
+#page(
+  paper: "a4",
+  margin: 0pt,
+  fill: c-paper,
+  header: none,
+  footer: none,
+)[
+  // Running Header Top Right
+  #place(top + left, dx: 24mm, dy: 18mm, text(
+    font: font-khmer-display,
+    size: 7.5pt,
+    weight: "bold",
+    fill: c-charcoal.lighten(30%),
+  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · សំយោគជំពូកទី ៧])
+
+  // Full Page Photographic Hero Frame
+  #geom-frame(24mm, 28mm, 162mm, 122mm, stroke-color: c-sand, offset-x: 3mm, offset-y: 3mm)
+  #place(top + left, dx: 24mm, dy: 28mm, image("../assets/photos/DSC_8464.jpg", width: 162mm, height: 122mm, fit: "cover"))
+
+  // Photo Caption Cleanly Below Photo
+  #place(top + left, dx: 24mm, dy: 154mm, editorial-caption(
+    "ពិធីប្រគល់ពានរង្វាន់ជ័យលាភី និងការអបអរសាទរសមិទ្ធផលនវានុវត្តន៍នៃគម្រោង InnoLab",
+    meta-tag: "សមិទ្ធផលជោគជ័យ",
+    width: 162mm,
+  ))
+
+  // Bottom Synthesis Block
+  #place(top + left, dx: 24mm, dy: 174mm, block(
+    width: 162mm,
+    inset: 4.5mm,
+    fill: c-white,
+    stroke: 0.5pt + c-line,
+    radius: 2pt,
+  )[
+    #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[សំយោគទិវាប្រកួតប្រជែង និងប្រសិទ្ធភាពថវិកា]
+    #v(1.5mm)
+    #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
+      ទិវាប្រកួតប្រជែងឡើងពេជ្រចុងក្រោយបានបង្ហាញយ៉ាងច្បាស់ពីការរីកចម្រើនយ៉ាងធំធេងនៃសមត្ថភាពរបស់សហគ្រិនខេត្តកំពង់ធំ។ តាមរយៈការគ្រប់គ្រងថវិកាប្រកបដោយតម្លាភាព និងការបែងចែកទុនវិនិយោគចំគោលដៅ គម្រោងបានត្រួសត្រាយផ្លូវសម្រាប់សហគ្រាសក្នុងការឈានទៅរកការធ្វើស្វ័យប្រវត្តិកម្ម និងការតភ្ជាប់ទីផ្សារទ្រង់ទ្រាយធំ។
+    ]
+  ])
+
+  // Bottom Datum Line & Folio
+  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
+  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
+    100,
+    header-right: "ជំពូកទី៧ ៖ សំយោគទិវាប្រកួតប្រជែងចុងក្រោយ",
+    side: "right",
+  ))
+]

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" width="210mm" height="297mm">
+  <defs>
+    <!-- Crisp White Sky down to soft atmospheric mist -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="42%" stop-color="#FFFFFF" />
+      <stop offset="62%" stop-color="#F4F8F8" />
+      <stop offset="82%" stop-color="#E2EEF0" />
+      <stop offset="100%" stop-color="#CDE3E6" />
+    </linearGradient>
+
+    <!-- Mountain Layers -->
+    <linearGradient id="mountDist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#24788A" />
+      <stop offset="100%" stop-color="#185B69" />
+    </linearGradient>
+    <linearGradient id="mountMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#165B6A" />
+      <stop offset="100%" stop-color="#0E424E" />
+    </linearGradient>
+    <linearGradient id="mountNear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E4754" />
+      <stop offset="100%" stop-color="#072F38" />
+    </linearGradient>
+
+    <!-- Water & Land Gradients -->
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#125666" />
+      <stop offset="40%" stop-color="#0C414D" />
+      <stop offset="100%" stop-color="#072931" />
+    </linearGradient>
+    <linearGradient id="baseGround" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#072931" />
+      <stop offset="100%" stop-color="#03161B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Sky -->
+  <rect x="0" y="0" width="210" height="297" fill="url(#skyGrad)" />
+
+  <!-- Mountain Ridges -->
+  <path d="
+    M0,165
+    Q25,160 50,163 T100,158 Q130,154 160,160 T210,153
+    L210,297 L0,297 Z
+  " fill="url(#mountDist)" opacity="0.65" />
+
+  <path d="
+    M10,163 L16,158 L22,162 L32,156 L40,161 L55,154 L68,160
+    L90,152 L105,157 L130,149 L145,155 L175,147 L190,153 L210,148
+    L210,297 L0,297 Z
+  " fill="url(#mountDist)" opacity="0.75" />
+
+  <path d="
+    M0,172
+    Q35,166 75,170 T155,164 Q195,160 210,163
+    L210,297 L0,297 Z
+  " fill="url(#mountMid)" opacity="0.88" />
+
+  <path d="
+    M0,178
+    L18,173 L26,177 L42,170 L52,175 L74,168 L88,174
+    L115,166 L130,172 L160,164 L178,171 L208,162 L210,163
+    L210,297 L0,297 Z
+  " fill="url(#mountNear)" />
+
+  <!-- Stung Sen Waterways -->
+  <path d="
+    M0,184
+    C40,181 90,186 145,183
+    C180,181 200,183 210,182
+    L210,246
+    C180,245 140,248 85,245
+    C40,243 15,246 0,244 Z
+  " fill="url(#waterGrad)" />
+
+  <g stroke="#3BB0C4" stroke-width="0.85" stroke-linecap="round" opacity="0.8">
+    <line x1="20" y1="189" x2="70" y2="189" />
+    <line x1="85" y1="194" x2="155" y2="194" stroke-width="1.2" stroke="#68CCE0" />
+    <line x1="35" y1="199" x2="115" y2="199" />
+    <line x1="175" y1="188" x2="210" y2="188" />
+    <line x1="75" y1="206" x2="185" y2="206" />
+    <line x1="145" y1="214" x2="210" y2="214" />
+    <line x1="25" y1="219" x2="110" y2="219" />
+  </g>
+
+  <!-- Shoreline Reeds -->
+  <g stroke="#082C35" stroke-width="1.2" stroke-linecap="round" fill="none">
+    <path d="M3,242 Q5,226 9,216" />
+    <path d="M7,244 Q11,224 15,212" />
+    <path d="M12,244 Q17,228 21,218" />
+    <path d="M19,246 Q23,232 26,222" />
+    <path d="M98,228 Q101,217 105,210" />
+    <path d="M103,229 Q107,215 111,206" />
+    <path d="M109,230 Q114,218 117,211" />
+  </g>
+
+  <!-- Solid Deep Base Ground -->
+  <path d="
+    M0,242
+    C45,240 115,246 195,243
+    C200,243 205,243 210,243
+    L210,297 L0,297 Z
+  " fill="url(#baseGround)" />
+
+  <path d="
+    M0,242
+    C45,240 115,246 195,243
+    C200,243 205,243 210,243
+  " fill="none" stroke="#D8B86C" stroke-width="0.8" opacity="0.65" />
+</svg>

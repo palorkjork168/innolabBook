@@ -181,7 +181,7 @@
         #v(2.5mm)
 
         #block[
-          #set par(leading: 5.8pt, justify: false)
+          #set par(leading: 7.2pt, justify: false)
           #text(
             font: fonts.main,
             size: 8pt,
@@ -224,7 +224,7 @@
     #v(2.5mm)
 
     #block[
-      #set par(leading: 5.8pt, justify: false)
+      #set par(leading: 7.5pt, justify: false)
       #text(
         font: fonts.main,
         size: 8.2pt,
@@ -284,7 +284,7 @@
     #v(2.5mm)
 
     #block[
-      #set par(leading: 6.2pt, justify: false)
+      #set par(leading: 7.8pt, justify: false)
       #text(
         font: fonts.main,
         size: 8.8pt,
