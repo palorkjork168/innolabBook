@@ -4,7 +4,7 @@
 
 #chapter-opener(
   num: "០៥",
-  title: "៧. ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់",
+  title: "ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់",
   subtitle: "ចក្ខុវិស័យពង្រីកវិសាលភាពសម្រាប់រដូវកាលទី ២ ទី ៣ និងទី ៤ ឆ្ពោះទៅកាន់សហគ្រិន ១០០ រូប ត្រឹមឆ្នាំ២០២៨",
   label-id: "ch-05",
 )
@@ -20,7 +20,7 @@
 #v(3mm)
 
 #rect(width: 100%, fill: c-paper, stroke: (left: 3pt + c-sand, rest: 0.5pt + c-line), radius: (right: 3pt), inset: 4mm)[
-  #text(font: font-khmer-display, size: 9.8pt, weight: "bold", fill: c-teal)[យុទ្ធសាស្ត្រពង្រីកវិសាលភាពឆ្ពោះទៅឆ្នាំ២០២៨]\
+  #text(font: font-khmer-display, size: 9.8pt, weight: "bold", fill: c-teal)[៥.១ យុទ្ធសាស្ត្រពង្រីកវិសាលភាពឆ្ពោះទៅឆ្នាំ២០២៨]\
   #v(1mm)
   #line(length: 100%, stroke: 0.5pt + c-sand.lighten(30%))
   #v(2mm)
@@ -29,7 +29,7 @@
 ]
 #v(3mm)
 
-#section-title("ក្នុងដំណាក់កាលជ្រើសជ្រើសនេះផងដែរ ក្រុមការងារបានចុះធ្វើការផ្សព្វផ្សាយអំពីគម្រោងចំនួន២ លើកដោយ ៖")
+#section-title("៥.២ សកម្មភាពផ្សព្វផ្សាយជ្រើសរើសបេក្ខជនរដូវកាលទី ២")
 
 #grid(
   columns: (1fr, 1fr),
@@ -68,7 +68,7 @@
     [
       #text(font: font-sans, size: 8pt, weight: "bold", fill: c-sand, tracking: 0.12em)[STRATEGIC PARTNERSHIP ECOSYSTEM]\
       #v(1mm)
-      #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-white)[កិច្ចសហការគាំទ្រដោយ SDF, KE និងស្ថាប័នពាក់ព័ន្ធ]\
+      #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-white)[៥.៣ កិច្ចសហការគាំទ្រដោយ SDF, KE និងស្ថាប័នពាក់ព័ន្ធ]\
       #v(1mm)
       #text(font: font-khmer-body, size: 8pt, fill: c-sand-light)[រួមគ្នាដើម្បីអភិវឌ្ឍន៍សហគ្រាសធុនតូច និងមធ្យម ឆ្ពោះទៅរកនវានុវត្តន៍ និងចីរភាពសេដ្ឋកិច្ចខេត្តកំពង់ធំ]
     ],
