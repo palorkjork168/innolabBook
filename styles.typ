@@ -575,46 +575,29 @@
       )
     ])
 
-    // 5. Official Publication Barcode & Partner Logos (Unified Balanced Card)
-    #place(top + left, dx: 26mm, dy: 218mm, block(
+    // 5. Official Partner Organizations Card
+    #place(top + left, dx: 26mm, dy: 220mm, block(
       width: 164mm,
-      height: 26mm,
+      height: 24mm,
       fill: rgb(255, 255, 255, 96%),
       radius: 4pt,
       stroke: 0.8pt + c-sand,
-      inset: (x: 4.5mm, y: 2.5mm),
+      inset: (x: 8mm, y: 2.8mm),
     )[
-      #grid(
-        columns: (44mm, 1pt, 1fr),
-        gutter: 4mm,
-        align: horizon,
-        [
-          #align(center + horizon)[
-            #image("assets/cover/barcode.svg", width: 42mm, height: 11mm, fit: "contain")
-            #v(1mm)
-            #text(font: font-sans, size: 5.6pt, weight: 700, fill: c-teal)[ISBN 978-0-141-32113-4]\
-            #v(0.3mm)
-            #text(font: font-sans, size: 5pt, weight: 600, fill: rgb("#0E3844"))[www.innolab-kh.com]
-          ]
-        ],
-        line(length: 19mm, angle: 90deg, stroke: 0.6pt + c-line),
-        [
-          #align(center + horizon)[
-            #grid(
-              columns: (1fr, 1fr, 1fr),
-              gutter: 3mm,
-              align: horizon + center,
-              image(resolve-logo("asip"), height: 10mm, fit: "contain"),
-              image(resolve-logo("sdf"), height: 9.5mm, fit: "contain"),
-              image(resolve-logo("ke"), height: 8.5mm, fit: "contain"),
-            )
-            #v(1.8mm)
-            #text(font: font-khmer-display, size: 6pt, weight: "bold", fill: c-teal)[
-              ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP) · មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) · សហគ្រិនខ្មែរ (Khmer Enterprise)
-            ]
-          ]
-        ],
-      )
+      #align(center + horizon)[
+        #grid(
+          columns: (1fr, 1fr, 1fr),
+          gutter: 6mm,
+          align: horizon + center,
+          image(resolve-logo("asip"), height: 10.5mm, fit: "contain"),
+          image(resolve-logo("sdf"), height: 10mm, fit: "contain"),
+          image(resolve-logo("ke"), height: 9mm, fit: "contain"),
+        )
+        #v(1.8mm)
+        #text(font: font-khmer-display, size: 6.8pt, weight: "bold", fill: c-teal)[
+          ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP) · មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) · សហគ្រិនខ្មែរ (Khmer Enterprise)
+        ]
+      ]
     ])
 
     // 6. Bottom Datum & Archival Tag
