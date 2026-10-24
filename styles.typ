@@ -431,20 +431,17 @@
     // 1. Running Eyebrow Header Top Left
     #place(top + left, dx: 26mm, dy: 13mm, block[
       #text(
-        font: font-sans,
-        size: 7.2pt,
-        weight: 700,
+        font: font-khmer-display,
+        size: 7.8pt,
+        weight: "bold",
         fill: c-sand-dark,
-        tracking: 0.2em,
-      )[INNOLAB KAMPONG THOM · OFFICIAL MONOGRAPH]
-      #v(0.8mm)
+      )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · របាយការណ៍បូកសរុបផ្លូវការ]
+      #v(0.6mm)
       #text(
-        font: font-sans,
-        size: 6.2pt,
-        weight: 600,
+        font: font-khmer-body,
+        size: 6.8pt,
         fill: c-teal,
-        tracking: 0.14em,
-      )[EXECUTIVE SUMMARY & PROGRAM SYNTHESIS]
+      )[សេចក្តីសង្ខេបប្រតិបត្តិ និងសំយោគសមិទ្ធផលគម្រោង]
     ])
 
     // 2. Program Executive Narrative
@@ -453,8 +450,8 @@
         ដំណើរនៃនវានុវត្តន៍ និងការរីកចម្រើននៃសហគ្រាសខេត្តកំពង់ធំ
       ]\
       #v(0.8mm)
-      #text(font: font-sans, size: 8pt, weight: 700, fill: c-sand-dark, tracking: 0.12em)[
-        CATALYZING REGIONAL INNOVATION & SUSTAINABLE SME GROWTH
+      #text(font: font-khmer-display, size: 8pt, weight: "bold", fill: c-sand-dark)[
+        ជំរុញនវានុវត្តន៍ថ្នាក់តំបន់ និងការរីកចម្រើនប្រកបដោយចីរភាពនៃសហគ្រាសធុនតូច និងមធ្យម
       ]
       #v(2mm)
       #line(length: 36mm, stroke: 1.4pt + c-sand)
@@ -467,10 +464,10 @@
       ]
     ])
 
-    // 3. Four Core Learning Modules (Refined 2x2 Grid with generous padding & proportion)
+    // 3. Four Core Learning Modules
     #place(top + left, dx: 26mm, dy: 80mm, block(width: 164mm)[
       #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-teal)[
-        កម្មវិធីបណ្តុះបណ្តាលស្នូលទាំង ៤ ដំណាក់កាល · 4 CORE LEARNING MODULES
+        កម្មវិធីបណ្តុះបណ្តាលស្នូលទាំង ៤ ដំណាក់កាល
       ]
       #v(3mm)
       #grid(
@@ -487,8 +484,8 @@
         )[
           #stack(
             spacing: 1.6mm,
-            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 01],
-            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[Design Thinking & Empathy],
+            text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-dark)[ដំណាក់កាលទី ១],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ការច្នៃគំនិត និងការយល់ចិត្តអតិថិជន],
             block[
               #set par(leading: 4.5pt, justify: false)
               #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ការស្វែងយល់ស៊ីជម្រៅពីតម្រូវការអតិថិជន និងបញ្ហាប្រឈម]
@@ -505,8 +502,8 @@
         )[
           #stack(
             spacing: 1.6mm,
-            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 02],
-            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[Customer Insights & Prototype],
+            text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-dark)[ដំណាក់កាលទី ២],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ការយល់ដឹងពីអតិថិជន និងគំរូសាកល្បង],
             block[
               #set par(leading: 4.5pt, justify: false)
               #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ការអភិវឌ្ឍផលិតផលគំរូនវានុវត្តន៍ និងការធ្វើតេស្តទីផ្សារ]
@@ -523,8 +520,8 @@
         )[
           #stack(
             spacing: 1.6mm,
-            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 03],
-            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[Innovative Project Management],
+            text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-dark)[ដំណាក់កាលទី ៣],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ការគ្រប់គ្រងគម្រោងនវានុវត្តន៍],
             block[
               #set par(leading: 4.5pt, justify: false)
               #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ការគ្រប់គ្រងប្រតិបត្តិការ ហិរញ្ញវត្ថុ និងយុទ្ធសាស្ត្រលក់]
@@ -541,8 +538,8 @@
         )[
           #stack(
             spacing: 1.6mm,
-            text(font: font-sans, size: 6.8pt, weight: 800, fill: c-sand-dark)[MODULE 04],
-            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[InnoTour & Pitching Stage],
+            text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-dark)[ដំណាក់កាលទី ៤],
+            text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ទស្សនកិច្ចសិក្សា និងការប្រកួតប្រជែង],
             block[
               #set par(leading: 4.5pt, justify: false)
               #text(font: font-khmer-body, size: 7.2pt, fill: rgb("#234850"))[ទស្សនកិច្ចសិក្សា ការតភ្ជាប់បណ្តាញ និងការប្រកួតប្រជែង]
@@ -558,68 +555,66 @@
       fill: rgb("#062228").transparentize(15%),
       stroke: 0.8pt + c-sand,
       radius: 3pt,
-      inset: (x: 10pt, y: 5pt),
+      inset: (x: 10pt, y: 6pt),
     )[
       #grid(
         columns: (1fr, 1fr, 1fr),
         gutter: 4mm,
         [
           #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand)[100%]\
-          #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[អត្រាបញ្ចប់គម្រោង]\
-          #text(font: font-sans, size: 5.5pt, fill: c-sand-light)[COMPLETION RATE]
+          #text(font: font-khmer-display, size: 7.6pt, weight: "bold", fill: c-white)[អត្រាបញ្ចប់គម្រោង]
         ],
         [
           #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand)[48M]\
-          #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[រង្វាន់ប្រកួតប្រជែង (រៀល)]\
-          #text(font: font-sans, size: 5.5pt, fill: c-sand-light)[PITCHING PRIZE POOL]
+          #text(font: font-khmer-display, size: 7.6pt, weight: "bold", fill: c-white)[រង្វាន់ប្រកួតប្រជែង (រៀល)]
         ],
         [
           #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand)[20]\
-          #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[ករណីសិក្សាសហគ្រាស]\
-          #text(font: font-sans, size: 5.5pt, fill: c-sand-light)[SME CASE STUDIES]
+          #text(font: font-khmer-display, size: 7.6pt, weight: "bold", fill: c-white)[ករណីសិក្សាសហគ្រាស]
         ],
       )
     ])
 
-    // 5. Official Publication Barcode & Partner Card
+    // 5. Official Publication Barcode & Partner Logos (Unified Balanced Card)
     #place(top + left, dx: 26mm, dy: 218mm, block(
-      width: 56mm,
-      fill: rgb(255, 255, 255, 95%),
+      width: 164mm,
+      height: 26mm,
+      fill: rgb(255, 255, 255, 96%),
       radius: 4pt,
-      inset: (x: 3.5mm, y: 2.8mm),
       stroke: 0.8pt + c-sand,
-    )[
-      #align(center)[
-        #text(font: font-sans, size: 5.5pt, weight: 800, fill: c-teal, tracking: 0.14em)[OFFICIAL PUBLICATION]\
-        #v(1mm)
-        #image("assets/cover/barcode.svg", width: 48mm, height: 11mm, fit: "contain")\
-        #v(0.8mm)
-        #text(font: font-sans, size: 6pt, weight: 700, fill: c-teal)[ISBN 978-0-141-32113-4]\
-        #text(font: font-sans, size: 5.2pt, weight: 600, fill: rgb("#0E3844"))[www.innolab-kh.com]
-      ]
-    ])
-
-    #place(top + left, dx: 86mm, dy: 218mm, block(
-      width: 104mm,
-      fill: rgb(255, 255, 255, 92%),
-      radius: 4pt,
-      inset: (x: 4mm, y: 3.2mm),
-      stroke: 0.8pt + c-sand,
+      inset: (x: 4.5mm, y: 2.5mm),
     )[
       #grid(
-        columns: (1fr, 1fr, 1fr),
-        gutter: 3mm,
-        align: horizon + center,
-        image(resolve-logo("asip"), height: 9mm, fit: "contain"),
-        image(resolve-logo("sdf"), height: 8.5mm, fit: "contain"),
-        image(resolve-logo("ke"), height: 7.5mm, fit: "contain"),
+        columns: (44mm, 1pt, 1fr),
+        gutter: 4mm,
+        align: horizon,
+        [
+          #align(center + horizon)[
+            #image("assets/cover/barcode.svg", width: 42mm, height: 11mm, fit: "contain")
+            #v(1mm)
+            #text(font: font-sans, size: 5.6pt, weight: 700, fill: c-teal)[ISBN 978-0-141-32113-4]\
+            #v(0.3mm)
+            #text(font: font-sans, size: 5pt, weight: 600, fill: rgb("#0E3844"))[www.innolab-kh.com]
+          ]
+        ],
+        line(length: 19mm, angle: 90deg, stroke: 0.6pt + c-line),
+        [
+          #align(center + horizon)[
+            #grid(
+              columns: (1fr, 1fr, 1fr),
+              gutter: 3mm,
+              align: horizon + center,
+              image(resolve-logo("asip"), height: 10mm, fit: "contain"),
+              image(resolve-logo("sdf"), height: 9.5mm, fit: "contain"),
+              image(resolve-logo("ke"), height: 8.5mm, fit: "contain"),
+            )
+            #v(1.8mm)
+            #text(font: font-khmer-display, size: 6pt, weight: "bold", fill: c-teal)[
+              ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP) · មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) · សហគ្រិនខ្មែរ (Khmer Enterprise)
+            ]
+          ]
+        ],
       )
-      #v(1.5mm)
-      #align(center)[
-        #text(font: font-sans, size: 5.6pt, weight: 700, fill: c-teal, tracking: 0.08em)[
-          ANGKOR SOCIAL INNOVATION PARK · SDF · KHMER ENTERPRISE
-        ]
-      ]
     ])
 
     // 6. Bottom Datum & Archival Tag

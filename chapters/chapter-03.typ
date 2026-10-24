@@ -25,10 +25,10 @@
 #equal-box-grid(
   columns: (1fr, 1fr, 1fr, 1fr),
   gutter: 3mm,
-  stat-card("២០ រូប", "សហគ្រិនចូលរួមសរុប", label-en: "ENTREPRENEURS"),
-  stat-card("៨ ស្រុក", "វិសាលភាពគ្របដណ្តប់", label-en: "DISTRICTS"),
-  stat-card("៤ វិស័យ", "កសិកម្ម កែច្នៃ សេវាកម្ម", label-en: "SECTOR DIVERSITY"),
-  stat-card("៤៨ លាន", "រង្វាន់ជ័យលាភី (រៀល)", label-en: "TOTAL PRIZES"),
+  stat-card("២០ រូប", "សហគ្រិនចូលរួមសរុប"),
+  stat-card("៨ ស្រុក", "វិសាលភាពគ្របដណ្តប់"),
+  stat-card("៤ វិស័យ", "កសិកម្ម កែច្នៃ សេវាកម្ម"),
+  stat-card("៤៨ លាន", "រង្វាន់ជ័យលាភី (រៀល)"),
 )
 #v(4mm)
 

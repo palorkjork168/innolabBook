@@ -1,4 +1,4 @@
-﻿#import "../styles.typ": *
+#import "../styles.typ": *
 #import "../components/catalogue.typ": *
 
 #let ch-data = (
@@ -153,7 +153,7 @@
         ],
         [
           #pad(bottom: 2.5mm)[
-            #text(font: font-sans, size: 7pt, weight: "bold", fill: c-muted, tracking: 0.18em)[TABLE OF CONTENTS]
+            #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-dark)[សន្ទស្សន៍ជំពូក]
           ]
         ],
       )
@@ -181,8 +181,8 @@
             ]
           ],
           [
-            #text(font: font-sans, size: 6.5pt, weight: "bold", fill: c-sand, tracking: 0.12em)[
-              INNOLAB KAMPONG THOM — SEASON 1
+            #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand)[
+              រដូវកាលទី ១
             ]
           ],
         )

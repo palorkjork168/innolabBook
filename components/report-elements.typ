@@ -583,10 +583,10 @@
 }
 
 // ------------------------------------------------------------------------------
-// 6C. SPLIT COLOR-BLOCK FEATURE SPREAD (Option 2 — Flourish Magazine Style)
+// 6C. SPLIT COLOR-BLOCK FEATURE SPREAD (Full-Bleed 50/50 Editorial Layout)
 // ------------------------------------------------------------------------------
 #let split-colorblock-feature(
-  kicker: "SPECIAL FEATURE",
+  kicker: none,
   title: "",
   subtitle: "",
   left-photo: none,
@@ -601,119 +601,149 @@
   metric-box: none,
   kpi-badge: none,
 ) = {
-  block(
-    width: 100%,
-    height: 100%,
-    fill: c-paper,
-    radius: 4pt,
-    stroke: 0.5pt + c-line,
-    clip: true,
-    inset: 0pt,
+  page(
+    paper: "a4",
+    margin: (top: 0pt, bottom: 0pt, left: 0pt, right: 0pt),
+    fill: none,
+    header: none,
+    footer: none,
   )[
-    #grid(
-      columns: (1fr, 1fr),
-      gutter: 0mm,
-      [
-        // LEFT SIDE: EDITORIAL NARRATIVE & DOCUMENTARY PHOTO
-        #pad(x: 5.5mm, y: 5.5mm)[
-          #if kicker != none [
-            #rect(fill: c-teal, radius: 2pt, inset: (x: 2.2mm, y: 1mm))[
-              #text(font: font-sans, size: 6.5pt, weight: "bold", fill: c-white, tracking: 0.1em)[#upper(kicker)]
-            ]
-            #v(1.5mm)
-          ]
-          #text(font: font-khmer-display, size: 12pt, weight: "bold", fill: c-teal)[#title]\
-          #if subtitle != "" [
-            #v(0.3mm)
-            #text(font: font-sans, size: 6.8pt, fill: c-muted)[#subtitle]
-          ]
-          #v(2.5mm)
+    // 1. Full-bleed background: 50% paper (left) + 50% deep teal (right)
+    #place(top + left, rect(width: 105mm, height: 297mm, fill: c-paper))
+    #place(top + left, dx: 105mm, rect(width: 105mm, height: 297mm, fill: c-teal))
 
-          #if left-photo != none [
-            #box(
-              width: 100%,
-              height: 48mm,
-              radius: 3pt,
-              stroke: 0.5pt + c-sand,
-              clip: true,
-            )[
-              #image(left-photo, width: 100%, height: 48mm, fit: "cover")
-            ]
-            #if left-caption != none [
-              #v(0.8mm)
-              #text(font: font-khmer-body, size: 6.5pt, fill: c-muted)[#left-caption]
-            ]
-          ]
-          #v(2mm)
+    // 2. Running headers
+    #place(top + left, dx: 16mm, dy: 13mm)[
+      #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-teal)[
+        INNOLAB KAMPONG THOM · របាយការណ៍គម្រោង
+      ]
+    ]
+    #place(top + right, dx: -16mm, dy: 13mm)[
+      #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-light)[
+        សកម្មភាពគម្រោង និងសមិទ្ធផល
+      ]
+    ]
 
-          #set par(leading: 5.6pt, justify: false)
-          #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[#left-text]
-
-          #for b in extra-blocks [
-            #v(1.8mm)
-            #b
-          ]
+    // 3. Left Column Content (dx: 16mm, width: 80mm)
+    #place(top + left, dx: 16mm, dy: 22mm, block(width: 80mm)[
+      #if kicker != none [
+        #rect(fill: c-teal, radius: 2pt, inset: (x: 2.2mm, y: 1mm))[
+          #text(font: font-khmer-display, size: 6.8pt, weight: "bold", fill: c-white)[#kicker]
         ]
-      ],
-      [
-        // RIGHT SIDE: SOLID TEAL EDITORIAL COLOR-BLOCK
+        #v(1.5mm)
+      ]
+      #text(font: font-khmer-display, size: 12pt, weight: "bold", fill: c-teal)[#title]\
+      #if subtitle != "" [
+        #v(0.6mm)
+        #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-dark)[#subtitle]
+      ]
+      #v(2.5mm)
+
+      #if left-photo != none [
+        #box(
+          width: 100%,
+          height: 48mm,
+          radius: 3pt,
+          stroke: 0.5pt + c-sand,
+          clip: true,
+        )[
+          #image(left-photo, width: 100%, height: 48mm, fit: "cover")
+        ]
+        #if left-caption != none [
+          #v(0.8mm)
+          #text(font: font-khmer-body, size: 6.5pt, fill: c-muted)[#left-caption]
+        ]
+      ]
+      #v(2mm)
+
+      #set par(leading: 5.6pt, justify: false)
+      #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[#left-text]
+
+      #for b in extra-blocks [
+        #v(1.8mm)
+        #b
+      ]
+    ])
+
+    // 4. Right Column Content (dx: 114mm, width: 80mm)
+    #place(top + left, dx: 114mm, dy: 22mm, block(width: 80mm)[
+      #if inset-photo != none [
+        #box(
+          width: 100%,
+          height: 48mm,
+          stroke: 1.2pt + c-sand,
+          radius: 3pt,
+          clip: true,
+        )[
+          #image(inset-photo, width: 100%, height: 48mm, fit: "cover")
+        ]
+        #if inset-caption != none [
+          #v(0.8mm)
+          #text(font: font-khmer-body, size: 6.5pt, fill: c-sand-light)[#inset-caption]
+        ]
+        #v(3mm)
+      ]
+
+      #if quote != "" [
         #rect(
           width: 100%,
-          height: 100%,
-          fill: c-teal,
-          inset: (x: 5.5mm, y: 5.5mm),
+          fill: rgb("#062228").transparentize(25%),
+          stroke: (left: 2.2pt + c-sand, rest: none),
+          radius: (right: 3pt),
+          inset: (x: 3mm, y: 2.5mm),
         )[
-          #if inset-photo != none [
-            #box(
-              width: 100%,
-              height: 48mm,
-              stroke: 1.2pt + c-sand,
-              radius: 3pt,
-              clip: true,
-            )[
-              #image(inset-photo, width: 100%, height: 48mm, fit: "cover")
-            ]
-            #if inset-caption != none [
-              #v(0.8mm)
-              #text(font: font-khmer-body, size: 6.5pt, fill: c-sand-light)[#inset-caption]
-            ]
-            #v(3mm)
+          #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-light)[“#quote”]\
+          #if quote-sub != none [
+            #v(1mm)
+            #text(font: font-khmer-display, size: 6.8pt, weight: "bold", fill: c-sand)[#quote-sub]
           ]
+        ]
+        #v(2.5mm)
+      ]
 
-          #grid(
-            columns: (auto, 1fr),
-            gutter: 2.5mm,
-            align: top,
-            [
-              #text(font: font-sans, size: 24pt, weight: "black", fill: c-sand)[“]
-            ],
-            [
-              #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-sand-light)[#quote]
-              #if quote-sub != none [
-                #v(0.5mm)
-                #text(font: font-sans, size: 6.5pt, fill: c-sand)[#quote-sub]
-              ]
-            ]
-          )
-          #v(2.5mm)
+      #if right-text != none [
+        #set par(leading: 5.6pt, justify: false)
+        #text(font: font-khmer-body, size: 7.8pt, fill: rgb("#d8e8ea"))[#right-text]
+        #v(2.5mm)
+      ]
 
-          #set par(leading: 5.8pt, justify: false)
-          #text(font: font-khmer-body, size: 7.8pt, fill: c-white)[#right-text]
+      #if metric-box != none [
+        #rect(
+          width: 100%,
+          fill: rgb("#062228").transparentize(35%),
+          stroke: 0.5pt + c-sand.transparentize(50%),
+          radius: 3pt,
+          inset: 3mm,
+        )[#metric-box]
+        #v(2.5mm)
+      ]
 
-          #if metric-box != none [
-            #v(3mm)
-            #metric-box
-          ]
-
-          #if kpi-badge != none [
-            #v(3mm)
-            #rect(fill: c-sand, radius: 2.5pt, inset: (x: 3.5mm, y: 1.8mm))[
-              #text(font: font-khmer-body, size: 7.8pt, weight: "bold", fill: c-charcoal)[★ #kpi-badge]
-            ]
+      #if kpi-badge != none [
+        #rect(
+          width: 100%,
+          fill: c-sand,
+          radius: 2pt,
+          inset: (x: 3mm, y: 1.8mm),
+        )[
+          #align(center)[
+            #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-teal)[★ #kpi-badge]
           ]
         ]
       ]
-    )
+    ])
+
+    // 5. Folios / bottom footer
+    #place(top + left, dx: 16mm, dy: 280mm)[
+      #text(font: font-khmer-body, size: 6.8pt, fill: c-muted)[
+        របាយការណ៍សមិទ្ធផលគម្រោង InnoLab Kampong Thom
+      ]
+    ]
+    #place(top + right, dx: -16mm, dy: 280mm)[
+      #context {
+        let p = counter(page).get().first()
+        text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-sand)[#to-khmer-num(p)]
+      }
+    ]
   ]
 }
 

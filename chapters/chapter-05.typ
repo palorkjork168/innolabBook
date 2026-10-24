@@ -12,10 +12,10 @@
 #equal-box-grid(
   columns: (1fr, 1fr, 1fr, 1fr),
   gutter: 3mm,
-  stat-card("១០០ រូប", "គោលដៅសហគ្រិនត្រឹមឆ្នាំ២០២៨", label-en: "EXPANSION TARGET"),
-  stat-card("៤ រដូវកាល", "វដ្តជីវិតគម្រោងបន្តបន្ទាប់", label-en: "TOTAL SEASONS"),
-  stat-card("១១០ រូប", "បេក្ខជនរដូវកាលទី២ ដាក់ពាក្យ", label-en: "SEASON 2 APPLICANTS"),
-  stat-card("៣០ រូប", "បេក្ខជនជម្រុះចុងក្រោយ", label-en: "SEASON 2 FINALISTS"),
+  stat-card("១០០ រូប", "គោលដៅសហគ្រិនត្រឹមឆ្នាំ២០២៨"),
+  stat-card("៤ រដូវកាល", "វដ្តជីវិតគម្រោងបន្តបន្ទាប់"),
+  stat-card("១១០ រូប", "បេក្ខជនរដូវកាលទី២ ដាក់ពាក្យ"),
+  stat-card("៣០ រូប", "បេក្ខជនជម្រុះចុងក្រោយ"),
 )
 #v(3mm)
 
@@ -40,7 +40,7 @@
   inset: 3.8mm,
   [
     #rect(fill: c-teal, inset: (x: 2.5mm, y: 1.2mm), radius: 2pt)[
-      #text(font: font-sans, size: 7.2pt, weight: "bold", fill: c-white)[OUTREACH 01]
+      #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[ការផ្សព្វផ្សាយលើកទី ១]
     ]
     #v(1.5mm)
     #text(font: font-khmer-display, size: 8.8pt, weight: "bold", fill: c-teal)[វិទ្យាស្ថានពហុបច្ចេកទេសខេត្តកំពង់ធំ]\
@@ -52,7 +52,7 @@
   ],
   [
     #rect(fill: c-sand-dark, inset: (x: 2.5mm, y: 1.2mm), radius: 2pt)[
-      #text(font: font-sans, size: 7.2pt, weight: "bold", fill: c-white)[OUTREACH 02]
+      #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-white)[ការផ្សព្វផ្សាយលើកទី ២]
     ]
     #v(1.5mm)
     #text(font: font-khmer-display, size: 8.8pt, weight: "bold", fill: c-teal)[សាលាស្រុកស្ទោង]\
