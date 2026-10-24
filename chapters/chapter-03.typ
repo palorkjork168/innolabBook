@@ -22,7 +22,7 @@
 ]
 #v(4mm)
 
-#grid(
+#equal-box-grid(
   columns: (1fr, 1fr, 1fr, 1fr),
   gutter: 3mm,
   stat-card("២០ រូប", "សហគ្រិនចូលរួមសរុប", label-en: "ENTREPRENEURS"),
@@ -32,7 +32,7 @@
 )
 #v(4mm)
 
-#documentary-photo("/assets/photos/13.jpg", caption: "ទិដ្ឋភាពជ័យលាភីសហគ្រាសទាំង ២០ រូប ក្នុងទិវាប្រកួតប្រជែងឡើងពេជ្រវគ្គផ្តាច់ព្រ័ត្រ (Final Pitching Day) នៅខេត្តកំពង់ធំ", height: 78mm)
+
 
 #pagebreak()
 

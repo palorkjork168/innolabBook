@@ -26,3 +26,6 @@ dist/
 out/
 tmp/
 scratch/
+
+# Temporary render/preview images in root
+/*.png

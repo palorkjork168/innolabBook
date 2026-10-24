@@ -27,13 +27,12 @@
 
 #let chapter-opener(
   num: "០១",
-  latin-num: none,
+  latin-num: none, // kept for backwards compatibility, ignored
   title: "",
   subtitle: none,
   kicker: "INNOLAB KAMPONG THOM · របាយការណ៍គម្រោង",
   label-id: none,
 ) = {
-  let l-num = if latin-num != none { latin-num } else { khmer-to-latin-digits(num) }
   [
     #if label-id != none [
       #metadata(title) #label(label-id)
@@ -51,10 +50,10 @@
           gutter: 5mm,
           align: horizon,
           [
-            // Giant Outlined Stroke Numeral (Design DNA)
+            // Giant Outlined Khmer Numeral (Design DNA)
             #box(height: 18mm)[
               #align(center + horizon)[
-                #text(font: font-sans, size: 42pt, weight: "black", stroke: 1.6pt + c-sand, fill: rgb("#00000000"))[#l-num]
+                #text(font: font-khmer-display, size: 42pt, weight: "bold", stroke: 1.6pt + c-sand, fill: rgb("#00000000"))[#num]
               ]
             ]
           ],
@@ -70,9 +69,9 @@
             ]
           ],
           [
-            // Rotated Margin Tag (Design DNA)
+            // Rotated Margin Tag — Khmer chapter number
             #rotate(-90deg)[
-              #text(font: font-sans, size: 7pt, weight: "bold", fill: c-muted.lighten(15%), tracking: 0.2em)[CHAPTER #l-num]
+              #text(font: font-khmer-display, size: 7pt, weight: "bold", fill: c-muted.lighten(15%), tracking: 0.1em)[ជំពូក #num]
             ]
           ]
         )
@@ -789,4 +788,137 @@
     ]
   ]
   v(3mm)
+}
+
+// ------------------------------------------------------------------------------
+// 21. EQUAL-HEIGHT BOX GRID
+// Ensures all cards/boxes in a row or grid have the exact same uniform height.
+// ------------------------------------------------------------------------------
+#let equal-box(
+  body,
+  fill: auto,
+  stroke: auto,
+  radius: auto,
+  inset: auto,
+) = (
+  _type: "equal-box",
+  body: body,
+  fill: fill,
+  stroke: stroke,
+  radius: radius,
+  inset: inset,
+)
+
+#let unwrap-rect(it) = {
+  if type(it) == content {
+    if it.func() == rect {
+      return it
+    }
+    let fields = it.fields()
+    if "children" in fields {
+      let filtered = fields.children.filter(c => {
+        repr(c) != "[ ]" and repr(c) != "parbreak()"
+      })
+      if filtered.len() == 1 and filtered.first().func() == rect {
+        return filtered.first()
+      }
+    }
+  }
+  return none
+}
+
+#let equal-box-grid(
+  columns: (1fr, 1fr),
+  gutter: 3.5mm,
+  column-gutter: auto,
+  row-gutter: auto,
+  fill: c-paper,
+  stroke: 0.5pt + c-line,
+  radius: 3pt,
+  inset: 3.5mm,
+  equalize: "all",
+  ..items,
+) = {
+  let raw-items = items.pos()
+  let normalized = raw-items.map(it => {
+    let r = unwrap-rect(it)
+    if r != none {
+      let rf = r.fields()
+      (
+        body: rf.at("body", default: []),
+        fill: rf.at("fill", default: fill),
+        stroke: rf.at("stroke", default: stroke),
+        radius: rf.at("radius", default: radius),
+        inset: rf.at("inset", default: inset),
+      )
+    } else if type(it) == dictionary and it.at("_type", default: none) == "equal-box" {
+      (
+        body: it.body,
+        fill: if it.fill == auto { fill } else { it.fill },
+        stroke: if it.stroke == auto { stroke } else { it.stroke },
+        radius: if it.radius == auto { radius } else { it.radius },
+        inset: if it.inset == auto { inset } else { it.inset },
+      )
+    } else {
+      (
+        body: it,
+        fill: fill,
+        stroke: stroke,
+        radius: radius,
+        inset: inset,
+      )
+    }
+  })
+
+  let c-gutter = if column-gutter != auto { column-gutter } else { gutter }
+  let r-gutter = if row-gutter != auto { row-gutter } else { gutter }
+
+  context {
+    layout(size => {
+      let col-count = if type(columns) == array { columns.len() } else if type(columns) == int { columns } else { 1 }
+      let col-width = (size.width - c-gutter * (col-count - 1)) / col-count
+
+      let measured = normalized.map(c => {
+        let inside = block(width: col-width, inset: c.inset, c.body)
+        (
+          card: c,
+          h: measure(inside).height,
+        )
+      })
+
+      let rendered-cells = if equalize == "row" {
+        let rows = measured.chunks(col-count)
+        rows.map(row-items => {
+          let row-max-h = calc.max(..row-items.map(it => it.h))
+          row-items.map(it => rect(
+            width: 100%,
+            height: row-max-h,
+            fill: it.card.fill,
+            stroke: it.card.stroke,
+            radius: it.card.radius,
+            inset: it.card.inset,
+            it.card.body,
+          ))
+        }).flatten()
+      } else {
+        let all-max-h = calc.max(..measured.map(it => it.h))
+        measured.map(it => rect(
+          width: 100%,
+          height: all-max-h,
+          fill: it.card.fill,
+          stroke: it.card.stroke,
+          radius: it.card.radius,
+          inset: it.card.inset,
+          it.card.body,
+        ))
+      }
+
+      grid(
+        columns: columns,
+        column-gutter: c-gutter,
+        row-gutter: r-gutter,
+        ..rendered-cells,
+      )
+    })
+  }
 }

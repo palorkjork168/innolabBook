@@ -9,7 +9,7 @@
   label-id: "ch-05",
 )
 
-#grid(
+#equal-box-grid(
   columns: (1fr, 1fr, 1fr, 1fr),
   gutter: 3mm,
   stat-card("១០០ រូប", "គោលដៅសហគ្រិនត្រឹមឆ្នាំ២០២៨", label-en: "EXPANSION TARGET"),
@@ -31,10 +31,14 @@
 
 #section-title("៥.២ សកម្មភាពផ្សព្វផ្សាយជ្រើសរើសបេក្ខជនរដូវកាលទី ២")
 
-#grid(
+#equal-box-grid(
   columns: (1fr, 1fr),
   gutter: 3.5mm,
-  rect(width: 100%, fill: c-white, stroke: 0.75pt + c-sand, radius: 3pt, inset: 3.8mm)[
+  fill: c-white,
+  stroke: 0.75pt + c-sand,
+  radius: 3pt,
+  inset: 3.8mm,
+  [
     #rect(fill: c-teal, inset: (x: 2.5mm, y: 1.2mm), radius: 2pt)[
       #text(font: font-sans, size: 7.2pt, weight: "bold", fill: c-white)[OUTREACH 01]
     ]
@@ -46,7 +50,7 @@
     #set par(leading: 6.5pt, justify: true)
     #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[លើកទី១ ៖ នាថ្ងៃទី៣០ ខែឧសភា នៅវិទ្យាស្ថានពហុបច្ចេកទេសខេត្តកំពង់ធំ ដោយមានការចូលរួមពីឯកឧត្តម ងួន រាសី និងមន្ទីរខេត្តពាក់ព័ន្ធ។]
   ],
-  rect(width: 100%, fill: c-white, stroke: 0.75pt + c-sand, radius: 3pt, inset: 3.8mm)[
+  [
     #rect(fill: c-sand-dark, inset: (x: 2.5mm, y: 1.2mm), radius: 2pt)[
       #text(font: font-sans, size: 7.2pt, weight: "bold", fill: c-white)[OUTREACH 02]
     ]
@@ -60,6 +64,7 @@
   ],
 )
 #v(3.5mm)
+
 
 #rect(width: 100%, fill: c-teal, radius: 3pt, inset: (x: 6mm, y: 5mm))[
   #grid(

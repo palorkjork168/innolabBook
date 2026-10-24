@@ -1,4 +1,4 @@
-#import "../styles.typ": *
+﻿#import "../styles.typ": *
 #import "../components/catalogue.typ": *
 
 #let ch-data = (
@@ -55,22 +55,20 @@
       columns: (auto, 1fr, auto),
       align: bottom,
       gutter: 2.5mm,
-      text(font: font-khmer-display, size: 18pt, weight: "bold", fill: c-teal)[#item.num],
+      text(font: font-khmer-display, size: 20pt, weight: "bold", fill: c-teal)[#item.num],
       none,
-      text(font: font-khmer-display, size: 10.5pt, weight: "bold", fill: c-sand-dark)[#get-chapter-page(item)],
+      box(baseline: 3pt)[
+        #text(font: font-khmer-display, size: 11pt, weight: "bold", fill: c-sand-dark)[#get-chapter-page(item)]
+      ],
     )
-    #v(1.2mm)
-    #line(length: 100%, stroke: 0.75pt + c-sand.lighten(20%))
-    #v(2.5mm)
-    #box(height: 10mm, width: 100%)[
-      #set par(leading: 6.5pt, justify: false)
-      #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[#item.km]
-    ]
     #v(1.5mm)
-    #block[
-      #set par(leading: 5.8pt, justify: false)
-      #text(font: font-khmer-body, size: 7.5pt, fill: c-muted)[#item.sub]
-    ]
+    #line(length: 100%, stroke: 0.75pt + c-sand.lighten(20%))
+    #v(3mm)
+    #set par(leading: 6.5pt, justify: false)
+    #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[#item.km]
+    #v(2.5mm)
+    #set par(leading: 5.8pt, justify: false)
+    #text(font: font-khmer-body, size: 7.5pt, fill: c-muted)[#item.sub]
   ]
 
   context {
@@ -83,64 +81,125 @@
   }
 }
 
+// Equal-height TOC grid
+#let toc-card-grid(items, col-count: 2, column-gutter: 9mm, row-gutter: 10mm) = {
+  context {
+    layout(size => {
+      let col-width = (size.width - column-gutter * (col-count - 1)) / col-count
+      let measured = items.map(item => {
+        let inside = block(width: col-width)[#toc-card(item)]
+        (item: item, h: measure(inside).height)
+      })
+      let rows = measured.chunks(col-count)
+      let rendered = rows.map(row => {
+        let row-h = calc.max(..row.map(m => m.h))
+        row.map(m => block(width: 100%, height: row-h)[#toc-card(m.item)])
+      }).flatten()
+      let pad-count = calc.rem(rendered.len(), col-count)
+      if pad-count != 0 {
+        for _ in range(col-count - pad-count) {
+          rendered.push(none)
+        }
+      }
+      grid(
+        columns: (1fr,) * col-count,
+        column-gutter: column-gutter,
+        row-gutter: row-gutter,
+        ..rendered,
+      )
+    })
+  }
+}
+
+// Use a two-column outer layout: 5mm teal bar + content
 #page(
   paper: "a4",
-  margin: 0pt,
-  fill: c-paper,
+  margin: (top: 0pt, bottom: 0pt, left: 0pt, right: 0pt),
+  fill: none,
   header: none,
   footer: none,
 )[
-  // Running Header Top Left
-  #place(top + left, dx: 24mm, dy: 16mm, text(
-    font: font-khmer-display,
-    size: 7.5pt,
-    weight: "bold",
-    fill: c-teal,
-  )[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · រចនាសម្ព័ន្ធមាតិកា និងសន្ទស្សន៍])
+  // Full-width background split: teal bar + paper body
+  #grid(
+    columns: (5mm, 1fr),
+    gutter: 0pt,
+    rect(width: 5mm, height: 297mm, fill: c-teal),
+    rect(width: 100%, height: 297mm, fill: c-paper),
+  )
 
-  // Top Right Season Tag
-  #place(top + right, dx: -24mm, dy: 16mm, text(
-    font: font-khmer-display,
-    size: 7.5pt,
-    weight: "bold",
-    fill: c-sand-dark,
-  )[រដូវកាលទី១ / ២០២៥–២០២៦])
+  // Running header
+  #place(top + left, dx: 13mm, dy: 16mm)[
+    #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-teal)[
+      មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · រចនាសម្ព័ន្ធមាតិកា
+    ]
+  ]
 
-  // Master Title
-  #place(top + left, dx: 24mm, dy: 24mm, block(width: 162mm)[
-    #khmer-display-title(
-      "មាតិកា",
-      preset: "xl",
-      size: 26pt,
-      color: c-teal,
-      rule-length: 162mm,
-      rule-stroke: 1.2pt + c-sand,
+  // Top right season tag
+  #place(top + right, dx: -18mm, dy: 16mm)[
+    #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
+      រដូវកាលទី១ / ២០២៥–២០២៦
+    ]
+  ]
+
+  // Master title block
+  #place(top + left, dx: 13mm, dy: 27mm)[
+    #block(width: 169mm)[
+      #grid(
+        columns: (1fr, auto),
+        align: bottom,
+        gutter: 0mm,
+        [
+          #text(font: font-khmer-display, size: 30pt, weight: "bold", fill: c-teal)[មាតិកា]
+        ],
+        [
+          #pad(bottom: 2.5mm)[
+            #text(font: font-sans, size: 7pt, weight: "bold", fill: c-muted, tracking: 0.18em)[TABLE OF CONTENTS]
+          ]
+        ],
+      )
+      #v(1.5mm)
+      #line(length: 100%, stroke: 1.5pt + c-sand)
+      #v(10mm)
+
+      #toc-card-grid(ch-data, col-count: 2, column-gutter: 9mm, row-gutter: 10mm)
+
+      #v(8mm)
+
+      // Publication accent bar
+      #rect(
+        width: 100%,
+        fill: c-teal,
+        radius: 3pt,
+        inset: (x: 5mm, y: 3.5mm),
+      )[
+        #grid(
+          columns: (1fr, auto),
+          align: horizon,
+          [
+            #text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-sand-light)[
+              គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ASIP · ២០២៥–២០២៦
+            ]
+          ],
+          [
+            #text(font: font-sans, size: 6.5pt, weight: "bold", fill: c-sand, tracking: 0.12em)[
+              INNOLAB KAMPONG THOM — SEASON 1
+            ]
+          ],
+        )
+      ]
+    ]
+  ]
+
+  // Bottom datum line & folio
+  #place(top + left, dx: 13mm, dy: 269mm)[
+    #line(length: 169mm, stroke: 0.5pt + c-line)
+  ]
+  #place(top + left, dx: 13mm, dy: 275mm)[
+    #catalogue-folio(
+      "ii",
+      header-right: "មាតិកា · មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ",
+      side: "right",
+      width: 169mm,
     )
-
-    #v(8mm)
-
-    // Symmetrical Row-by-Row 2-Column Chapter Spread
-    #grid(
-      columns: (77mm, 77mm),
-      column-gutter: 8mm,
-      row-gutter: 11mm,
-      toc-card(ch-data.at(0)),
-      toc-card(ch-data.at(3)),
-
-      toc-card(ch-data.at(1)),
-      toc-card(ch-data.at(4)),
-
-      toc-card(ch-data.at(2)),
-      none,
-    )
-  ])
-
-  // Bottom Datum Line & Folio
-  #place(top + left, dx: 24mm, dy: 268mm, line(length: 162mm, stroke: 0.5pt + c-line))
-  #place(top + left, dx: 24mm, dy: 274mm, catalogue-folio(
-    "ii",
-    header-right: "មាតិកា · មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ",
-    side: "right",
-    width: 162mm,
-  ))
+  ]
 ]

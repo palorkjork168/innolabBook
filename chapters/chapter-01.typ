@@ -7,7 +7,7 @@
 // ==========================================
 #chapter-opener(
   num: "០១",
-  latin-num: "01",
+  latin-num: "០១",
   title: "ទិដ្ឋភាពទូទៅ",
   subtitle: "និងអំពីគម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ",
   label-id: "ch-01",
@@ -40,7 +40,7 @@
 #v(3mm)
 
 // 4 KEY METRICS - Large, confident, minimal
-#grid(
+#equal-box-grid(
   columns: (1fr, 1fr, 1fr, 1fr),
   gutter: 3.5mm,
   rect(width: 100%, fill: c-teal, radius: 3pt, inset: (x: 4mm, y: 3mm))[
