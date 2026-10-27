@@ -13,6 +13,10 @@
 
 #include "frontmatter/toc.typ"
 
+#include "frontmatter/acknowledgements.typ"
+
+#include "frontmatter/executive-summary.typ"
+
 
 // ============================================================
 // REPORT CONTENT & NUMBERING

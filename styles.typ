@@ -798,7 +798,7 @@
       weight: 600,
       fill: colors.text,
     )[
-      របាយការណ៍គម្រោង និងសមិទ្ធផល
+      របាយការណ៍ផ្លូវការនៃសមិទ្ធផលគម្រោង
       រដូវកាលទី១
     ]
 
@@ -916,108 +916,111 @@
           គោរពជូន៖
         ]\
         #v(0.8mm)
-        #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[
-          ឯកឧត្តម វង្សី វិសុទ្ធ ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ នៃព្រះរាជាណាចក្រកម្ពុជា
+        #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[
+          ឯកឧត្តម វង្សី វិស្សុត ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ រដ្ឋមន្ត្រីទទួលបន្ទុកទីស្តីការគណៈរដ្ឋមន្ត្រី
         ]\
         #v(1mm)
         #line(length: 100%, stroke: 0.5pt + c-line)
         #v(1.2mm)
         #set par(leading: 6.5pt, justify: false)
         #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal.lighten(15%))[
-          របាយការណ៍គ្រប់ជ្រុងជ្រោយស្តីពីការបណ្តុះបណ្តាលសហគ្រាសធុនតូចនិងមធ្យម (SME) ថ្នាក់តំបន់ ការធ្វើសមាហរណកម្មសេដ្ឋកិច្ចចក្រា និងការផ្លាស់ប្តូរសេដ្ឋកិច្ចខេត្តកំពង់ធំ
+          ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន · របាយការណ៍គ្រប់ជ្រុងជ្រោយស្តីពីការបណ្តុះបណ្តាលសហគ្រាសធុនតូចនិងមធ្យម (SME) ថ្នាក់តំបន់ ការធ្វើសមាហរណកម្មសេដ្ឋកិច្ចចក្រា និងការផ្លាស់ប្តូរសេដ្ឋកិច្ចខេត្តកំពង់ធំ
         ]
       ]
 
-      #v(3mm)
+      #v(2.5mm)
 
       // Section 1: Implementing Agency (Verbatim from DOCX)
       #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
-        រៀបចំដោយ៖ ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (Angkor Social Innovation Park )
+        រៀបចំ និងអនុវត្តដោយ៖ ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (Angkor Social Innovation Park - ASIP)
       ]
-      #v(1.5mm)
+      #v(1.2mm)
       #grid(
         columns: (auto, 1fr),
         gutter: 4mm,
         align: horizon,
         block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 4pt), stroke: 0.5pt + c-line)[
-          #image(resolve-logo("asip"), height: 10mm, fit: "contain")
+          #image(resolve-logo("asip"), height: 9mm, fit: "contain")
         ],
         [
-          #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[
+          #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[
             ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP)
           ]\
           #v(0.3mm)
-          #text(font: font-sans, size: 7pt, fill: c-muted)[
+          #text(font: font-sans, size: 6.5pt, fill: c-muted)[
             Angkor Social Innovation Park · ប្រតិបត្តិករគម្រោង
           ]
         ],
       )
 
-      #v(2.5mm)
+      #v(2mm)
       #line(length: 106mm, stroke: 0.5pt + c-line)
-      #v(2.5mm)
+      #v(2mm)
 
       // Section 2: Strategic & Development Partners (Verbatim from DOCX)
-      #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
-        សហប្រតិបត្តិការដោយ៖ មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) និងសហគ្រិនខ្មែរ (KE)
+      #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-dark)[
+        គាំទ្រថវិកា និងកិច្ចសហការដោយ៖ មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) និង សហគ្រិនខ្មែរ (Khmer Enterprise - KE)
       ]
-      #v(1.5mm)
+      #v(1.2mm)
       #grid(
         columns: (1fr, 1fr),
         gutter: 4mm,
         align: horizon,
-        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 5pt), stroke: 0.5pt + c-line)[
-          #align(center + horizon)[#image(resolve-logo("sdf"), height: 9.5mm, fit: "contain")]
+        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 4pt), stroke: 0.5pt + c-line)[
+          #align(center + horizon)[#image(resolve-logo("sdf"), height: 8.5mm, fit: "contain")]
         ],
-        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 5pt), stroke: 0.5pt + c-line)[
-          #align(center + horizon)[#image(resolve-logo("ke"), height: 9.5mm, fit: "contain")]
+        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 4pt), stroke: 0.5pt + c-line)[
+          #align(center + horizon)[#image(resolve-logo("ke"), height: 8.5mm, fit: "contain")]
         ],
       )
 
-      #v(2.5mm)
+      #v(2mm)
       #line(length: 106mm, stroke: 0.5pt + c-line)
-      #v(2.5mm)
+      #v(1.5mm)
 
       // Section 3: Project Metadata Architecture (Hairline Rows)
       #let credit-row(label-km, val-km) = block(
         width: 100%,
-        inset: (y: 1.5mm),
+        inset: (y: 1.2mm),
         stroke: (bottom: 0.5pt + c-line),
       )[
         #grid(
-          columns: (32mm, 1fr),
+          columns: (28mm, 1fr),
           gutter: 3mm,
           [
-            #text(font: font-khmer-display, size: 7pt, weight: "bold", fill: c-sand-dark)[#label-km]
+            #text(font: font-khmer-display, size: 6.8pt, weight: "bold", fill: c-sand-dark)[#label-km]
           ],
           [
-            #text(font: font-khmer-body, size: 7.5pt, weight: "bold", fill: c-teal)[#val-km]
+            #text(font: font-khmer-body, size: 7.2pt, weight: "bold", fill: c-teal)[#val-km]
           ],
         )
       ]
 
-      #credit-row("គម្រោង", "គម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ (INNOLAB KAMPONG THOM)")
+      #credit-row("គម្រោង", "មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ (INNOLAB KAMPONG THOM)")
+      #credit-row("ពាក្យស្លោក", "ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations")
       #credit-row("រដូវកាល", "រដូវកាលទី១ (២០២៥–២០២៦)")
-      #credit-row("ទីតាំងអនុវត្ត", "ខេត្តកំពង់ធំ ព្រះរាជាណាចក្រកម្ពុជា")
-      #credit-row("ដៃគូសហការ", "SDF និង KE រួមជាមួយរដ្ឋបាលខេត្តកំពង់ធំ")
+      #credit-row("សហការរដ្ឋបាល", "សហការរដ្ឋបាលដោយ៖ រដ្ឋបាលខេត្តកំពង់ធំ")
 
-      #v(3mm)
+      #v(2mm)
 
-      // Section 4: Acknowledgement Quote
-      #editorial-quote(
-        "គម្រោង InnoLab Kampong Thom សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅចំពោះស្ថាប័នដៃគូ រដ្ឋបាលខេត្តកំពង់ធំ គ្រូបណ្តុះបណ្តាល អ្នកប្រឹក្សាយោបល់ និងសហគ្រាសធុនតូច និងមធ្យម (SMEs) ទាំងអស់ ដែលបានចូលរួមចំណែកយ៉ាងសកម្មក្នុងការកសាងប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍ក្នុងមូលដ្ឋាន។",
-        author: text(font: font-khmer-body, size: 7pt, fill: c-muted)[ក្រុមការងារ InnoLab Kampong Thom · ASIP],
-        tag: "ការថ្លែងអំណរគុណ",
-        bar-color: c-sand,
-        text-color: c-teal,
-        text-size: 7.5pt,
-        bar-height: 20mm,
-        width: 106mm,
-      )
+      // Section 4: Scope Statement
+      #block(
+        fill: c-paper,
+        radius: 2pt,
+        inset: (x: 6pt, y: 5pt),
+        stroke: 0.5pt + c-sand,
+      )[
+        #text(font: font-khmer-display, size: 7pt, weight: "bold", fill: c-teal)[សេចក្តីបញ្ជាក់អំពីវិសាលភាពរបាយការណ៍]\
+        #v(0.8mm)
+        #set par(leading: 5.8pt, justify: true)
+        #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
+          របាយការណ៍នេះជាឯកសារផ្លូវការកម្រិតយុទ្ធសាស្ត្រ ដែលរៀបចំឡើងដោយ ក្រុមហ៊ុន ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ ដើម្បីកត់ត្រា និងបូកសរុបសកម្មភាព សមិទ្ធផលជាក់ស្តែង បរិវត្តកម្មរបស់សហគ្រាសធុនតូច និងមធ្យម (SMEs) ព្រមទាំងការវាយតម្លៃផលប៉ះពាល់នៃគម្រោង មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ រដូវកាលទី១ ដែលបានអនុវត្តក្នុងចន្លោះឆ្នាំ ២០២៥–២០២៦ ក្នុងភូមិសាស្ត្រខេត្តកំពង់ធំ។
+        ]
+      ]
     ])
 
     // Bottom Datum Line & Folio
-    #place(top + left, dx: 86mm, dy: 268mm, line(length: 106mm, stroke: 0.5pt + c-line))
+    #place(top + left, dx: 86mm, dy: 270mm, line(length: 106mm, stroke: 0.5pt + c-line))
     #place(top + left, dx: 86mm, dy: 274mm, catalogue-folio(
       "i",
       header-right: "INNOLAB KAMPONG THOM · INSTITUTIONAL CREDITS",

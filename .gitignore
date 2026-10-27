@@ -26,6 +26,9 @@ dist/
 out/
 tmp/
 scratch/
+scripts/
+node_modules/
+npm-debug.log*
 
 # Temporary render/preview images in root
 /*.png

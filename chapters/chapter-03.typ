@@ -3,24 +3,78 @@
 #import "../components/report-elements.typ": *
 
 // ==============================================================================
-// ជំពូកទី ៣៖ ករណីសិក្សាសហគ្រាសធុនតូច និងមធ្យមទាំង ២០
+// ជំពូកទី ៣៖ កម្រងករណីសិក្សាសហគ្រាសឆ្នើមទាំង ២០
 // ==============================================================================
 
 #chapter-opener(
   num: "០៣",
-  title: "ករណីសិក្សាសហគ្រាសធុនតូច និងមធ្យមទាំង ២០",
-  subtitle: "ប្រវត្តិរូបសហគ្រិនឆ្នើម ដំណោះស្រាយនវានុវត្តន៍ និងសមិទ្ធផលជាក់ស្តែង នៃគម្រោង InnoLab",
+  title: "កម្រងករណីសិក្សាសហគ្រាសឆ្នើមទាំង ២០",
+  subtitle: "ជំពូកទី ៣៖ កម្រងករណីសិក្សាសហគ្រាសឆ្នើមទាំង ២០ (Enterprise Case Studies)",
   label-id: "ch-03",
 )
 
-#rect(width: 100%, fill: c-paper, stroke: (left: 2.5pt + c-teal, rest: 0.5pt + c-line), radius: (right: 3pt), inset: 4.5mm)[
-  #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[ករណីសិក្សាសហគ្រាសទាំង ២០]\
-  #v(1mm)
-  #text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
+#rect(width: 100%, fill: c-paper, stroke: (left: 2.5pt + c-teal, rest: 0.5pt + c-line), radius: (right: 3pt), inset: 4mm)[
+  #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[បញ្ជីរាយនាមសហគ្រាសទាំង ២០ បែងចែកតាមវិស័យស្នូលទាំង ៤]\
+  #v(0.8mm)
+  #text(font: font-khmer-body, size: 8.2pt, fill: c-charcoal)[
     ផ្នែកនេះបង្ហាញពីប្រវត្តិរូប បញ្ហាប្រឈម និងដំណើរការនវានុវត្តន៍ជាក់ស្តែងរបស់សហគ្រាសធុនតូច និងមធ្យមទាំង ២០ មកពីគ្រប់ ៨ ស្រុកនៃខេត្តកំពង់ធំ ដែលបានចូលរួម និងឆ្លងកាត់ការបណ្តុះបណ្តាល ការប្រឹក្សាផ្ទាល់ និងការអភិវឌ្ឍផលិតផលក្នុងគម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ។
   ]
 ]
-#v(4mm)
+#v(3mm)
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 3.5mm,
+  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
+    #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[ផ្នែកកសិកម្មទំនើប និងធាតុចូលកសិកម្ម (AgriTech & Modern Agriculture)]\
+    #v(1mm)
+    #set par(leading: 5.5pt)
+    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[
+      - ៩. លោក ឡុក គ្រៀនស្រុី - ក្រុមហ៊ុន ខេ អេស ស៊ីដ ឯ.ក\
+      - ៣. លោក ម៉ៅ សៃ - កសិដ្ឋាន ម៉ៅ សៃ\
+      - ៦. លោក អុល ចំណាប់ - បច្ចេកវិទ្យាគ្រឿងយន្ដ 007 AI\
+      - ១២. លោក វន វ៉ុង - ផលិតជីធម្មជាតិ ១០០% ប្រាសាទសាមគ្គី\
+      - ១៩. លោកស្រី យូ សុគន្ធា - ជីទឹកកសិករយើង
+    ]
+  ],
+  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
+    #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[ផ្នែកកែច្នៃចំណីអាហារ និងភេសជ្ជៈ (Food Processing & Value Addition)]\
+    #v(1mm)
+    #set par(leading: 5.5pt)
+    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[
+      - ១. លោក សុង សេង - សិប្បកម្មផលិតប្រេងសណ្ដែកផ្កាយ\
+      - ៤. លោក អាន លីហ៊ាន់ - LCDC Eco Green\
+      - ៧. លោកស្រី ប៉ុង ស្រីនាង - សហគ្រាសធុនតូចមេគង្គអូឌឺ\
+      - ១០. លោក លឹម សភា - សិប្បកម្ម ស្រេង ហ៊ុន\
+      - ១៣. លោកស្រី អ៉ិន ឡៃហួត - សិប្បកម្មកែច្នៃគ្រាប់ស្វាយចន្ទី ជ័យសំបូរ\
+      - ១៤. លោក សាំង សុខឃៀង - សិប្បកម្មកែច្នៃគ្រាប់ស្វាយចន្ទី SSKH\
+      - ១៥. លោកស្រី ចែម ធីតា - Khmer Pantry\
+      - ១៧. លោកស្រី ពិន ភិរម្យ - សិប្បកម្មសុវណ្ណភូមិ
+    ]
+  ],
+  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
+    #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[ផ្នែកអេកូទេសចរណ៍ និងបដិសណ្ឋារកិច្ចសហគមន៍ (Eco-Tourism & Community Hospitality)]\
+    #v(1mm)
+    #set par(leading: 5.5pt)
+    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[
+      - ២. លោក ឡូន ឆួង - សហគមន៍ទេសចរណ៍សំបូរព្រៃគុក\
+      - ៥. លោក សៅ ប៊ុនអូ - ហាងទាអូ ជំនោរស្ទឹងសែន\
+      - ១១. លោកស្រី សោម ស៊ីថា - សិប្បកម្មកែច្នៃ និងដាំបន្លែសុវត្ថិភាព
+    ]
+  ],
+  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
+    #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-teal)[ផ្នែកសិប្បកម្មកែច្នៃ និងសេដ្ឋកិច្ចចក្រា (Creative Handicrafts & Upcycling)]\
+    #v(1mm)
+    #set par(leading: 5.5pt)
+    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[
+      - ៨. លោកស្រី អ៊ួង ចាន់ថន - ផលិតផលកែច្នៃពីសម្បុកកំប្លោក (Floating Creations)\
+      - ១៦. លោក សួង សោភ័ណ - សិប្បកម្មផលិតត្រីងៀតបឹងទន្លេសាប\
+      - ១៨. លោក ញឹប សារុន - កសិដ្ឋានចិញ្ចឹមចង្រិតសំបូរព្រៃគុក\
+      - ២០. លោក ថោង កុយ - កសិដ្ឋានចិញ្ចឹមមាន់ និងកែច្នៃស៊ុតមាន់ធម្មជាតិ
+    ]
+  ],
+)
+#v(3mm)
 
 #equal-box-grid(
   columns: (1fr, 1fr, 1fr, 1fr),
