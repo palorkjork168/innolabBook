@@ -49,6 +49,10 @@
 
 #include "chapters/chapter-05.typ"
 
+#pagebreak()
+
+#include "backmatter/appendix.typ"
+
 
 // ============================================================
 // BACK MATTER

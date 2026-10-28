@@ -124,10 +124,11 @@
   - ការរីកចម្រើននៃបណ្តាញភាពជាដៃគូយុទ្ធសាស្ត្រ (យោងតាមរូបភាពទី៣ និងទី៤):
 ]
 #v(1mm)
-#set par(leading: 5.8pt, justify: true)
-#text(font: font-khmer-body, size: 8.3pt, fill: c-charcoal)[
-  ·         -
-[IMAGES: media/image20.png]
+
+#align(center)[
+  #box(stroke: 0.5pt + c-line, radius: 3pt, inset: 2mm, fill: c-paper)[
+    #image("../assets/figures/image20.png", width: 88%, fit: "contain")
+  ]
 ]
 #v(1mm)
 #set par(leading: 6pt, justify: true)
@@ -144,16 +145,155 @@
 #editorial-block(tag: "ពន្យល់", tag-color: c-teal)[
   មុនពេលចូលរួម អាជីវកម្មភាគច្រើនមានបណ្តាញចង្អៀត ព្រោះពួកគេធ្វើអាជីវកម្មបែបឯកោ。 តែតាមរយៈកម្មវិធីបណ្តុះបណ្តាល និងវេទិកាតភ្ជាប់បណ្តាញរបស់គម្រោង វាបានបើកឱកាសឱ្យម្ចាស់អាជីវកម្មបានជួបជុំគ្នា ស្គាល់អ្នកផ្គត់ផ្គង់ថ្មីៗ និងដៃគូសហការ ដែលធ្វើឱ្យភាគរយនៃសហគ្រាសដែលមានដៃគូច្រើនមានការកើនឡើងយ៉ាងច្បាស់លាស់。
 ]
-#v(1.5mm)
-#set par(leading: 6pt, justify: true)
-#text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
-  -
-]
-#v(1.5mm)
 
-#align(center)[
-  #box(stroke: 0.5pt + c-line, radius: 3pt, inset: 2mm, fill: c-paper)[
-    #image("../assets/figures/image14.png", width: 88%, fit: "contain")
+#v(3mm)
+#pagebreak()
+
+#block(
+  width: 100%,
+  stroke: 0.5pt + c-line,
+  radius: 3.5pt,
+  fill: c-paper,
+  clip: true,
+  breakable: false,
+)[
+  #block(
+    fill: c-teal,
+    width: 100%,
+    inset: (x: 4mm, y: 2.8mm),
+  )[
+    #grid(
+      columns: (1fr, auto),
+      align: horizon,
+      [
+        #text(font: font-sans, size: 6.8pt, weight: "bold", fill: c-sand, tracking: 0.12em)[INNOLAB KAMPONG THOM · OPERATIONAL UPGRADES]\
+        #v(0.4mm)
+        #text(font: font-khmer-display, size: 9.2pt, weight: "bold", fill: c-white)[រូបភាពទី ៥៖ ការផ្លាស់ប្តូរ និងការកែលម្អផលិតផល សេវាកម្ម និងសកម្មភាពអាជីវកម្ម]\
+        #v(0.2mm)
+        #text(font: font-sans, size: 6.8pt, fill: c-paper.darken(10%))[Reported Changes and Practical Operational Improvements]
+      ],
+      [
+        #rect(fill: c-sand-dark, radius: 2pt, inset: (x: 2.5mm, y: 1.5mm))[
+          #text(font: font-sans, size: 7pt, weight: "bold", fill: c-white)[១៤ សហគ្រាស]
+        ]
+      ]
+    )
+  ]
+  #v(2.5mm)
+  #pad(x: 3mm, bottom: 3mm)[
+    #grid(
+      columns: (1fr, 1fr),
+      gutter: 2.5mm,
+      [
+        #rect(fill: c-white, stroke: 0.4pt + c-line, radius: 2.5pt, inset: 2.5mm, width: 100%)[
+          #grid(
+            columns: (auto, 1fr),
+            gutter: 2mm,
+            align: horizon,
+            circle(radius: 2.2mm, fill: c-teal)[#align(center + horizon)[#text(font: font-sans, size: 6pt, weight: "bold", fill: c-white)[1]]],
+            text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[ពីការងារដោយដៃ ទៅម៉ាស៊ីន]
+          )
+          #v(1mm)
+          #set par(leading: 5pt, justify: true)
+          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+            - ផ្លាស់ប្តូរពីការងារដោយដៃ ទៅម៉ាស៊ីន (ពី hand to machine) ដើម្បីបង្កើនផលិតភាព\
+            - វិនិយោគលើម៉ាស៊ីនថ្មី និងបច្ចេកវិទ្យាកែច្នៃ (Invest in new machine)
+          ]
+        ]
+      ],
+      [
+        #rect(fill: c-white, stroke: 0.4pt + c-line, radius: 2.5pt, inset: 2.5mm, width: 100%)[
+          #grid(
+            columns: (auto, 1fr),
+            gutter: 2mm,
+            align: horizon,
+            circle(radius: 2.2mm, fill: c-teal)[#align(center + horizon)[#text(font: font-sans, size: 6pt, weight: "bold", fill: c-white)[2]]],
+            text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[ស្តង់ដារដំណើរការផលិត និងបង្កើត SOP]
+          )
+          #v(1mm)
+          #set par(leading: 5pt, justify: true)
+          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+            - រៀបចំដំណើរការផលិតឱ្យមានស្តង់ដារ (Standardize production process)\
+            - ដាក់ឱ្យអនុវត្តនូវនីតិវិធីប្រតិបត្តិស្តង់ដារ (SOP development)
+          ]
+        ]
+      ],
+      [
+        #rect(fill: c-white, stroke: 0.4pt + c-line, radius: 2.5pt, inset: 2.5mm, width: 100%)[
+          #grid(
+            columns: (auto, 1fr),
+            gutter: 2mm,
+            align: horizon,
+            circle(radius: 2.2mm, fill: c-teal)[#align(center + horizon)[#text(font: font-sans, size: 6pt, weight: "bold", fill: c-white)[3]]],
+            text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[រៀបចំប្លង់ទីតាំងផលិត និងលំហូរផលិត]
+          )
+          #v(1mm)
+          #set par(leading: 5pt, justify: true)
+          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+            - រៀបចំប្លង់ទីតាំងផលិតកម្មឡើងវិញ (Rearrange production place)\
+            - កែលម្អលំហូរផលិតឱ្យមានស្តង់ដារ (More standardized production flow)
+          ]
+        ]
+      ],
+      [
+        #rect(fill: c-white, stroke: 0.4pt + c-line, radius: 2.5pt, inset: 2.5mm, width: 100%)[
+          #grid(
+            columns: (auto, 1fr),
+            gutter: 2mm,
+            align: horizon,
+            circle(radius: 2.2mm, fill: c-teal)[#align(center + horizon)[#text(font: font-sans, size: 6pt, weight: "bold", fill: c-white)[4]]],
+            text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[បំបែកតំបន់ផលិតអាហារ និងផលិតទឹក]
+          )
+          #v(1mm)
+          #set par(leading: 5pt, justify: true)
+          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+            - ផ្លាស់ប្តូរទីតាំង ឬបំបែកតំបន់ផលិតអាហារកែច្នៃ ពីកន្លែងផលិតទឹក\
+            - ការពារហានិភ័យចម្លង និងធានាសុវត្ថិភាពអនាម័យចំណីអាហារ
+          ]
+        ]
+      ],
+      [
+        #rect(fill: c-white, stroke: 0.4pt + c-line, radius: 2.5pt, inset: 2.5mm, width: 100%)[
+          #grid(
+            columns: (auto, 1fr),
+            gutter: 2mm,
+            align: horizon,
+            circle(radius: 2.2mm, fill: c-teal)[#align(center + horizon)[#text(font: font-sans, size: 6pt, weight: "bold", fill: c-white)[5]]],
+            text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[រៀបចំក្រុមការងារ និងបន្ថែមបុគ្គលិក]
+          )
+          #v(1mm)
+          #set par(leading: 5pt, justify: true)
+          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+            - រៀបចំក្រុមការងារឡើងវិញតាមជំនាញ (Restructure team)\
+            - បន្ថែមបុគ្គលិក និងពង្រឹងសមត្ថភាពប្រតិបត្តិការ (Add more staff)
+          ]
+        ]
+      ],
+      [
+        #rect(fill: c-white, stroke: 0.4pt + c-line, radius: 2.5pt, inset: 2.5mm, width: 100%)[
+          #grid(
+            columns: (auto, 1fr),
+            gutter: 2mm,
+            align: horizon,
+            circle(radius: 2.2mm, fill: c-teal)[#align(center + horizon)[#text(font: font-sans, size: 6pt, weight: "bold", fill: c-white)[6]]],
+            text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[កែលម្អទីផ្សារឌីជីថល និងស្តុក]
+          )
+          #v(1mm)
+          #set par(leading: 5pt, justify: true)
+          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+            - ធ្វើទីផ្សារឌីជីថល និងផ្សព្វផ្សាយផលិតផល (Digital marketing)\
+            - គ្រប់គ្រងស្តុកដោយប្រព័ន្ធបច្ចេកវិទ្យាឌីជីថល (Digitalize stock control)
+          ]
+        ]
+      ],
+    )
+    #v(1.5mm)
+    #rect(fill: c-sand.lighten(45%), stroke: 0.4pt + c-sand, radius: 2pt, inset: 2mm, width: 100%)[
+      #set par(leading: 4.8pt, justify: true)
+      #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
+        *ចំណាំ៖* សេចក្តីសង្ខេបនេះផ្អែកលើចម្លើយជាក់ស្តែងរបស់សហគ្រាសចំនួន ១៤ ដែលបានចូលរួមឆ្លើយតបការស្ទង់មតិផលប៉ះពាល់ (Summary based on 14 SME responses)。
+      ]
+    ]
   ]
 ]
 #v(1.5mm)
@@ -176,7 +316,10 @@
 #text(font: font-khmer-body, size: 8.3pt, fill: c-charcoal)[
   ·         - ការរៀបចំប្លង់ទីតាំងផលិតកម្មឡើងវិញ (ឧទាហរណ៍ ការបែងចែកដាច់ពីគ្នារវាងកន្លែងផលិតទឹក និងកន្លែងផលិតផ្សេងៗ) និងការដាក់ឱ្យអនុវត្តនូវនីតិវិធីប្រតិបត្តិស្តង់ដារ (SOP)。
 ]
-#v(1mm)
+
+#v(3mm)
+#pagebreak()
+
 #set par(leading: 5.8pt, justify: true)
 #text(font: font-khmer-body, size: 8.3pt, fill: c-charcoal)[
   - ការប្រៀបធៀបទំហំទីផ្សាររបស់សហគ្រាស (យោងតាមរូបភាពទី៦ និងទី៧):

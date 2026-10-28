@@ -349,33 +349,55 @@
     ])
 
     // 2. Main Title Block (Bilingual Monograph Typography)
-    #place(top + left, dx: 22mm, dy: 46mm, block(width: 166mm)[
+    #place(top + left, dx: 22mm, dy: 43mm, block(width: 166mm)[
+      #block[
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-dark, tracking: 0.08em)[
+          របាយការណ៍ផ្លូវការនៃសមិទ្ធផលគម្រោង
+        ]
+      ]
+
+      #v(1.8mm)
       #block[
         #set par(leading: 9pt, justify: false)
         #text(font: font-khmer-display, size: 24pt, weight: "bold", fill: c-teal)[
-          គម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ
+          មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ
         ]
       ]
 
       #v(1.5mm)
-      #text(font: font-sans, size: 18pt, weight: 800, fill: c-sand-dark, tracking: 0.08em)[
-        (INNOLAB KAMPONG THOM)
+      #text(font: font-sans, size: 17pt, weight: 800, fill: c-sand-dark, tracking: 0.08em)[
+        INNOLAB KAMPONG THOM
       ]
 
       #v(2.5mm)
       #line(length: 44mm, stroke: 2pt + c-sand)
       #v(3mm)
 
-      #block(width: 140mm)[
+      #block(width: 155mm)[
         #set par(leading: 7.5pt, justify: false)
         #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[
-          របាយការណ៍គ្រប់ជ្រុងជ្រោយស្តីពីការបណ្តុះបណ្តាលសហគ្រាសធុនតូចនិងមធ្យម (SME) ថ្នាក់តំបន់ ការធ្វើសមាហរណកម្មសេដ្ឋកិច្ចចក្រា និងការផ្លាស់ប្តូរសេដ្ឋកិច្ចខេត្តកំពង់ធំ
+          ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations
         ]
       ]
 
-      #v(2mm)
-      #text(font: font-khmer-body, size: 8.5pt, fill: c-teal.lighten(15%))[
-        ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations
+      #v(2.2mm)
+      #block(width: 145mm)[
+        #set par(leading: 7pt, justify: false)
+        #text(font: font-khmer-body, size: 8.8pt, fill: c-teal.lighten(12%))[
+          ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន
+        ]
+      ]
+
+      #v(2.8mm)
+      #rect(
+        fill: rgb("#FFFFFF").transparentize(15%),
+        stroke: 0.8pt + c-sand,
+        radius: 2.5pt,
+        inset: (x: 3.5mm, y: 1.6mm),
+      )[
+        #text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[
+          រដូវកាលទី១ · ២០២៥–២០២៦
+        ]
       ]
     ])
 
@@ -923,8 +945,8 @@
         #line(length: 100%, stroke: 0.5pt + c-line)
         #v(1.2mm)
         #set par(leading: 6.5pt, justify: false)
-        #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal.lighten(15%))[
-          ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន · របាយការណ៍គ្រប់ជ្រុងជ្រោយស្តីពីការបណ្តុះបណ្តាលសហគ្រាសធុនតូចនិងមធ្យម (SME) ថ្នាក់តំបន់ ការធ្វើសមាហរណកម្មសេដ្ឋកិច្ចចក្រា និងការផ្លាស់ប្តូរសេដ្ឋកិច្ចខេត្តកំពង់ធំ
+        #text(font: font-khmer-body, size: 7.5pt, fill: c-charcoal.lighten(15%))[
+          ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន
         ]
       ]
 
