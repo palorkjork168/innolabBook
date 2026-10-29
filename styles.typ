@@ -344,12 +344,12 @@
     }
 
     // 1. InnoLab Brand Logo (Top Left, Crisp & Unblurred Vector/High-Res)
-    #place(top + left, dx: 22mm, dy: 20mm, block[
-      #image(resolve-logo("innolab"), height: 19mm, fit: "contain")
+    #place(top + left, dx: 22mm, dy: 18mm, block[
+      #image(resolve-logo("innolab"), height: 18mm, fit: "contain")
     ])
 
     // 2. Main Title Block (Bilingual Monograph Typography)
-    #place(top + left, dx: 22mm, dy: 43mm, block(width: 166mm)[
+    #place(top + left, dx: 22mm, dy: 42mm, block(width: 166mm)[
       #block[
         #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-dark, tracking: 0.08em)[
           របាយការណ៍ផ្លូវការនៃសមិទ្ធផលគម្រោង
@@ -359,82 +359,80 @@
       #v(1.8mm)
       #block[
         #set par(leading: 9pt, justify: false)
-        #text(font: font-khmer-display, size: 24pt, weight: "bold", fill: c-teal)[
+        #text(font: font-khmer-display, size: 23pt, weight: "bold", fill: c-teal)[
           មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ
         ]
       ]
 
       #v(1.5mm)
-      #text(font: font-sans, size: 17pt, weight: 800, fill: c-sand-dark, tracking: 0.08em)[
+      #text(font: font-sans, size: 16.5pt, weight: 800, fill: c-sand-dark, tracking: 0.08em)[
         INNOLAB KAMPONG THOM
       ]
 
+      #v(2.2mm)
+      #line(length: 44mm, stroke: 1.8pt + c-sand)
       #v(2.5mm)
-      #line(length: 44mm, stroke: 2pt + c-sand)
-      #v(3mm)
 
       #block(width: 155mm)[
-        #set par(leading: 7.5pt, justify: false)
-        #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[
+        #set par(leading: 7.2pt, justify: false)
+        #text(font: font-khmer-display, size: 9.2pt, weight: "bold", fill: c-teal)[
           ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations
         ]
       ]
 
-      #v(2.2mm)
-      #block(width: 145mm)[
-        #set par(leading: 7pt, justify: false)
-        #text(font: font-khmer-body, size: 8.8pt, fill: c-teal.lighten(12%))[
+      #v(2mm)
+      #block(width: 155mm)[
+        #set par(leading: 6.8pt, justify: false)
+        #text(font: font-khmer-body, size: 8.5pt, fill: c-teal.lighten(12%))[
           ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន
         ]
       ]
 
-      #v(2.8mm)
-      #rect(
-        fill: rgb("#FFFFFF").transparentize(15%),
-        stroke: 0.8pt + c-sand,
-        radius: 2.5pt,
-        inset: (x: 3.5mm, y: 1.6mm),
-      )[
-        #text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[
-          រដូវកាលទី១ · ២០២៥–២០២៦
+      #v(2.5mm)
+      #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-sand-dark)[
+        រដូវកាលទី១ · ២០២៥–២០២៦
+      ]
+
+      #v(3mm)
+      #block(width: 155mm)[
+        #set par(leading: 6.8pt, justify: false)
+        #text(font: font-khmer-display, size: 8.5pt, fill: c-sand-dark, weight: "bold")[
+          គោរពជូន៖
+        ]
+        #h(1.5mm)
+        #text(font: font-khmer-display, size: 8.5pt, fill: c-teal, weight: "bold")[
+          ឯកឧត្តម វង្សី វិស្សុត ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ រដ្ឋមន្ត្រីទទួលបន្ទុកទីស្តីការគណៈរដ្ឋមន្ត្រី
         ]
       ]
     ])
 
     // 3. Middle Area: Open, clean, showcasing the serene mountain and river landscape
 
-    // 4. Institutional Sponsor & Partner Logos (Refined Frosted Card)
-    #place(top + left, dx: 22mm, dy: 238mm, block(
-      width: 166mm,
-      fill: rgb(255, 255, 255, 92%),
-      radius: 5pt,
-      inset: (x: 10mm, y: 4.5mm),
-      stroke: 0.9pt + c-sand,
-    )[
-      #grid(
-        columns: (1fr, 1fr, 1fr),
-        align: horizon + center,
-        gutter: 6mm,
-        image(resolve-logo("asip"), height: 10mm, fit: "contain"),
-        image(resolve-logo("sdf"), height: 9.5mm, fit: "contain"),
-        image(resolve-logo("ke"), height: 8.5mm, fit: "contain"),
-      )
+    // 4. Subtle Attribution Line above footer
+    #place(top + left, dx: 22mm, dy: 263mm, block(width: 166mm)[
+      #align(center)[
+        #text(font: font-khmer-display, size: 6.8pt, fill: c-white.transparentize(10%))[
+          រៀបចំ និងអនុវត្តដោយ ASIP · គាំទ្រថវិកាដោយ SDF & KE · សហការជាមួយរដ្ឋបាលខេត្តកំពង់ធំ
+        ]
+      ]
     ])
 
-    // 5. Official Attribution & Governance
-    #place(top + left, dx: 22mm, dy: 268mm, block(width: 166mm)[
-      #align(center)[
-        #text(font: font-sans, size: 8pt, weight: 700, fill: c-white, tracking: 0.16em)[
-          ANGKOR SOCIAL INNOVATION PARK (ASIP)
-        ]\
-        #v(1mm)
-        #text(font: font-sans, size: 6.5pt, weight: 500, fill: c-sand-light, tracking: 0.08em)[
-          SUPPORTED BY SKILLS DEVELOPMENT FUND (SDF) & KHMER ENTERPRISE (KE)
-        ]\
-        #v(0.8mm)
-        #text(font: font-khmer-display, size: 6.5pt, fill: c-white.transparentize(20%))[
-          សហការជាមួយរដ្ឋបាលខេត្តកំពង់ធំ · KAMPONG THOM PROVINCIAL ADMINISTRATION
-        ]
+    // 5. White Footer Band spanning full width with 3 logos (as in user reference)
+    #place(top + left, dx: 0mm, dy: 271mm, block(
+      width: 210mm,
+      height: 26mm,
+      fill: c-white,
+      stroke: (top: 0.5pt + c-line),
+    )[
+      #align(center + horizon)[
+        #grid(
+          columns: (auto, auto, auto),
+          align: horizon + center,
+          gutter: 14mm,
+          image(resolve-logo("asip"), height: 11mm, fit: "contain"),
+          image(resolve-logo("sdf"), height: 10.5mm, fit: "contain"),
+          image(resolve-logo("ke"), height: 9.5mm, fit: "contain"),
+        )
       ]
     ])
   ]
