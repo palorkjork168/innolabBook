@@ -11,14 +11,13 @@
   header: none,
   footer: none,
 )[
-  #rect(fill: c-teal, inset: (x: 4mm, y: 2mm), radius: 2pt)[
-    #text(font: font-khmer-display, size: 8pt, weight: "bold", fill: c-sand)[សង្ខេបរបាយការណ៍គម្រោង]
+  #v(2mm)
+  #align(center)[
+    #text(font: font-khmer-display, size: 19.5pt, weight: "bold", fill: c-teal)[សេចក្តីសង្ខេបប្រតិបត្តិ (Executive Summary)]
   ]
-  #v(1.5mm)
-  #text(font: font-khmer-display, size: 18pt, weight: "bold", fill: c-teal)[សេចក្តីសង្ខេបប្រតិបត្តិ (Executive Summary)]
-  #v(1mm)
-  #line(length: 100%, stroke: 0.75pt + c-sand)
-  #v(2.5mm)
+  #v(3mm)
+  #line(length: 100%, stroke: 1.2pt + c-sand)
+  #v(3.5mm)
 
   #block(
     fill: c-white,

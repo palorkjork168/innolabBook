@@ -343,65 +343,67 @@
       place(top + left, image("assets/cover/cover-front-art.svg", width: 210mm, height: 297mm))
     }
 
-    // 1. InnoLab Brand Logo (Top Left, Crisp & Unblurred Vector/High-Res)
-    #place(top + left, dx: 22mm, dy: 18mm, block[
-      #image(resolve-logo("innolab"), height: 18mm, fit: "contain")
+    // 1. InnoLab Brand Logo (Centered at Top)
+    #place(top + center, dy: 16mm, block[
+      #image(resolve-logo("innolab"), height: 19mm, fit: "contain")
     ])
 
-    // 2. Main Title Block (Bilingual Monograph Typography)
-    #place(top + left, dx: 22mm, dy: 42mm, block(width: 166mm)[
-      #block[
-        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-dark, tracking: 0.08em)[
-          របាយការណ៍ផ្លូវការនៃសមិទ្ធផលគម្រោង
+    // 2. Main Title Block (Bilingual Monograph Typography - Centered)
+    #place(top + center, dy: 40mm, block(width: 175mm)[
+      #align(center)[
+        #block[
+          #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-dark, tracking: 0.08em)[
+            របាយការណ៍ផ្លូវការនៃសមិទ្ធផលគម្រោង
+          ]
         ]
-      ]
 
-      #v(1.8mm)
-      #block[
-        #set par(leading: 9pt, justify: false)
-        #text(font: font-khmer-display, size: 23pt, weight: "bold", fill: c-teal)[
-          មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ
+        #v(1.8mm)
+        #block[
+          #set par(leading: 9pt, justify: false)
+          #text(font: font-khmer-display, size: 23pt, weight: "bold", fill: c-teal)[
+            មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ
+          ]
         ]
-      ]
 
-      #v(1.5mm)
-      #text(font: font-sans, size: 16.5pt, weight: 800, fill: c-sand-dark, tracking: 0.08em)[
-        INNOLAB KAMPONG THOM
-      ]
-
-      #v(2.2mm)
-      #line(length: 44mm, stroke: 1.8pt + c-sand)
-      #v(2.5mm)
-
-      #block(width: 155mm)[
-        #set par(leading: 7.2pt, justify: false)
-        #text(font: font-khmer-display, size: 9.2pt, weight: "bold", fill: c-teal)[
-          ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations
+        #v(1.5mm)
+        #text(font: font-sans, size: 16.5pt, weight: 800, fill: c-sand-dark, tracking: 0.08em)[
+          INNOLAB KAMPONG THOM
         ]
-      ]
 
-      #v(2mm)
-      #block(width: 155mm)[
-        #set par(leading: 6.8pt, justify: false)
-        #text(font: font-khmer-body, size: 8.5pt, fill: c-teal.lighten(12%))[
-          ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន
+        #v(2.5mm)
+        #rect(width: 44mm, height: 1.5pt, fill: c-sand)
+        #v(2.5mm)
+
+        #block(width: 160mm)[
+          #set par(leading: 7.2pt, justify: false)
+          #text(font: font-khmer-display, size: 9.2pt, weight: "bold", fill: c-teal)[
+            ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations
+          ]
         ]
-      ]
 
-      #v(2.5mm)
-      #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-sand-dark)[
-        រដូវកាលទី១ · ២០២៥–២០២៦
-      ]
-
-      #v(3mm)
-      #block(width: 155mm)[
-        #set par(leading: 6.8pt, justify: false)
-        #text(font: font-khmer-display, size: 8.5pt, fill: c-sand-dark, weight: "bold")[
-          គោរពជូន៖
+        #v(2mm)
+        #block(width: 160mm)[
+          #set par(leading: 6.8pt, justify: false)
+          #text(font: font-khmer-body, size: 8.5pt, fill: c-teal.lighten(12%))[
+            ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន
+          ]
         ]
-        #h(1.5mm)
-        #text(font: font-khmer-display, size: 8.5pt, fill: c-teal, weight: "bold")[
-          ឯកឧត្តម វង្សី វិស្សុត ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ រដ្ឋមន្ត្រីទទួលបន្ទុកទីស្តីការគណៈរដ្ឋមន្ត្រី
+
+        #v(2.8mm)
+        #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-sand-dark)[
+          រដូវកាលទី១ · ២០២៥–២០២៦
+        ]
+
+        #v(3mm)
+        #block(width: 165mm)[
+          #set par(leading: 6.8pt, justify: false)
+          #text(font: font-khmer-display, size: 8.5pt, fill: c-sand-dark, weight: "bold")[
+            គោរពជូន៖
+          ]
+          #h(1.5mm)
+          #text(font: font-khmer-display, size: 8.5pt, fill: c-teal, weight: "bold")[
+            ឯកឧត្តម វង្សី វិស្សុត ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ រដ្ឋមន្ត្រីទទួលបន្ទុកទីស្តីការគណៈរដ្ឋមន្ត្រី
+          ]
         ]
       ]
     ])
@@ -891,166 +893,60 @@
 #let credits-page() = {
   page(
     paper: "a4",
-    margin: 0mm,
+    margin: (top: 25mm, bottom: 25mm, left: 22mm, right: 22mm),
     fill: c-paper,
     header: none,
     footer: none,
   )[
-    // Left Panel: Architectural Framing and Tall Documentary Photo
-    #geom-frame(18mm, 20mm, 58mm, 218mm, stroke-color: c-sand, offset-x: -3mm, offset-y: -3mm, marker: true)
+    #v(4mm)
 
-    #place(top + left, dx: 18mm, dy: 20mm, image("/assets/photos/02.jpg", width: 58mm, height: 218mm, fit: "cover"))
-
-    // Photo Caption under photograph
-    #place(top + left, dx: 18mm, dy: 242mm, block(width: 58mm)[
-      #text(font: font-sans, size: 6.5pt, weight: "bold", fill: c-sand-dark, tracking: 0.14em)[FIELD ARCHIVE · 2025–2026]\
-      #v(1.5mm)
-      #line(length: 24mm, stroke: 0.75pt + c-sand)
-      #v(2mm)
-      #set par(leading: 7.2pt, justify: false)
-      #text(font: font-khmer-body, size: 7pt, fill: c-charcoal.lighten(25%))[
-        សកម្មភាពបណ្តុះបណ្តាល និងកិច្ចពិភាក្សាសហគ្រិន InnoLab ខេត្តកំពង់ធំ
-      ]
-    ])
-
-    // Right Panel: Pure Editorial Typographic Architecture
-    #place(top + left, dx: 86mm, dy: 16mm, block(width: 106mm)[
-      // Running Header Top Right
+    // 1. Centered Title
+    #align(center)[
       #text(
         font: font-khmer-display,
-        size: 7.5pt,
+        size: 20pt,
         weight: "bold",
         fill: c-teal,
-      )[របាយការណ៍ផ្លូវការ · គម្រោងមន្ទីរពិសោធន៍នវានុវត្ដន៍កំពង់ធំ]
-
-      #v(2.5mm)
-
-      // Official Dedication Block (Verbatim from DOCX Source)
-      #block(
-        fill: c-white,
-        radius: 3pt,
-        inset: (x: 8pt, y: 7pt),
-        stroke: 1pt + c-sand,
       )[
-        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-sand-dark)[
-          គោរពជូន៖
-        ]\
-        #v(0.8mm)
-        #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[
-          ឯកឧត្តម វង្សី វិស្សុត ឧបនាយករដ្ឋមន្ត្រីប្រចាំការ រដ្ឋមន្ត្រីទទួលបន្ទុកទីស្តីការគណៈរដ្ឋមន្ត្រី
-        ]\
-        #v(1mm)
-        #line(length: 100%, stroke: 0.5pt + c-line)
-        #v(1.2mm)
-        #set par(leading: 6.5pt, justify: false)
-        #text(font: font-khmer-body, size: 7.5pt, fill: c-charcoal.lighten(15%))[
-          ការកត់ត្រាសកម្មភាព សមិទ្ធផល និងមេរៀនដែលទទួលបាន
-        ]
+        សេចក្តីបញ្ជាក់អំពីវិសាលភាពរបាយការណ៍
       ]
+    ]
 
-      #v(2.5mm)
+    #v(4mm)
 
-      // Section 1: Implementing Agency (Verbatim from DOCX)
-      #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
-        រៀបចំ និងអនុវត្តដោយ៖ ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (Angkor Social Innovation Park - ASIP)
-      ]
-      #v(1.2mm)
-      #grid(
-        columns: (auto, 1fr),
-        gutter: 4mm,
-        align: horizon,
-        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 4pt), stroke: 0.5pt + c-line)[
-          #image(resolve-logo("asip"), height: 9mm, fit: "contain")
-        ],
-        [
-          #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[
-            ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP)
-          ]\
-          #v(0.3mm)
-          #text(font: font-sans, size: 6.5pt, fill: c-muted)[
-            Angkor Social Innovation Park · ប្រតិបត្តិករគម្រោង
-          ]
-        ],
-      )
+    // 2. Full-width Dividing Line
+    #line(length: 100%, stroke: 1.2pt + c-sand)
 
-      #v(2mm)
-      #line(length: 106mm, stroke: 0.5pt + c-line)
-      #v(2mm)
+    #v(8mm)
 
-      // Section 2: Strategic & Development Partners (Verbatim from DOCX)
-      #text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-dark)[
-        គាំទ្រថវិកា និងកិច្ចសហការដោយ៖ មូលនិធិអភិវឌ្ឍន៍ជំនាញ (SDF) និង សហគ្រិនខ្មែរ (Khmer Enterprise - KE)
-      ]
-      #v(1.2mm)
-      #grid(
-        columns: (1fr, 1fr),
-        gutter: 4mm,
-        align: horizon,
-        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 4pt), stroke: 0.5pt + c-line)[
-          #align(center + horizon)[#image(resolve-logo("sdf"), height: 8.5mm, fit: "contain")]
-        ],
-        block(fill: c-white, radius: 2pt, inset: (x: 6pt, y: 4pt), stroke: 0.5pt + c-line)[
-          #align(center + horizon)[#image(resolve-logo("ke"), height: 8.5mm, fit: "contain")]
-        ],
-      )
-
-      #v(2mm)
-      #line(length: 106mm, stroke: 0.5pt + c-line)
-      #v(1.5mm)
-
-      // Section 3: Project Metadata Architecture (Hairline Rows)
-      #let credit-row(label-km, val-km) = block(
-        width: 100%,
-        inset: (y: 1.2mm),
-        stroke: (bottom: 0.5pt + c-line),
-      )[
-        #grid(
-          columns: (28mm, 1fr),
-          gutter: 3mm,
-          [
-            #text(font: font-khmer-display, size: 6.8pt, weight: "bold", fill: c-sand-dark)[#label-km]
-          ],
-          [
-            #text(font: font-khmer-body, size: 7.2pt, weight: "bold", fill: c-teal)[#val-km]
-          ],
-        )
-      ]
-
-      #credit-row("គម្រោង", "មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ (INNOLAB KAMPONG THOM)")
-      #credit-row("ពាក្យស្លោក", "ផ្សារភ្ជាប់សហគ្រាស និងនវានុវត្តន៍ភាព · Connect SMEs, Connect Innovations")
-      #credit-row("រដូវកាល", "រដូវកាលទី១ (២០២៥–២០២៦)")
-      #credit-row("សហការរដ្ឋបាល", "សហការរដ្ឋបាលដោយ៖ រដ្ឋបាលខេត្តកំពង់ធំ")
-
-      #v(2mm)
-
-      // Section 4: Scope Statement
-      #block(
-        fill: c-paper,
-        radius: 2pt,
-        inset: (x: 6pt, y: 5pt),
-        stroke: 0.5pt + c-sand,
-      )[
-        #text(font: font-khmer-display, size: 7pt, weight: "bold", fill: c-teal)[សេចក្តីបញ្ជាក់អំពីវិសាលភាពរបាយការណ៍]\
-        #v(0.8mm)
-        #set par(leading: 5.8pt, justify: true)
-        #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
+    // 3. Centered Body Text (Matching Figma Specification)
+    #align(center)[
+      #block(width: 155mm)[
+        #set par(leading: 11pt, justify: false)
+        #text(
+          font: font-khmer-body,
+          size: 10.5pt,
+          fill: c-charcoal,
+        )[
           របាយការណ៍នេះជាឯកសារផ្លូវការកម្រិតយុទ្ធសាស្ត្រ ដែលរៀបចំឡើងដោយ ក្រុមហ៊ុន ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ ដើម្បីកត់ត្រា និងបូកសរុបសកម្មភាព សមិទ្ធផលជាក់ស្តែង បរិវត្តកម្មរបស់សហគ្រាសធុនតូច និងមធ្យម (SMEs) ព្រមទាំងការវាយតម្លៃផលប៉ះពាល់នៃគម្រោង មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ រដូវកាលទី១ ដែលបានអនុវត្តក្នុងចន្លោះឆ្នាំ ២០២៥–២០២៦ ក្នុងភូមិសាស្ត្រខេត្តកំពង់ធំ។
         ]
       ]
-    ])
+    ]
 
-    // Bottom Datum Line & Folio
-    #place(top + left, dx: 86mm, dy: 270mm, line(length: 106mm, stroke: 0.5pt + c-line))
-    #place(top + left, dx: 86mm, dy: 274mm, catalogue-folio(
-      "i",
-      header-right: "INNOLAB KAMPONG THOM · INSTITUTIONAL CREDITS",
-      side: "right",
-      width: 106mm,
-    ))
+    // Bottom datum & folio
+    #place(top + left, dx: 0mm, dy: 242mm)[
+      #line(length: 100%, stroke: 0.5pt + c-line)
+    ]
+    #place(top + left, dx: 0mm, dy: 247mm)[
+      #catalogue-folio(
+        "i",
+        header-right: "INNOLAB KAMPONG THOM · SCOPE OF REPORT",
+        side: "right",
+        width: 100%,
+      )
+    ]
   ]
 }
-
-
 
 // ============================================================
 // TABLE OF CONTENTS
