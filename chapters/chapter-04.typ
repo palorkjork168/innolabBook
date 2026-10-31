@@ -8,12 +8,158 @@
 
 #chapter-opener(
   num: "០៤",
-  title: "ការរកឃើញសំខាន់ៗ និងការវាយតម្លៃផលប៉ះពាល់",
-  subtitle: "ជំពូកទី ៤៖ ការរកឃើញសំខាន់ៗ និងការវាយតម្លៃផលប៉ះពាល់ (Data Analysis & Impact)",
+  title: [ការរកឃើញសំខាន់ៗ \ #v(2.5mm) និងការវាយតម្លៃផលប៉ះពាល់],
+  hero-image: "/assets/photos/finnal-pitching-2.jpg",
+  apply-gradient: true,
   label-id: "ch-04",
 )
 
-#rect(width: 100%, fill: c-paper, stroke: (left: 2.5pt + c-teal, rest: 0.5pt + c-line), radius: (right: 3pt), inset: 4.5mm)[
+#page(
+  paper: "a4",
+  margin: 0pt,
+  header: none,
+  footer: none,
+  fill: c-paper,
+)[
+  #place(top + left, rect(width: 100%, height: 100%, fill: c-paper))
+  #place(top + left, dx: 19mm, dy: 17mm)[
+    #text(font: font-sans, size: 8pt, weight: "bold", fill: c-sand-dark, tracking: 0.12em)[INNOLAB KAMPONG THOM · វឌ្ឍនភាព]
+  ]
+  #place(top + left, dx: 19mm, dy: 29mm, block(width: 172mm)[
+    #set par(leading: 18pt, justify: false)
+    #text(font: font-khmer-display, size: 21pt, weight: "bold", fill: c-teal)[លទ្ធផល និងវឌ្ឍនភាពនៃការអនុវត្តជាក់ស្តែង]
+  ])
+  #place(top + left, dx: 19mm, dy: 52mm, block(width: 172mm, height: 37mm)[
+    #grid(
+      columns: (1fr, 1fr, 1fr),
+      gutter: 4mm,
+      block(fill: c-teal, radius: 2mm, inset: (x: 4mm, y: 3mm))[
+        #text(font: font-sans, size: 23pt, weight: "bold", fill: c-sand)[100%]\
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-white)[នវានុវត្តន៍ផលិតផល]
+      ],
+      block(fill: c-teal, radius: 2mm, inset: (x: 4mm, y: 3mm))[
+        #text(font: font-sans, size: 23pt, weight: "bold", fill: c-sand)[66.7%]\
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-white)[ការកែលម្អដំណើរការផលិត]
+      ],
+      block(fill: c-teal, radius: 2mm, inset: (x: 4mm, y: 3mm))[
+        #text(font: font-sans, size: 23pt, weight: "bold", fill: c-sand)[53.3%]\
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: c-white)[ការទទួលយកបច្ចេកវិទ្យាថ្មី]
+      ],
+    )
+  ])
+  #place(top + left, dx: 19mm, dy: 99mm, block(width: 172mm)[
+    #grid(
+      columns: (1fr, 1.05fr),
+      gutter: 7mm,
+      align: top,
+      block(width: 100%, height: 79mm, clip: true)[
+        #image("../assets/photos/12.jpg", width: 100%, height: 100%, fit: "cover")
+      ],
+      block[
+        #text(font: font-khmer-display, size: 13pt, weight: "bold", fill: c-teal)[ការកែលម្អប្រតិបត្តិការ និងគុណភាពផលិតផល]
+        #v(3mm)
+        #line(length: 22mm, stroke: 1.2pt + c-sand)
+        #v(3mm)
+        #set par(leading: 7.5pt, justify: false)
+        #text(font: font-khmer-body, size: 9pt, fill: c-charcoal)[
+          ការកែលម្អផលិតផល និងដំណើរការផលិត គឺជាជំហានសំខាន់ក្នុងការបង្កើនគុណភាព ប្រសិទ្ធភាព និងតម្លៃបន្ថែមរបស់សហគ្រាស។ ការអនុវត្តជាក់ស្តែងរួមមានការកែលម្អការវេចខ្ចប់ ការប្រើប្រាស់ម៉ាស៊ីន និងការរៀបចំដំណើរការផលិតឱ្យមានស្តង់ដារ។
+        ]
+      ],
+    )
+  ])
+  #place(bottom + left, dx: 19mm, dy: -19mm, block(width: 172mm)[
+    #line(length: 100%, stroke: 0.5pt + c-line)
+    #v(2mm)
+    #grid(
+      columns: (1fr, auto),
+      text(font: font-khmer-body, size: 7pt, fill: c-muted)[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · របាយការណ៍សមិទ្ធផលគម្រោង],
+      context text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-teal)[#to-khmer-num(counter(page).get().first())],
+    )
+  ])
+]
+
+#page(
+  paper: "a4",
+  margin: 0pt,
+  header: none,
+  footer: none,
+  fill: c-white,
+)[
+  #place(top + left, rect(width: 100%, height: 100%, fill: c-white))
+  #place(top + left, dx: 19mm, dy: 18mm)[
+    #text(font: font-sans, size: 8pt, weight: "bold", fill: c-sand-dark, tracking: 0.12em)[INNOLAB KAMPONG THOM · សមិទ្ធផលស្នូល]
+  ]
+  #place(top + left, dx: 19mm, dy: 33mm, block(width: 172mm)[
+    #grid(
+      columns: (1fr, 1fr, 1fr),
+      gutter: 4mm,
+      block(fill: c-teal, height: 37mm, radius: 2mm, inset: (x: 4mm, y: 4mm))[
+        #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-sand)[ផ្នត់គំនិតនវានុវត្តន៍]
+        #v(2mm)
+        #text(font: font-sans, size: 22pt, weight: "bold", fill: c-white)[73.3%]
+        #v(1mm)
+        #text(font: font-khmer-body, size: 7pt, fill: c-white)[យល់ដឹងកម្រិតខ្ពស់បំផុត]
+      ],
+      block(fill: c-teal, height: 37mm, radius: 2mm, inset: (x: 4mm, y: 4mm))[
+        #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-sand)[បណ្តាញទីផ្សារ]
+        #v(2mm)
+        #text(font: font-sans, size: 22pt, weight: "bold", fill: c-white)[23.1%]
+        #v(1mm)
+        #text(font: font-khmer-body, size: 7pt, fill: c-white)[មានដៃគូ ៧–១០]
+      ],
+      block(fill: c-teal, height: 37mm, radius: 2mm, inset: (x: 4mm, y: 4mm))[
+        #text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-sand)[ការគ្រប់គ្រងទំនើប]
+        #v(2mm)
+        #text(font: font-sans, size: 22pt, weight: "bold", fill: c-white)[80%]
+        #v(1mm)
+        #text(font: font-khmer-body, size: 7pt, fill: c-white)[កម្រិតមធ្យម]
+      ],
+    )
+  ])
+  #place(top + left, dx: 19mm, dy: 88mm, block(width: 172mm)[
+    #block(width: 100%, height: 67mm, clip: true)[
+      #image("../assets/photos/18.jpg", width: 100%, height: 100%, fit: "cover")
+    ]
+    #v(2mm)
+    #line(length: 100%, stroke: 0.5pt + c-line)
+    #v(1mm)
+    #text(font: font-khmer-body, size: 7.5pt, fill: c-muted)[សហគ្រិន និងដៃគូសហការក្នុងកម្មវិធីមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ]
+  ])
+  #place(top + left, dx: 19mm, dy: 178mm, block(width: 172mm)[
+    #grid(
+      columns: (1fr, 1fr, 1fr),
+      gutter: 4mm,
+      align: top,
+      block(fill: c-paper, height: 39mm, inset: (x: 4mm, y: 4mm))[
+        #text(font: font-sans, size: 23pt, weight: "bold", fill: c-teal)[១៦៣+]\
+        #text(font: font-khmer-display, size: 8pt, weight: "bold", fill: c-charcoal)[អ្នកចូលរួមថ្ងៃប្រកួត]
+      ],
+      block(fill: c-paper, height: 39mm, inset: (x: 4mm, y: 4mm))[
+        #text(font: font-sans, size: 23pt, weight: "bold", fill: c-teal)[២០]\
+        #text(font: font-khmer-display, size: 8pt, weight: "bold", fill: c-charcoal)[សហគ្រាសចូលរួម]
+      ],
+      block(fill: c-paper, height: 39mm, inset: (x: 4mm, y: 4mm))[
+        #text(font: font-sans, size: 23pt, weight: "bold", fill: c-teal)[៤៨ លាន]\
+        #text(font: font-khmer-display, size: 8pt, weight: "bold", fill: c-charcoal)[រៀលជាទុនពូជ]
+      ],
+    )
+  ])
+  #place(bottom + left, dx: 19mm, dy: -19mm, block(width: 172mm)[
+    #line(length: 100%, stroke: 0.5pt + c-line)
+    #v(2mm)
+    #grid(
+      columns: (1fr, auto),
+      text(font: font-khmer-body, size: 7pt, fill: c-muted)[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · របាយការណ៍សមិទ្ធផលគម្រោង],
+      context text(font: font-khmer-display, size: 9pt, weight: "bold", fill: c-teal)[#to-khmer-num(counter(page).get().first())],
+    )
+  ])
+]
+
+#block(
+  width: 100%,
+  stroke: (left: 3pt + c-teal),
+  inset: (left: 4.5mm, y: 1.5mm),
+)[
   #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[សេចក្តីផ្តើម និងទិដ្ឋភាពទូទៅនៃទិន្នន័យ]  #v(1mm)
   #set par(leading: 6pt, justify: true)
   #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
@@ -127,7 +273,7 @@
 
 #align(center)[
   #box(stroke: 0.5pt + c-line, radius: 3pt, inset: 2mm, fill: c-paper)[
-    #image("../assets/figures/image20.png", width: 88%, fit: "contain")
+    #image("../assets/figures/image20.png", width: 60%, fit: "contain")
   ]
 ]
 #v(1mm)
@@ -145,9 +291,6 @@
 #editorial-block(tag: "ពន្យល់", tag-color: c-teal)[
   មុនពេលចូលរួម អាជីវកម្មភាគច្រើនមានបណ្តាញចង្អៀត ព្រោះពួកគេធ្វើអាជីវកម្មបែបឯកោ。 តែតាមរយៈកម្មវិធីបណ្តុះបណ្តាល និងវេទិកាតភ្ជាប់បណ្តាញរបស់គម្រោង វាបានបើកឱកាសឱ្យម្ចាស់អាជីវកម្មបានជួបជុំគ្នា ស្គាល់អ្នកផ្គត់ផ្គង់ថ្មីៗ និងដៃគូសហការ ដែលធ្វើឱ្យភាគរយនៃសហគ្រាសដែលមានដៃគូច្រើនមានការកើនឡើងយ៉ាងច្បាស់លាស់。
 ]
-
-#v(3mm)
-#pagebreak()
 
 #block(
   width: 100%,
@@ -182,8 +325,8 @@
   #v(2.5mm)
   #pad(x: 3mm, bottom: 3mm)[
     #grid(
-      columns: (1fr, 1fr),
-      gutter: 2.5mm,
+      columns: (1fr, 1fr, 1fr),
+      gutter: 2mm,
       [
         #rect(fill: c-white, stroke: 0.4pt + c-line, radius: 2.5pt, inset: 2.5mm, width: 100%)[
           #grid(
@@ -194,8 +337,8 @@
             text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[ពីការងារដោយដៃ ទៅម៉ាស៊ីន]
           )
           #v(1mm)
-          #set par(leading: 5pt, justify: true)
-          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+          #set par(leading: 4.5pt, justify: true)
+          #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
             - ផ្លាស់ប្តូរពីការងារដោយដៃ ទៅម៉ាស៊ីន (ពី hand to machine) ដើម្បីបង្កើនផលិតភាព\
             - វិនិយោគលើម៉ាស៊ីនថ្មី និងបច្ចេកវិទ្យាកែច្នៃ (Invest in new machine)
           ]
@@ -211,8 +354,8 @@
             text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[ស្តង់ដារដំណើរការផលិត និងបង្កើត SOP]
           )
           #v(1mm)
-          #set par(leading: 5pt, justify: true)
-          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+          #set par(leading: 4.5pt, justify: true)
+          #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
             - រៀបចំដំណើរការផលិតឱ្យមានស្តង់ដារ (Standardize production process)\
             - ដាក់ឱ្យអនុវត្តនូវនីតិវិធីប្រតិបត្តិស្តង់ដារ (SOP development)
           ]
@@ -228,8 +371,8 @@
             text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[រៀបចំប្លង់ទីតាំងផលិត និងលំហូរផលិត]
           )
           #v(1mm)
-          #set par(leading: 5pt, justify: true)
-          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+          #set par(leading: 4.5pt, justify: true)
+          #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
             - រៀបចំប្លង់ទីតាំងផលិតកម្មឡើងវិញ (Rearrange production place)\
             - កែលម្អលំហូរផលិតឱ្យមានស្តង់ដារ (More standardized production flow)
           ]
@@ -245,8 +388,8 @@
             text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[បំបែកតំបន់ផលិតអាហារ និងផលិតទឹក]
           )
           #v(1mm)
-          #set par(leading: 5pt, justify: true)
-          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+          #set par(leading: 4.5pt, justify: true)
+          #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
             - ផ្លាស់ប្តូរទីតាំង ឬបំបែកតំបន់ផលិតអាហារកែច្នៃ ពីកន្លែងផលិតទឹក\
             - ការពារហានិភ័យចម្លង និងធានាសុវត្ថិភាពអនាម័យចំណីអាហារ
           ]
@@ -262,8 +405,8 @@
             text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[រៀបចំក្រុមការងារ និងបន្ថែមបុគ្គលិក]
           )
           #v(1mm)
-          #set par(leading: 5pt, justify: true)
-          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+          #set par(leading: 4.5pt, justify: true)
+          #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
             - រៀបចំក្រុមការងារឡើងវិញតាមជំនាញ (Restructure team)\
             - បន្ថែមបុគ្គលិក និងពង្រឹងសមត្ថភាពប្រតិបត្តិការ (Add more staff)
           ]
@@ -279,8 +422,8 @@
             text(font: font-khmer-display, size: 7.8pt, weight: "bold", fill: c-teal)[កែលម្អទីផ្សារឌីជីថល និងស្តុក]
           )
           #v(1mm)
-          #set par(leading: 5pt, justify: true)
-          #text(font: font-khmer-body, size: 7.2pt, fill: c-charcoal)[
+          #set par(leading: 4.5pt, justify: true)
+          #text(font: font-khmer-body, size: 6.8pt, fill: c-charcoal)[
             - ធ្វើទីផ្សារឌីជីថល និងផ្សព្វផ្សាយផលិតផល (Digital marketing)\
             - គ្រប់គ្រងស្តុកដោយប្រព័ន្ធបច្ចេកវិទ្យាឌីជីថល (Digitalize stock control)
           ]
@@ -317,9 +460,6 @@
   ·         - ការរៀបចំប្លង់ទីតាំងផលិតកម្មឡើងវិញ (ឧទាហរណ៍ ការបែងចែកដាច់ពីគ្នារវាងកន្លែងផលិតទឹក និងកន្លែងផលិតផ្សេងៗ) និងការដាក់ឱ្យអនុវត្តនូវនីតិវិធីប្រតិបត្តិស្តង់ដារ (SOP)。
 ]
 
-#v(3mm)
-#pagebreak()
-
 #set par(leading: 5.8pt, justify: true)
 #text(font: font-khmer-body, size: 8.3pt, fill: c-charcoal)[
   - ការប្រៀបធៀបទំហំទីផ្សាររបស់សហគ្រាស (យោងតាមរូបភាពទី៦ និងទី៧):
@@ -350,7 +490,9 @@
 
 #v(3mm)
 #pagebreak()
-#text(font: font-khmer-display, size: 11pt, weight: "bold", fill: c-teal)[៣. ការផ្សព្វផ្សាយទីផ្សារ ធនធានមនុស្ស និងការគ្រប់គ្រងអាជីវកម្ម]
+#block(fill: c-teal, radius: 2pt, inset: (x: 3mm, y: 1.5mm), width: 100%)[
+  #text(font: font-khmer-display, size: 10.5pt, weight: "bold", fill: white)[៣. ការផ្សព្វផ្សាយទីផ្សារ ធនធានមនុស្ស និងការគ្រប់គ្រងអាជីវកម្ម]
+]
 #v(1.5mm)
 #set par(leading: 5.8pt, justify: true)
 #text(font: font-khmer-body, size: 8.3pt, fill: c-charcoal)[
@@ -360,7 +502,7 @@
 
 #align(center)[
   #box(stroke: 0.5pt + c-line, radius: 3pt, inset: 2mm, fill: c-paper)[
-    #image("../assets/figures/image17.png", width: 88%, fit: "contain")
+    #image("../assets/figures/image17.png", width: 84%, fit: "contain")
   ]
 ]
 #v(1.5mm)
@@ -377,7 +519,7 @@
 
 #align(center)[
   #box(stroke: 0.5pt + c-line, radius: 3pt, inset: 2mm, fill: c-paper)[
-    #image("../assets/figures/image4.png", width: 88%, fit: "contain")
+    #image("../assets/figures/image4.png", width: 84%, fit: "contain")
   ]
 ]
 #v(1.5mm)
@@ -444,11 +586,43 @@
 ]
 #v(1mm)
 
-#align(center)[
-  #box(stroke: 0.5pt + c-line, radius: 3pt, inset: 2mm, fill: c-paper)[
-    #image("../assets/figures/image22.png", width: 88%, fit: "contain")
-  ]
-]
+#grid(
+  columns: (1.8fr, 1fr),
+  gutter: 2mm,
+  align: horizon,
+  [
+    #box(stroke: 0.5pt + c-line, radius: 3pt, inset: 2mm, fill: c-paper)[
+      #image("../assets/figures/image22.png", width: 100%, fit: "contain")
+    ]
+  ],
+  [
+    #stack(
+      dir: ttb,
+      spacing: 1.5mm,
+      [
+        #block(fill: c-paper, stroke: 0.5pt + c-line, radius: 2pt, inset: 2mm)[
+          #text(font: font-sans, size: 15pt, weight: "bold", fill: c-teal)[80%]
+          #linebreak()
+          #text(font: font-khmer-body, size: 7pt, fill: c-charcoal)[Facebook (ក្រោយ)]
+        ]
+      ],
+      [
+        #block(fill: c-paper, stroke: 0.5pt + c-line, radius: 2pt, inset: 2mm)[
+          #text(font: font-sans, size: 15pt, weight: "bold", fill: c-teal)[33.3%]
+          #linebreak()
+          #text(font: font-khmer-body, size: 7pt, fill: c-charcoal)[Instagram (ក្រោយ)]
+        ]
+      ],
+      [
+        #block(fill: c-paper, stroke: 0.5pt + c-line, radius: 2pt, inset: 2mm)[
+          #text(font: font-sans, size: 15pt, weight: "bold", fill: c-teal)[26.7%]
+          #linebreak()
+          #text(font: font-khmer-body, size: 7pt, fill: c-charcoal)[Website (ក្រោយ)]
+        ]
+      ],
+    )
+  ],
+)
 #v(1.5mm)
 
 #v(3mm)
@@ -637,11 +811,59 @@
 #v(1mm)
 
 #v(3mm)
-#pagebreak()
-#text(font: font-khmer-display, size: 11pt, weight: "bold", fill: c-teal)[៤.៦ ការសំយោគលទ្ធផល និងសេចក្តីសន្និដ្ឋាន]
-#v(1.5mm)
-#set par(leading: 6pt, justify: true)
-#text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
-  គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ រដូវកាលទី១ ទទួលបានជោគជ័យយ៉ាងត្រចះត្រចង់ ក្នុងការបណ្តុះផ្នត់គំនិតនវានុវត្តន៍ និងការកសាងសមត្ថភាពសហគ្រាសធុនតូច និងមធ្យម (SMEs) នៅថ្នាក់មូលដ្ឋាន។ ទិន្នន័យបានបង្ហាញឱ្យឃើញពីការផ្លាស់ប្តូរជាវិជ្ជមានលើគ្រប់វិមាត្រ៖ ការពង្រីកបណ្តាញដៃគូ, ការធ្វើទំនើបកម្មខ្សែច្រវាក់ផលិតកម្ម, និងការកសាងកម្រិតគ្រប់គ្រងដែលមានរចនាសម្ព័ន្ធ។ ទោះជាយ៉ាងណា ដើម្បីធានានិរន្តរភាព និងការលូតលាស់នៃសហគ្រាសទាំងនេះ ការគាំទ្រជាបន្តផ្នែកហិរញ្ញវត្ថុ ជំនាញបច្ចេកវិទ្យា និងការភ្ជាប់ទីផ្សារ គឺជាកត្តាចាំបាច់ដែលមិនអាចខ្វះបានសម្រាប់គម្រោងដំណាក់កាលបន្ទាប់។
-]
-#v(1.5mm)
+
+// ==============================================================================
+// ៤.៦ ការសំយោគលទ្ធផល និងករណីសិក្សាគម្រោង (CAPSTONE EDITORIAL SPREAD)
+// User Custom Designs: Pure Khmer Edition
+// ==============================================================================
+#project-case-study-page(
+  folio-num: none,
+  project-name: "មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ (រដូវកាលទី ១)",
+  client-name: "សហគ្រាសធុនតូច និងមធ្យម ២០ ក្នុងខេត្តកំពង់ធំ",
+  objective-title: "គោលបំណងនៃគម្រោង ៖",
+  objective-body: [
+    គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ មានគោលបំណងចម្បងក្នុងការជួយពង្រឹងសមត្ថភាពសហគ្រិនក្នុងស្រុក តាមរយៈការផ្ទេរចំណេះដឹងនវានុវត្តន៍ ការរៀបចំគំរូអាជីវកម្ម (Business Model Canvas) និងការស្វែងយល់ស៊ីជម្រៅពីដំណើរអតិថិជន (Customer Journey)។
+
+    គោលដៅយុទ្ធសាស្ត្រគឺការប្រែក្លាយកសិផល និងធនធានធម្មជាតិក្នុងខេត្តឱ្យទៅជាផលិតផលដែលមានតម្លៃបន្ថែមខ្ពស់ ព្រមទាំងកសាងបណ្តាញសហគមន៍សហគ្រិនដែលចេះសហការ និងរីកចម្រើនប្រកបដោយចីរភាព។
+  ],
+  hero-image: "/assets/photos/DSC_8462.jpg",
+  overview-title: "ទិដ្ឋភាពទូទៅនៃគម្រោង",
+  overview-image: "/assets/photos/08.jpg",
+  headline: "ការកសាងសមត្ថភាព និងការលើកកម្ពស់ផលិតផលក្នុងស្រុក តាមរយៈនវានុវត្តន៍ជាក់ស្តែង",
+  overview-body: [
+    ឆ្លងកាត់ការអនុវត្តយ៉ាងសកម្មក្នុងរយៈពេលកន្លងមក គម្រោង InnoLab Kampong Thom បានបង្ហាញពីប្រសិទ្ធភាពជាក់ស្តែងនៃការអភិវឌ្ឍសហគ្រាសធុនតូច និងមធ្យមនៅថ្នាក់មូលដ្ឋាន។ សហគ្រាសទាំង ២០ បានបង្ហាញពីការប្តេជ្ញាចិត្តខ្ពស់ក្នុងការកែលម្អផលិតផល និងដំណើរការអាជីវកម្ម។
+
+    ភាពជោគជ័យនេះឆ្លុះបញ្ចាំងឱ្យឃើញថា នៅពេលដែលសហគ្រិនទទួលបានការបណ្តុះបណ្តាលត្រឹមត្រូវ ការប្រឹក្សាយោបល់ផ្ទាល់ និងការគាំទ្រផ្នែកទីផ្សារ ពួកគេមានលទ្ធភាពពេញលេញក្នុងការបង្កើតនវានុវត្តន៍ និងពង្រីកសក្តានុពលសេដ្ឋកិច្ចមូលដ្ឋានប្រកបដោយនិរន្តរភាព។
+  ],
+)
+
+#approach-results-page(
+  folio-num: none,
+  approach-title: "វិធីសាស្ត្រ និងដំណើរការអនុវត្ត",
+  approach-image: "/assets/photos/02.jpg",
+  approach-points: (
+    [ការរៀបចំវគ្គបណ្តុះបណ្តាល Bootcamps ចំនួន ៣ វគ្គ លើជំនាញ Design Thinking, Customer Journey និង Project Management],
+    [ការចុះជួប វាយតម្លៃ និងប្រឹក្សាយោបល់បច្ចេកទេសផ្ទាល់ ១-ទល់-១ ដល់មូលដ្ឋានសហគ្រាស],
+    [ដំណើរទស្សនកិច្ច InnoTour នៅខេត្តសៀមរាប ដើម្បីដកស្រង់បទពិសោធន៍ពីសហគ្រាសគំរូ],
+    [ការគាំទ្រការរៀបចំគម្រោងនវានុវត្តន៍ និងការប្រកួតប្រជែង Final Pitch Day ដណ្តើមទុនពូជ],
+  ),
+  results-title: "លទ្ធផល និងការវាយតម្លៃគន្លឹះ",
+  results-blurb: [ការវាយតម្លៃផលប៉ះពាល់លើសហគ្រាសទាំង ២០ បានបង្ហាញពីការរីកចម្រើនគួរឱ្យកត់សម្គាល់លើគ្រប់វិមាត្រ ៖],
+  stat-1-val: "១០០%",
+  stat-1-title: "នវានុវត្តន៍ផលិតផល",
+  stat-1-desc: "សហគ្រាសទាំងអស់បានកែលម្អ ឬបង្កើតផលិតផលថ្មីសម្រេច",
+  stat-2-val: "៨០%",
+  stat-2-title: "ពង្រឹងកម្រិតគ្រប់គ្រង",
+  stat-2-desc: "សហគ្រាសបានវិវត្តទៅកាន់កម្រិតគ្រប់គ្រងមធ្យម និងមានរចនាសម្ព័ន្ធ",
+  stat-3-val: "៧៣%",
+  stat-3-title: "ការយល់ដឹងនវានុវត្តន៍",
+  stat-3-desc: "សហគ្រិនយល់ដឹងពីនវានុវត្តន៍ក្នុងកម្រិតល្អប្រសើរខ្លាំង",
+  conclusion-title: "ការសំយោគ និងសេចក្តីសន្និដ្ឋាន",
+  conclusion-headline: "ការកសាងសមត្ថភាព និងប្រព័ន្ធអេកូឡូស៊ី ដើម្បីចីរភាពសហគ្រាសធុនតូច និងមធ្យម",
+  conclusion-body: [
+    គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ រដូវកាលទី១ ទទួលបានជោគជ័យយ៉ាងត្រចះត្រចង់ ក្នុងការបណ្តុះផ្នត់គំនិតនវានុវត្តន៍ និងការកសាងសមត្ថភាពសហគ្រាសធុនតូច និងមធ្យម (SMEs) នៅថ្នាក់មូលដ្ឋាន។ ទិន្នន័យបានបង្ហាញឱ្យឃើញពីការផ្លាស់ប្តូរជាវិជ្ជមានលើគ្រប់វិមាត្រ៖ ការពង្រីកបណ្តាញដៃគូ, ការធ្វើទំនើបកម្មខ្សែច្រវាក់ផលិតកម្ម, និងការកសាងកម្រិតគ្រប់គ្រងដែលមានរចនាសម្ព័ន្ធ។
+
+    ទោះជាយ៉ាងណា ដើម្បីធានានិរន្តរភាព និងការលូតលាស់នៃសហគ្រាសទាំងនេះ ការគាំទ្រជាបន្តផ្នែកហិរញ្ញវត្ថុ ជំនាញបច្ចេកវិទ្យា និងការភ្ជាប់ទីផ្សារ គឺជាកត្តាចាំបាច់ដែលមិនអាចខ្វះបានសម្រាប់គម្រោងដំណាក់កាលបន្ទាប់។
+  ],
+  conclusion-image: "/assets/photos/07.jpg",
+)

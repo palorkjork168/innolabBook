@@ -2,19 +2,23 @@
 #import "../components/catalogue.typ": *
 #import "../components/report-elements.typ": *
 
-#chapter-opener(
+#bold-chapter-opener(
   num: "០៥",
-  title: "ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់",
-  subtitle: "ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់ (Strategy 2026–2028) ឆ្ពោះទៅកាន់សហគ្រិន ១០០ រូប និងការពង្រីកវិសាលភាព ២៥ រាជធានី-ខេត្ត",
+  title-khmer: [ផែនការ និងទិសដៅ\ យុទ្ធសាស្ត្រឆ្នាំ២០២៦-២០២៨],
+  subtitle-khmer: "ការពង្រីកប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍ និងការគាំទ្រសហគ្រិនប្រកបដោយចីរភាព",
+  intro-body: [
+    ផ្អែកលើលទ្ធផលជោគជ័យ និងមេរៀនបទពិសោធន៍ដែលបានប្រមូលផ្តុំពីការអនុវត្តគម្រោងក្នុងរដូវកាលទី ១ គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ បានរៀបចំ និងដាក់ចេញនូវផែនការយុទ្ធសាស្ត្ររយៈពេលមធ្យម សម្រាប់ឆ្នាំ២០២៦ ដល់ឆ្នាំ២០២៨ ក្នុងគោលបំណងបន្តពង្រីកវិសាលភាព ឥទ្ធិពល និងធានានិរន្តរភាពនៃការអភិវឌ្ឍប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍ក្នុងខេត្ត។
+  ],
+  quote-body: [
+    «ការកសាងអនាគតសេដ្ឋកិច្ចមូលដ្ឋាន តាមរយៈការពង្រឹងសមត្ថភាពនវានុវត្តន៍សហគ្រិនកម្ពុជា»
+  ],
   label-id: "ch-05",
 )
 
 #block(
-  fill: c-paper,
-  stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line),
-  radius: (right: 3pt),
-  inset: 4mm,
   width: 100%,
+  stroke: (left: 3pt + c-teal),
+  inset: (left: 4.5mm, y: 1.5mm),
 )[
   #text(font: font-khmer-display, size: 9.8pt, weight: "bold", fill: c-teal)[ជំពូកទី៥៖ ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់ (Strategy 2026–2028)]\
   #v(1mm)
@@ -39,7 +43,11 @@
 
 #v(3mm)
 
-#rect(width: 100%, fill: c-paper, stroke: (left: 3pt + c-sand, rest: 0.5pt + c-line), radius: (right: 3pt), inset: 4mm)[
+#block(
+  width: 100%,
+  stroke: (left: 3pt + c-sand),
+  inset: (left: 4.5mm, y: 1.5mm),
+)[
   #text(font: font-khmer-display, size: 9.8pt, weight: "bold", fill: c-teal)[១. ចក្ខុវិស័យឆ្ពោះទៅឆ្នាំ២០២៨]\
   #v(1mm)
   #line(length: 100%, stroke: 0.5pt + c-sand.lighten(30%))
@@ -98,45 +106,29 @@
 
 #v(3mm)
 
-#section-title("៣. សកម្មភាពផ្សព្វផ្សាយ និងការពង្រីកកិច្ចសហការបន្ត")
-
-#text(font: font-khmer-body, size: 8.8pt, fill: c-charcoal)[
-  ដើម្បីធានាថាព័ត៌មានស្តីពីគម្រោងបានហូរចូលដល់មូលដ្ឋាន និងទាក់ទាញសហគ្រិនដែលស្ថិតនៅចន្លោះខេត្ត ឬស្រុកឆ្ងាយៗ ក្រុមការងារគម្រោងបានចុះអនុវត្តសកម្មភាពផ្សព្វផ្សាយយ៉ាងសកម្ម៖
-]
-#v(2mm)
-
-#equal-box-grid(
-  columns: (1fr, 1fr),
-  gutter: 3.5mm,
-  fill: c-white,
-  stroke: 0.75pt + c-line,
-  radius: 3pt,
-  inset: 3.8mm,
-  [
-    #text(font: font-khmer-display, size: 8.8pt, weight: "bold", fill: c-teal)[ការរៀបចំកិច្ចប្រជុំផ្សព្វផ្សាយ]\
-    #v(0.8mm)
-    #line(length: 100%, stroke: 0.5pt + c-line)
-    #v(1.5mm)
-    #set par(leading: 6.5pt, justify: true)
-    #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
-      គម្រោងបានសហការរៀបចំកិច្ចប្រជុំផ្សព្វផ្សាយផ្ទាល់នៅ វិទ្យាស្ថានពហុបច្ចេកទេសខេត្តកំពង់ធំ (ដោយមានការចូលរួមពីឯកឧត្តម ងួន រាសី និងមន្ទីរខេត្តពាក់ព័ន្ធ) និងនៅសាលាស្រុកស្ទោង (ដោយមានការចូលរួមពីលោកអភិបាលស្រុក និងមន្ត្រីពាក់ព័ន្ធ)។
-    ]
+// ==============================================================================
+// ៣. សកម្មភាពផ្សព្វផ្សាយ និងការពង្រីកកិច្ចសហការបន្ត (USER EDITORIAL FEATURE LAYOUT)
+// Big Numeral 03 + Stacked Title + Top Hero Photo + Narrative Divider + 2 Dual-Tone Cards
+// ==============================================================================
+#activity-feature-page(
+  folio-num: none,
+  running-title: "មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ផែនការ និងយុទ្ធសាស្ត្រ",
+  section-num: "០៣",
+  title-line1: "សកម្មភាព",
+  title-line2: "ផ្សព្វផ្សាយ",
+  hero-image: "/assets/photos/02.jpg",
+  intro-body: [
+    ដើម្បីធានាថាព័ត៌មានស្តីពីគម្រោងបានហូរចូលដល់មូលដ្ឋាន និងទាក់ទាញសហគ្រិនដែលស្ថិតនៅចន្លោះខេត្ត ឬស្រុកឆ្ងាយៗ ក្រុមការងារគម្រោងបានចុះអនុវត្តសកម្មភាពផ្សព្វផ្សាយយ៉ាងសកម្ម តាមរយៈការតភ្ជាប់ជាមួយរដ្ឋបាលខេត្ត អាជ្ញាធរស្រុក និងគ្រឹះស្ថានអប់រំបច្ចេកទេសក្នុងតំបន់។
   ],
-  [
-    #text(font: font-khmer-display, size: 8.8pt, weight: "bold", fill: c-teal)[ភាពជាដៃគូស្ថាប័ន]\
-    #v(0.8mm)
-    #line(length: 100%, stroke: 0.5pt + c-line)
-    #v(1.5mm)
-    #set par(leading: 6.5pt, justify: true)
-    #text(font: font-khmer-body, size: 8.5pt, fill: c-charcoal)[
-      សកម្មភាពទាំងនេះត្រូវបានធ្វើឡើងតាមរយៈកិច្ចសហការយ៉ាងជិតស្និទ្ធពីស្ថាប័នរដ្ឋ អាជ្ញាធរមូលដ្ឋាន គ្រឹះស្ថានអប់រំ និងស្ថាប័នពាក់ព័ន្ធ ដើម្បីធានាថាការផ្សព្វផ្សាយទៅដល់គោលដៅ និងរួមចំណែកកសាងប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍ថ្នាក់មូលដ្ឋានឱ្យកាន់តែមានភាពរស់រវើក និងបរិយាបន្ន។
-    ]
+  card-1-title: "វិទ្យាស្ថានពហុបច្ចេកទេស",
+  card-1-body: [
+    គម្រោងបានសហការរៀបចំកិច្ចប្រជុំផ្សព្វផ្សាយផ្ទាល់នៅ វិទ្យាស្ថានពហុបច្ចេកទេសខេត្តកំពង់ធំ (ដោយមានការចូលរួមពីឯកឧត្តម ងួន រាសី និងមន្ទីរខេត្តពាក់ព័ន្ធ) ដើម្បីបំផុសស្មារតីនវានុវត្តន៍ និងការចូលរួមរបស់សហគ្រិនក្នុងមូលដ្ឋាន។
+  ],
+  card-2-title: "រដ្ឋបាលស្រុកស្ទោង",
+  card-2-body: [
+    សកម្មភាពទាំងនេះត្រូវបានធ្វើឡើងតាមរយៈកិច្ចសហការយ៉ាងជិតស្និទ្ធជាមួយលោកអភិបាលស្រុក និងមន្ត្រីពាក់ព័ន្ធ ដើម្បីធានាថាការផ្សព្វផ្សាយទៅដល់គោលដៅ និងរួមចំណែកកសាងប្រព័ន្ធអេកូឡូស៊ីនវានុវត្តន៍ថ្នាក់មូលដ្ឋានឱ្យកាន់តែរស់រវើក និងបរិយាបន្ន។
   ],
 )
-
-#v(3mm)
-
-#pagebreak()
 
 #section-title("៤. សក្តានុពល និងយុទ្ធសាស្ត្រនៃការការពង្រីកវិសាលភាពទៅកាន់ ២៥ រាជធានី-ខេត្ត")
 
@@ -207,33 +199,26 @@
 #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: c-teal)[កត្តាគន្លឹះដើម្បីធានាភាពជោគជ័យ៖]
 #v(1.5mm)
 
+#let factor-item(title, body) = block(
+  width: 100%,
+  inset: (top: 1mm, bottom: 1.5mm),
+)[
+  #line(length: 22mm, stroke: 1.5pt + c-sand)
+  #v(0.8mm)
+  #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[#title]\
+  #v(0.5mm)
+  #set par(leading: 5.5pt, justify: true)
+  #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[#body]
+]
+
 #grid(
   columns: (1fr, 1fr),
-  gutter: 3mm,
-  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
-    #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ភាពជាដៃគូរដ្ឋ និងឯកជន (PPP)៖]\
-    #v(0.5mm)
-    #set par(leading: 5.5pt, justify: true)
-    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[សហការជាមួយមន្ទីរឧស្សាហកម្ម វិទ្យាសាស្ត្រ បច្ចេកវិទ្យា និងនវានុវត្តន៍ (MISTI) និងរដ្ឋបាលខេត្ត។]
-  ],
-  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
-    #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ធនធានហិរញ្ញវត្ថុ៖]\
-    #v(0.5mm)
-    #set par(leading: 5.5pt, justify: true)
-    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[កៀរគរថវិកាពីដៃគូអភិវឌ្ឍន៍អន្តរជាតិ ឬមូលនិធិអភិវឌ្ឍន៍សហគ្រាស (EDF)។]
-  ],
-  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
-    #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ការបណ្តុះបណ្តាលគ្រូបង្គោល (Train-the-Trainer)៖]\
-    #v(0.5mm)
-    #set par(leading: 5.5pt, justify: true)
-    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[បង្កើតក្រុមអ្នកជំនាញប្រចាំតំបន់ (Local Mentors)។]
-  ],
-  rect(width: 100%, fill: c-paper, stroke: 0.5pt + c-line, radius: 2.5pt, inset: 3mm)[
-    #text(font: font-khmer-display, size: 8.2pt, weight: "bold", fill: c-teal)[ការសម្របខ្លួនតាមបរិបទខេត្ត (Localization)៖]\
-    #v(0.5mm)
-    #set par(leading: 5.5pt, justify: true)
-    #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[សម្របតាមសក្តានុពល និងអត្តសញ្ញាណជាក់ស្តែងរបស់ខេត្តនីមួយៗ។]
-  ],
+  column-gutter: 6mm,
+  row-gutter: 3mm,
+  factor-item("ភាពជាដៃគូរដ្ឋ និងឯកជន (PPP)៖", "សហការជាមួយមន្ទីរឧស្សាហកម្ម វិទ្យាសាស្ត្រ បច្ចេកវិទ្យា និងនវានុវត្តន៍ (MISTI) និងរដ្ឋបាលខេត្ត។"),
+  factor-item("ធនធានហិរញ្ញវត្ថុ៖", "កៀរគរថវិកាពីដៃគូអភិវឌ្ឍន៍អន្តរជាតិ ឬមូលនិធិអភិវឌ្ឍន៍សហគ្រាស (EDF)។"),
+  factor-item("ការបណ្តុះបណ្តាលគ្រូបង្គោល (Train-the-Trainer)៖", "បង្កើតក្រុមអ្នកជំនាញប្រចាំតំបន់ (Local Mentors)។"),
+  factor-item("ការសម្របខ្លួនតាមបរិបទខេត្ត (Localization)៖", "សម្របតាមសក្តានុពល និងអត្តសញ្ញាណជាក់ស្តែងរបស់ខេត្តនីមួយៗ។"),
 )
 
 #v(3mm)

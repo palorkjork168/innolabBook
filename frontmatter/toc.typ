@@ -1,23 +1,39 @@
 #import "../styles.typ": *
 #import "../components/catalogue.typ": *
 
-// ------------------------------------------------------------------------------
-// TABLE OF CONTENTS (២ ទំព័រ ស្របតាមទំព័រ ៣ និង ៤ នៃឯកសារផ្លូវការ DOCX)
-// ------------------------------------------------------------------------------
+// ==============================================================================
+// TABLE OF CONTENTS · 2-PAGE SPREAD (មាតិកា ២ ទំព័រ ជាភាសាខ្មែរ ១០០%)
+// ==============================================================================
 
-#let toc-header-row(
-  title,
-  label-id: none,
-  fallback-page: "",
-  is-chapter: true,
-  num-badge: none,
-) = {
+#let bg-color = c-teal
+#let text-primary = c-white
+#let text-accent = c-sand
+#let text-muted = c-white.transparentize(35%)
+#let line-color = c-white.transparentize(80%)
+#let line-accent = c-sand
+
+#let format-kh-page(p) = {
+  if type(p) == int {
+    if p < 10 {
+      "០" + to-khmer-num(p)
+    } else {
+      to-khmer-num(p)
+    }
+  } else if type(p) == str {
+    to-khmer-num(p)
+  } else {
+    str(p)
+  }
+}
+
+// Helper for Chapter Header Row
+#let toc-chapter-header(badge, title, fallback-page: "", label-id: none) = {
   let page-val = context {
     if label-id != none {
       let targets = query(label(label-id))
       if targets.len() > 0 {
         let p = counter(page).at(targets.first().location()).first()
-        to-khmer-num(p)
+        format-kh-page(p)
       } else {
         fallback-page
       }
@@ -26,33 +42,27 @@
     }
   }
 
-  let row = block(width: 100%, inset: (y: 1.2mm))[
+  let row = block(
+    width: 100%,
+    inset: (top: 2.2mm, bottom: 1.5mm),
+    stroke: (bottom: 0.8pt + line-accent),
+  )[
     #grid(
-      columns: (if num-badge != none { auto } else { 0pt }, 1fr, auto),
-      gutter: if num-badge != none { 2.5mm } else { 0mm },
-      align: bottom,
-      if num-badge != none [
-        #rect(fill: c-teal, radius: 2pt, inset: (x: 2mm, y: 1mm))[
-          #text(font: font-sans, size: 6.8pt, weight: "bold", fill: c-white)[#num-badge]
+      columns: (if badge != none { auto } else { 0pt }, 1fr, auto),
+      gutter: if badge != none { 3mm } else { 0mm },
+      align: horizon,
+      if badge != none [
+        // Increased size for ជំពូក button only as requested
+        #rect(fill: c-sand, radius: 2.5pt, inset: (x: 3mm, y: 1.3mm))[
+          #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[#badge]
         ]
       ] else [ #none ],
       [
-        #text(
-          font: font-khmer-display,
-          size: if is-chapter { 8.8pt } else { 8.4pt },
-          weight: "bold",
-          fill: if is-chapter { c-teal } else { c-teal.darken(10%) },
-        )[#title]
-        #box(width: 1fr, baseline: -1.5pt)[#repeat[#text(fill: c-line, size: 6pt)[ . ]]]
+        #text(font: font-khmer-display, size: 8.8pt, weight: "bold", fill: text-accent)[#title]
       ],
       [
-        #text(
-          font: font-khmer-display,
-          size: 9pt,
-          weight: "bold",
-          fill: c-sand-dark,
-        )[#page-val]
-      ],
+        #text(font: font-khmer-display, size: 9.5pt, weight: "bold", fill: text-accent)[#page-val]
+      ]
     )
   ]
 
@@ -70,17 +80,16 @@
   }
 }
 
-#let toc-sub-row(
-  title,
-  label-id: none,
-  fallback-page: "",
-) = {
+// Helper for Subsection Row (unchanged size)
+#let toc-sub-item(title, fallback-page: "", label-id: none, is-frontmatter: false) = {
   let page-val = context {
-    if label-id != none {
+    if is-frontmatter {
+      fallback-page
+    } else if label-id != none {
       let targets = query(label(label-id))
       if targets.len() > 0 {
         let p = counter(page).at(targets.first().location()).first()
-        to-khmer-num(p)
+        format-kh-page(p)
       } else {
         fallback-page
       }
@@ -89,21 +98,22 @@
     }
   }
 
-  let row = block(width: 100%, inset: (y: 0.8mm))[
-    #pad(left: 6mm)[
-      #grid(
-        columns: (1fr, auto),
-        gutter: 2mm,
-        align: bottom,
-        [
-          #text(font: font-khmer-body, size: 7.8pt, fill: c-charcoal)[#title]
-          #box(width: 1fr, baseline: -1.5pt)[#repeat[#text(fill: c-line.lighten(35%), size: 5.5pt)[ . ]]]
-        ],
-        [
-          #text(font: font-khmer-body, size: 7.5pt, fill: c-muted)[#page-val]
-        ],
-      )
-    ]
+  let row = block(
+    width: 100%,
+    inset: (y: 1.25mm),
+    stroke: (bottom: 0.35pt + line-color),
+  )[
+    #grid(
+      columns: (1fr, auto),
+      gutter: 3mm,
+      align: horizon,
+      [
+        #text(font: font-khmer-display, size: 8pt, fill: text-primary)[#title]
+      ],
+      [
+        #text(font: font-khmer-display, size: 8.5pt, weight: "bold", fill: text-accent.lighten(15%))[#page-val]
+      ]
+    )
   ]
 
   context {
@@ -121,246 +131,141 @@
 }
 
 // ==============================================================================
-// 1. CONTENT PAGE 1 (ទំព័រទី ៣ នៃសៀវភៅ ស្របតាមទំព័រ ៣ DOCX)
+// PAGE 1: LEFT PAGE OF SPREAD (FRONT MATTER, CHAPTER 1, CHAPTER 2)
 // ==============================================================================
-#page(
+#set page(
   paper: "a4",
-  margin: (top: 0pt, bottom: 0pt, left: 0pt, right: 0pt),
-  fill: none,
+  margin: (top: 20mm, bottom: 18mm, left: 22mm, right: 20mm),
+  fill: bg-color,
   header: none,
   footer: none,
-)[
-  #grid(
-    columns: (5mm, 1fr),
-    gutter: 0pt,
-    rect(width: 5mm, height: 297mm, fill: c-teal),
-    rect(width: 100%, height: 297mm, fill: c-paper),
-  )
+)
 
-  // Running header
-  #place(top + left, dx: 13mm, dy: 15mm)[
-    #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-teal)[
-      មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · រចនាសម្ព័ន្ធមាតិកា
-    ]
+// Header Meta
+#grid(
+  columns: (1fr, auto),
+  text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: text-accent)[ទំព័រ ii · រចនាសម្ព័ន្ធមាតិកា],
+  text(font: font-khmer-display, size: 7.5pt, fill: text-muted)[មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ],
+)
+
+#v(5mm)
+
+// Title Block in Pure Khmer
+#grid(
+  columns: (auto, 1fr),
+  gutter: 4mm,
+  align: bottom,
+  [
+    #text(font: font-khmer-display, size: 36pt, weight: "bold", fill: text-accent)[មាតិកា]
+  ],
+
+)
+
+#v(1.5mm)
+#line(length: 100%, stroke: 1.2pt + line-accent)
+#v(2mm)
+
+// FRONT MATTER
+#toc-sub-item("សេចក្តីបញ្ជាក់អំពីវិសាលភាពរបាយការណ៍", fallback-page: "i", label-id: "fm-ack", is-frontmatter: true)
+#toc-sub-item("សេចក្តីថ្លែងអំណរគុណ និងសារស្ថាប័ន", fallback-page: "iv", label-id: "fm-ack", is-frontmatter: true)
+#toc-sub-item("សេចក្តីសង្ខេបប្រតិបត្តិ", fallback-page: "v", label-id: "fm-exec", is-frontmatter: true)
+
+#v(1.5mm)
+
+// CHAPTER 1 (Duplicate ជំពូកទី ១ removed from title)
+#toc-chapter-header("ជំពូក ០១", "ទិដ្ឋភាពទូទៅ និងក្របខ័ណ្ឌយុទ្ធសាស្ត្រគម្រោង", fallback-page: "០១", label-id: "ch-01")
+#toc-sub-item("១.១ បរិបទភូមិសាស្ត្រ និងសេដ្ឋកិច្ចខេត្តកំពង់ធំ", fallback-page: "០១")
+#toc-sub-item("១.២ គុណតម្លៃ និងសារៈសំខាន់យុទ្ធសាស្ត្រទាំង ៥ នៃនវានុវត្តន៍", fallback-page: "០២")
+#toc-sub-item("១.៣ គម្រោងមន្ទីពិសោធន៍នវានុវត្តន៍កំពង់ធំ និងការផ្សារភ្ជាប់យុទ្ធសាស្ត្របញ្ចកោណ", fallback-page: "០៣")
+#toc-sub-item("១.៤ បញ្ហាប្រឈមជាប្រព័ន្ធក្នុងមូលដ្ឋាន", fallback-page: "០៤")
+#toc-sub-item("១.៥ គោលបំណង និងនវានុវត្តន៍លើ ៤ វិមាត្រស្នូល", fallback-page: "០៥")
+#toc-sub-item("១.៦ តួនាទីរបស់ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP)", fallback-page: "០៦")
+#toc-sub-item("១.៧ ដំណាក់កាលស្នូលទាំង ៧ នៃការអនុវត្តគម្រោង", fallback-page: "០៧")
+
+#v(1.5mm)
+
+// CHAPTER 2 (Duplicate ជំពូកទី ២ removed from title)
+#toc-chapter-header("ជំពូក ០២", "កំណត់ត្រាសកម្មភាពប្រតិបត្តិទាំង ១០ នៃគម្រោង", fallback-page: "០៨", label-id: "ch-02")
+#toc-sub-item("ដំណាក់កាលទី ១៖ ដំណើរការវាយតម្លៃ និងជ្រើសរើសសហគ្រាស", fallback-page: "០៨")
+#toc-sub-item("ដំណាក់កាលទី ២៖ យុទ្ធនាការចុះផ្សព្វផ្សាយផ្ទាល់", fallback-page: "០៩")
+#toc-sub-item("ដំណាក់កាលទី ៣៖ វគ្គបណ្តុះបណ្តាលធំៗទាំង៣", fallback-page: "១០")
+#toc-sub-item("ដំណាក់កាលទី ៤៖ ដំណើរទស្សនកិច្ច InnoTour", fallback-page: "១២")
+#toc-sub-item("ដំណាក់កាលទី ៥៖ កម្មវិធីផលិតខ្សែវីដេអូឯកសារសហគ្រាស", fallback-page: "១៤")
+#toc-sub-item("ដំណាក់កាលទី ៦៖ ការប្រឹក្សាយោបល់ និងការបង្វឹកផ្ទាល់", fallback-page: "១៦")
+#toc-sub-item("ដំណាក់កាលទី ៧៖ ការប្រកួតប្រជែងផ្តាច់ព្រ័ត្រ ប្រកាសលទ្ធផល និងពិធីប្រគល់រង្វាន់", fallback-page: "១៨")
+
+#v(4mm)
+#grid(
+  columns: (1fr, auto),
+  align: horizon,
+  [
+
+  ],
+  [
+    #text(font: font-khmer-display, size: 7.5pt, fill: text-muted)[ii]
   ]
+)
 
-  #place(top + right, dx: -18mm, dy: 15mm)[
-    #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
-      រដូវកាលទី១ / ២០២៥–២០២៦
-    ]
-  ]
-
-  // Main Content Block
-  #place(top + left, dx: 13mm, dy: 24mm)[
-    #block(width: 169mm)[
-      #grid(
-        columns: (1fr, auto),
-        align: bottom,
-        [
-          #text(font: font-khmer-display, size: 26pt, weight: "bold", fill: c-teal)[មាតិកា]
-        ],
-        [
-          #pad(bottom: 2mm)[
-            #rect(fill: c-sand.lighten(40%), radius: 2pt, inset: (x: 2.5mm, y: 1mm))[
-              #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-teal)[ទំព័រ ១/២]
-            ]
-          ]
-        ],
-      )
-      #v(1mm)
-      #line(length: 100%, stroke: 1.5pt + c-sand)
-      #v(4mm)
-
-      // Section: Front Matter
-      #rect(fill: c-white, stroke: 0.5pt + c-line, radius: 2.5pt, inset: (x: 3.5mm, y: 2.5mm), width: 100%)[
-        #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[ផ្នែកបុព្វកថា (FRONT MATTER)]
-        #v(1mm)
-        #toc-header-row("សេចក្តីថ្លែងអំណរគុណ និងសារស្ថាប័ន", label-id: "fm-ack", fallback-page: "iv", is-chapter: false)
-        #toc-header-row("សេចក្តីសង្ខេបប្រតិបត្តិ", label-id: "fm-exec", fallback-page: "v", is-chapter: false)
-      ]
-
-      #v(3mm)
-
-      // Section: Chapter 1
-      #rect(fill: c-white, stroke: 0.5pt + c-line, radius: 2.5pt, inset: (x: 3.5mm, y: 2.5mm), width: 100%)[
-        #toc-header-row("ជំពូកទី ១៖ ទិដ្ឋភាពទូទៅ និងក្របខ័ណ្ឌយុទ្ធសាស្ត្រគម្រោង", label-id: "ch-01", fallback-page: "១", num-badge: "CH 01")
-        #v(1mm)
-        #line(length: 100%, stroke: 0.4pt + c-line)
-        #v(1.2mm)
-        #toc-sub-row("១.១ បរិបទភូមិសាស្ត្រ និងសេដ្ឋកិច្ចខេត្តកំពង់ធំ", fallback-page: "១")
-        #toc-sub-row("១.២ គុណតម្លៃ និងសារៈសំខាន់យុទ្ធសាស្ត្រទាំង ៥ នៃនវានុវត្តន៍", fallback-page: "២")
-        #toc-sub-row("១.៣ គម្រោងមន្ទីពិសោធន៍នវានុវត្តន៍កំពង់ធំ និងការផ្សារភ្ជាប់យុទ្ធសាស្ត្របញ្ចកោណ", fallback-page: "៣")
-        #toc-sub-row("១.៤ បញ្ហាប្រឈមជាប្រព័ន្ធក្នុងមូលដ្ឋាន", fallback-page: "៤")
-        #toc-sub-row("១.៥ គោលបំណង និងនវានុវត្តន៍លើ ៤ វិមាត្រស្នូល", fallback-page: "៥")
-        #toc-sub-row("១.៦ តួនាទីរបស់ឧទ្យាននវានុវត្តន៍សង្គមអង្គរ (ASIP)", fallback-page: "៦")
-        #toc-sub-row("១.៧ ដំណាក់កាលស្នូលទាំង ៧ នៃការអនុវត្តគម្រោង", fallback-page: "៧")
-      ]
-
-      #v(3mm)
-
-      // Section: Chapter 2
-      #rect(fill: c-white, stroke: 0.5pt + c-line, radius: 2.5pt, inset: (x: 3.5mm, y: 2.5mm), width: 100%)[
-        #toc-header-row("ជំពូកទី ២៖ កំណត់ត្រាសកម្មភាពប្រតិបត្តិទាំង ១០ នៃគម្រោង", label-id: "ch-02", fallback-page: "៨", num-badge: "CH 02")
-        #v(1mm)
-        #line(length: 100%, stroke: 0.4pt + c-line)
-        #v(1.2mm)
-        #toc-sub-row("ដំណាក់កាលទី ១៖ ដំណើរការវាយតម្លៃ និងជ្រើសរើសសហគ្រាស", fallback-page: "៨")
-        #toc-sub-row("ដំណាក់កាលទី ២៖ យុទ្ធនាការចុះផ្សព្វផ្សាយផ្ទាល់", fallback-page: "៩")
-        #toc-sub-row("ដំណាក់កាលទី ៣៖ វគ្គបណ្តុះបណ្តាលធំៗទាំង៣", fallback-page: "១០")
-        #toc-sub-row("ដំណាក់កាលទី ៤៖ ដំណើរទស្សនកិច្ច InnoTour", fallback-page: "១២")
-        #toc-sub-row("ដំណាក់កាលទី ៥៖ កម្មវិធីផលិតខ្សែវីដេអូឯកសារសហគ្រាស", fallback-page: "១៤")
-        #toc-sub-row("ដំណាក់កាលទី ៦៖ ការប្រឹក្សាយោបល់ និងការបង្វឹកផ្ទាល់", fallback-page: "១៦")
-        #toc-sub-row("ដំណាក់កាលទី ៧៖ ការប្រកួតប្រជែងផ្តាច់ព្រ័ត្រ ប្រកាសលទ្ធផល និងពិធីប្រគល់រង្វាន់", fallback-page: "១៨")
-      ]
-    ]
-  ]
-
-  // Bottom publication accent bar
-  #place(top + left, dx: 13mm, dy: 262mm)[
-    #rect(width: 169mm, fill: c-teal, radius: 2.5pt, inset: (x: 4mm, y: 2.5mm))[
-      #grid(
-        columns: (1fr, auto),
-        align: horizon,
-        text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-light)[គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ASIP · ២០២៥–២០២៦],
-        text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand)[រដូវកាលទី ១],
-      )
-    ]
-  ]
-
-  // Bottom datum line & folio
-  #place(top + left, dx: 13mm, dy: 272mm)[
-    #line(length: 169mm, stroke: 0.5pt + c-line)
-  ]
-  #place(top + left, dx: 13mm, dy: 276mm)[
-    #catalogue-folio(
-      "ii",
-      header-right: "មាតិកា (ទំព័រ ១/២) · INNOLAB KAMPONG THOM",
-      side: "right",
-      width: 169mm,
-    )
-  ]
-]
+#pagebreak()
 
 // ==============================================================================
-// 2. CONTENT PAGE 2 (ទំព័រទី ៤ នៃសៀវភៅ ស្របតាមទំព័រ ៤ DOCX)
+// PAGE 2: RIGHT PAGE OF SPREAD (CHAPTER 3, CHAPTER 4, CHAPTER 5, APPENDIX)
 // ==============================================================================
-#page(
-  paper: "a4",
-  margin: (top: 0pt, bottom: 0pt, left: 0pt, right: 0pt),
-  fill: none,
-  header: none,
-  footer: none,
-)[
-  #grid(
-    columns: (5mm, 1fr),
-    gutter: 0pt,
-    rect(width: 5mm, height: 297mm, fill: c-teal),
-    rect(width: 100%, height: 297mm, fill: c-paper),
-  )
+#set page(
+  margin: (top: 20mm, bottom: 18mm, left: 20mm, right: 22mm),
+)
 
-  // Running header
-  #place(top + left, dx: 13mm, dy: 15mm)[
-    #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-teal)[
-      មន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · រចនាសម្ព័ន្ធមាតិកា
-    ]
-  ]
+// Header Meta
+#grid(
+  columns: (1fr, auto),
+  text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: text-accent)[ទំព័រ iii · បញ្ជីមាតិកាលម្អិត],
+  text(font: font-khmer-display, size: 7.5pt, fill: text-muted)[រដូវកាលទី១ · ២០២៥–២០២៦],
+)
 
-  #place(top + right, dx: -18mm, dy: 15mm)[
-    #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-sand-dark)[
-      រដូវកាលទី១ / ២០២៥–២០២៦
-    ]
-  ]
+#v(5mm)
 
-  // Main Content Block
-  #place(top + left, dx: 13mm, dy: 24mm)[
-    #block(width: 169mm)[
-      #grid(
-        columns: (1fr, auto),
-        align: bottom,
-        [
-          #text(font: font-khmer-display, size: 26pt, weight: "bold", fill: c-teal)[មាតិកា (ត)]
-        ],
-        [
-          #pad(bottom: 2mm)[
-            #rect(fill: c-sand.lighten(40%), radius: 2pt, inset: (x: 2.5mm, y: 1mm))[
-              #text(font: font-khmer-display, size: 7.5pt, weight: "bold", fill: c-teal)[ទំព័រ ២/២]
-            ]
-          ]
-        ],
-      )
-      #v(1mm)
-      #line(length: 100%, stroke: 1.5pt + c-sand)
-      #v(4mm)
+// Motto in Pure Khmer
 
-      // Section: Chapter 3
-      #rect(fill: c-white, stroke: 0.5pt + c-line, radius: 2.5pt, inset: (x: 3.5mm, y: 2.5mm), width: 100%)[
-        #toc-header-row("ជំពូកទី ៣៖ ករណីសិក្សាសហគ្រាសឆ្នើមទាំង ២០", label-id: "ch-03", fallback-page: "២៣", num-badge: "CH 03")
-        #v(1mm)
-        #line(length: 100%, stroke: 0.4pt + c-line)
-        #v(1.2mm)
-        #toc-sub-row("ផ្នែកកសិកម្មទំនើប និងធាតុចូលកសិកម្ម (សហគ្រាស ៣.០១ – ៣.០៨)", fallback-page: "២៤")
-        #toc-sub-row("ផ្នែកកែច្នៃចំណីអាហារ និងភេសជ្ជៈ (សហគ្រាស ៣.០៩ – ៣.១២)", fallback-page: "៣០")
-        #toc-sub-row("ផ្នែកទេសចរណ៍ និងបដិសណ្ឋារកិច្ចសហគមន៍ (សហគ្រាស ៣.១៣ – ៣.១៦)", fallback-page: "៣៣")
-        #toc-sub-row("ផ្នែកសិប្បកម្មកែច្នៃ និងសេដ្ឋកិច្ចចក្រា (សហគ្រាស ៣.១៧ – ៣.២០)", fallback-page: "៣៥")
-      ]
 
-      #v(3mm)
 
-      // Section: Chapter 4
-      #rect(fill: c-white, stroke: 0.5pt + c-line, radius: 2.5pt, inset: (x: 3.5mm, y: 2.5mm), width: 100%)[
-        #toc-header-row("ជំពូកទី ៤៖ ការរកឃើញសំខាន់ៗ និងការវាយតម្លៃផលប៉ះពាល់", label-id: "ch-04", fallback-page: "៣៧", num-badge: "CH 04")
-        #v(1mm)
-        #line(length: 100%, stroke: 0.4pt + c-line)
-        #v(1.2mm)
-        #toc-sub-row("៤.១ ការវិភាគលក្ខណៈទូទៅនៃសហគ្រាស", fallback-page: "៣៧")
-        #toc-sub-row("៤.២ បរិវត្តកម្មគំរូអាជីវកម្ម និងដៃគូយុទ្ធសាស្ត្រ", fallback-page: "៣៨")
-        #toc-sub-row("៤.៣ ការអភិវឌ្ឍសមត្ថភាពគ្រប់គ្រង និងធនធានមនុស្ស", fallback-page: "៤១")
-        #toc-sub-row("៤.៤ ការស្ទង់មតិលើកម្រិតនវានុវត្តន៍ និងសមត្ថភាពប្រកួតប្រជែង", fallback-page: "៤៣")
-        #toc-sub-row("៤.៥ បញ្ហាប្រឈម និងតម្រូវការគាំទ្រជាបន្ត", fallback-page: "៤៦")
-        #toc-sub-row("៤.៦ ការសំយោគលទ្ធផល និងសេចក្តីសន្និដ្ឋាន", fallback-page: "៤៨")
-      ]
 
-      #v(3mm)
+#v(2mm)
 
-      // Section: Chapter 5 & Appendix
-      #rect(fill: c-white, stroke: 0.5pt + c-line, radius: 2.5pt, inset: (x: 3.5mm, y: 2.5mm), width: 100%)[
-        #toc-header-row("ជំពូកទី ៥៖ ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់ (Strategy 2026–2028)", label-id: "ch-05", fallback-page: "៥០", num-badge: "CH 05")
-        #v(1mm)
-        #line(length: 100%, stroke: 0.4pt + c-line)
-        #v(1.2mm)
-        #toc-sub-row("៥.១ ចក្ខុវិស័យឆ្ពោះទៅឆ្នាំ២០២៨ និងគោលដៅ ១០០ សហគ្រិន", fallback-page: "៥០")
-        #toc-sub-row("៥.២ សភាពការណ៍ និងវឌ្ឍនភាពនៃការរៀបចំរដូវកាលទី ២", fallback-page: "៥១")
-        #toc-sub-row("៥.៣ ការពង្រីកវិសាលភាព ២៥ រាជធានី-ខេត្ត និងកិច្ចសហការដៃគូ", fallback-page: "៥២")
-        #v(1.5mm)
-        #line(length: 100%, stroke: 0.4pt + c-sand.lighten(30%))
-        #v(1.2mm)
-        #toc-header-row("ឧបសម្ព័ន្ធ៖ សូចនាករគន្លឹះ និងកំណត់ត្រារដ្ឋបាល", label-id: "appendix-start", fallback-page: "៥៣", is-chapter: false)
-      ]
-    ]
-  ]
+// CHAPTER 3 (Duplicate ជំពូកទី ៣ removed from title)
+#toc-chapter-header("ជំពូក ០៣", "ករណីសិក្សាសហគ្រាសឆ្នើមទាំង ២០", fallback-page: "២៣", label-id: "ch-03")
+#toc-sub-item("ផ្នែកកសិកម្មទំនើប និងធាតុចូលកសិកម្ម (សហគ្រាស ៣.០១ – ៣.០៨)", fallback-page: "២៤")
+#toc-sub-item("ផ្នែកកែច្នៃចំណីអាហារ និងភេសជ្ជៈ (សហគ្រាស ៣.០៩ – ៣.១២)", fallback-page: "៣០")
+#toc-sub-item("ផ្នែកទេសចរណ៍ និងបដិសណ្ឋារកិច្ចសហគមន៍ (សហគ្រាស ៣.១៣ – ៣.១៦)", fallback-page: "៣៣")
+#toc-sub-item("ផ្នែកសិប្បកម្មកែច្នៃ និងសេដ្ឋកិច្ចចក្រា (សហគ្រាស ៣.១៧ – ៣.២០)", fallback-page: "៣៥")
 
-  // Bottom publication accent bar
-  #place(top + left, dx: 13mm, dy: 262mm)[
-    #rect(width: 169mm, fill: c-teal, radius: 2.5pt, inset: (x: 4mm, y: 2.5mm))[
-      #grid(
-        columns: (1fr, auto),
-        align: horizon,
-        text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand-light)[គម្រោងមន្ទីរពិសោធន៍នវានុវត្តន៍កំពង់ធំ · ASIP · ២០២៥–២០២៦],
-        text(font: font-khmer-display, size: 7.2pt, weight: "bold", fill: c-sand)[រដូវកាលទី ១],
-      )
-    ]
-  ]
+#v(1.5mm)
 
-  // Bottom datum line & folio
-  #place(top + left, dx: 13mm, dy: 272mm)[
-    #line(length: 169mm, stroke: 0.5pt + c-line)
-  ]
-  #place(top + left, dx: 13mm, dy: 276mm)[
-    #catalogue-folio(
-      "iii",
-      header-right: "មាតិកា (ទំព័រ ២/២) · INNOLAB KAMPONG THOM",
-      side: "right",
-      width: 169mm,
-    )
-  ]
-]
+// CHAPTER 4 (Duplicate ជំពូកទី ៤ removed from title)
+#toc-chapter-header("ជំពូក ០៤", "ការរកឃើញសំខាន់ៗ និងការវាយតម្លៃផលប៉ះពាល់", fallback-page: "៣៧", label-id: "ch-04")
+#toc-sub-item("៤.១ ការវិភាគលក្ខណៈទូទៅនៃសហគ្រាស", fallback-page: "៣៧")
+#toc-sub-item("៤.២ បរិវត្តកម្មគំរូអាជីវកម្ម និងដៃគូយុទ្ធសាស្ត្រ", fallback-page: "៣៨")
+#toc-sub-item("៤.៣ ការអភិវឌ្ឍសមត្ថភាពគ្រប់គ្រង និងធនធានមនុស្ស", fallback-page: "៤១")
+#toc-sub-item("៤.៤ ការស្ទង់មតិលើកម្រិតនវានុវត្តន៍ និងសមត្ថភាពប្រកួតប្រជែង", fallback-page: "៤៣")
+#toc-sub-item("៤.៥ បញ្ហាប្រឈម និងតម្រូវការគាំទ្រជាបន្ត", fallback-page: "៤៦")
+#toc-sub-item("៤.៦ ការសំយោគលទ្ធផល និងសេចក្តីសន្និដ្ឋាន", fallback-page: "៤៨")
+
+#v(1.5mm)
+
+// CHAPTER 5 (Duplicate ជំពូកទី ៥ removed from title)
+#toc-chapter-header("ជំពូក ០៥", "ផែនការ និងយុទ្ធសាស្ត្របន្ទាប់ (Strategy 2026–2028)", fallback-page: "៥០", label-id: "ch-05")
+#toc-sub-item("៥.១ ចក្ខុវិស័យឆ្ពោះទៅឆ្នាំ២០២៨ និងគោលដៅ ១០០ សហគ្រិន", fallback-page: "៥០")
+#toc-sub-item("៥.២ សភាពការណ៍ និងវឌ្ឍនភាពនៃការរៀបចំរដូវកាលទី ២", fallback-page: "៥១")
+#toc-sub-item("៥.៣ ការពង្រីកវិសាលភាព ២៥ រាជធានី-ខេត្ត និងកិច្ចសហការដៃគូ", fallback-page: "៥២")
+
+#v(1.5mm)
+
+// APPENDIX (Duplicate ឧបសម្ព័ន្ធ removed from title)
+#toc-chapter-header("ឧបសម្ព័ន្ធ", "សូចនាករគន្លឹះ និងកំណត់ត្រារដ្ឋបាល", fallback-page: "៥៣", label-id: "appendix-start")
+
+#v(4mm)
+#grid(
+  columns: (1fr, auto),
+  align: horizon,
+  text(font: font-khmer-display, size: 7pt, fill: text-muted)[របាយការណ៍សមិទ្ធផលផ្លូវការ · រដូវកាលទី១],
+  text(font: font-khmer-display, size: 7.5pt, fill: text-muted)[iii],
+)

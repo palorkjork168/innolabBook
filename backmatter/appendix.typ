@@ -33,7 +33,11 @@
 
   #v(4mm)
   // Annex A
-  #block(width: 100%, stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line), inset: 3.5mm, fill: c-white, radius: 2pt)[
+  #block(
+  width: 100%,
+  stroke: (left: 3pt + c-teal),
+  inset: (left: 4.5mm, y: 1.5mm),
+)[
     #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[ANNEX A: Comprehensive Design Thinking Matrix]
     #v(1mm)
     #text(font: font-khmer-body, size: 8pt, fill: c-charcoal)[
@@ -45,7 +49,11 @@
 
   #v(3mm)
   // Annex B
-  #block(width: 100%, stroke: (left: 3pt + c-sand, rest: 0.5pt + c-line), inset: 3.5mm, fill: c-white, radius: 2pt)[
+  #block(
+  width: 100%,
+  stroke: (left: 3pt + c-sand),
+  inset: (left: 4.5mm, y: 1.5mm),
+)[
     #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[ANNEX B: Market Observation Raw Data Sheets]
     #v(1mm)
     #text(font: font-khmer-body, size: 8pt, fill: c-charcoal)[
@@ -56,7 +64,11 @@
 
   #v(3mm)
   // Annex C
-  #block(width: 100%, stroke: (left: 3pt + c-teal, rest: 0.5pt + c-line), inset: 3.5mm, fill: c-white, radius: 2pt)[
+  #block(
+  width: 100%,
+  stroke: (left: 3pt + c-teal),
+  inset: (left: 4.5mm, y: 1.5mm),
+)[
     #text(font: font-khmer-display, size: 10pt, weight: "bold", fill: c-teal)[ANNEX C: Verbatim Project Management Templates]
     #v(1mm)
     #text(font: font-khmer-body, size: 8pt, fill: c-charcoal)[
@@ -122,7 +134,7 @@
 
   #v(3mm)
   // Constraint Warning
-  #block(width: 100%, inset: 3.5mm, fill: c-sand-light.lighten(40%), stroke: (left: 3pt + c-sand, rest: 0.5pt + c-sand), radius: 2pt)[
+  #block(width: 100%, inset: (left: 4.5mm, y: 1.5mm), stroke: (left: 3pt + c-sand))[
     #text(font: font-sans, size: 8pt, weight: "bold", fill: c-teal)[── SYSTEM DATA INTEGRITY CONSTRAINT WARNING ──]
     #v(1mm)
     #text(font: font-sans, size: 7.5pt, fill: c-charcoal)[The database enforces strict relational logic. If an enterprise's primary_sector is set to Agri, the system requires a valid entry in the circular_loop_type field. This prevents raw primary producers from applying for funding without integrating sustainable, closed-loop waste management practices into their models.]

@@ -145,12 +145,10 @@
       ]
     ],
     block(
-      width: 162mm,
-      inset: 4mm,
-      fill: c-white,
-      stroke: (left: 3pt + c-sand-dark, rest: 0.5pt + c-line),
-      radius: 2pt,
-    )[
+  width: 100%,
+  stroke: (left: 3pt + c-sand-dark),
+  inset: (left: 4.5mm, y: 1.5mm),
+)[
       #text(font: font-sans, size: 9pt, weight: "bold", fill: c-teal)[Challenges]
       #v(1mm)
       #text(font: font-sans, size: 7.8pt, fill: c-charcoal)[
